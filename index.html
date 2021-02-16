@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!--
+  Urban by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+  <head>
+    <title>Seminario de Pamplona</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="assets/css/lightgallery.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style type="text/css">
+      /* On all screens */
+      html {
+        scroll-behavior: smooth;
+      }
+
+            /* Works on Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-height: thin;
+        scrollbar-color: #444 rgba(0,0,0,0);
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #444;
+        border-radius: 10px;
+      }
+
+      .slides {
+          display:none;
+          width: 100%;
+        }
+
+      .navigation {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center; /* buttons align like text */
+      }
+
+      .pip {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        
+        border: 0;
+        border-radius: 9999px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.5) !important;
+      }
+
+      .pip--active {
+        background: rgba(255, 255, 255, 1) !important;
+      }
+
+
+      .gallery {
+        justify-content: space-evenly;
+        white-space: nowrap;
+        width: 100%;
+        overflow: auto;
+      }
+
+      .gallery a {
+        display: inline;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .gallery img {
+        width: 40vw;
+        position: relative;
+      }
+      .books img {
+        width: 20vw !important;
+      }
+
+      /*.video-gallery img::after {
+        content: url('images/play.svg');
+        opacity: 0.5;
+        position: absolute;
+        left: 42%;
+        top: 27%;
+        width: 16%;
+      }*/
+
+      .tip{
+        position: absolute !important;
+        background: #000;
+        opacity: 0;
+        height: 100%;
+        font-size: 90%;
+        color: #fff!important;
+        z-index: 9998;
+      }
+      /*.tip:hover{
+        opacity: 1;
+      }*/
+
+
+
+
+
+      .video-gallery img:hover:after {
+        opacity: 1;
+      }
+
+      /*section {
+        min-height: 100vh;
+      }*/
+
+      .enlaces a {
+        border-top: 1px solid #cec6ba;
+        padding: 3px;
+        display: block;
+        font-size: 0.9em;
+      }
+
+      .enlaces a:nth-child(1) {
+        border-top: none;
+      }
+
+
+      /* On medium-large sized screens */
+      @media screen and (min-width: 480px) {
+        /*html {
+          scroll-snap-type: proximity;
+          scroll-snap-type: y proximity;
+        }
+        section {
+          scroll-snap-align: start;
+        }*/
+
+        .gallery img {
+          width: 25vw;
+        }
+
+        .books img {
+          width: 15vw !important;
+        }
+
+        /* Create the parallax scrolling effect */
+        .parallax {
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+
+
+      /* On large screens */
+      @media screen and (min-width: 980px) {
+        .gallery img {
+          width: 18vw;
+        }
+        .books img {
+          width: 10vw !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="alt">
+      <div class="logo"><a href="index.html">Seminario de Pamplona</a></div>
+      <!--<a  >Menú</a>-->
+    </header>
+
+    <!-- Nav - ->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="#portada">Inicio</a></li>
+        <li><a href="#claves-discernimiento">Claves discernimiento</a></li>
+        <li><a href="#sacerdocio">Sacerdocio</a></li>
+      </ul>
+    </nav>-->
+
+    <!-- Banner -->
+    <section class="banner parallax" id="portada" style="background-image: url('images/jpii.jpg')">
+      <div class="inner">
+        <header>
+          <h1>Tienes una llamada del Señor</h1>
+        </header>
+        <b style="width: 80%"><p>Todos estamos llamados al Amor, a entregarnos 100% a Dios. ¿Quieres descubrir tu camino?</p></b>
+        <a href="#main" class="button scrolly">Responder</a>
+      </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Section -->
+      <section class="wrapper style1" id="claves-discernimiento">
+        <div class="inner">
+          <h1>Tres claves para el discernimiento</h1>
+          <br><br>
+          <div class="flex flex-2">
+            <div class="col col1">
+              <div class="image round fit">
+                <img src="images/oracion.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col col2">
+              <h2>1. Oración</h2>
+              <p>
+                La vocación es fruto del encuentro con Cristo, respuesta al encuentro con Aquel que nos conoce y nos ama con locura. Es Cristo quien nos mira, nos llama por nuestro nombre y nos dice "ven y sígueme". Ponte a tiro, deja que el Señor se te acerque, pasa muchos ratos a solas con Él y pregúntale: ¿Señor, qué camino, qué regalo, tienes pensado para mí?
+              </p>
+
+              <p>
+                Y, como no estás solo, nos encantaría ayudarte pidiendo a Dios que el Espíritu
+                Santo te ilumine con su Gracia.
+              </p>
+              <div class="flex flex-2">
+                <textarea class="col col2" name="message" placeholder="Cuéntanos algo sobre ti, ej: Tengo 23 años y creo que Dios me puede estar llamando al sacerdocio, pero me da miedo lo que puedan pensar mis amigos..." rows="4"></textarea>
+                <div class="col col1">
+                  <input type="text" name="name" value="" placeholder="Nombre (o pseudónimo)">
+                  <br>
+                  <a class="button">Pedir oraciones</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section -->
+      <section class="wrapper style1">
+        <div class="inner">
+          <div class="flex flex-2">
+            <div class="col col2">
+              <h2>2. Acompañamiento</h2>
+              <p>
+                Dios habla de muchas maneras: unas veces alto, otras bajito... la vocación y el
+                proceso de discernimiento son siempre únicos. Además, nadie es buen juez en causa
+                propia. Por eso, es importante que busques un sacerdote de confianza que te acompañe en tu proceso y te ayude a interpretar los signos que el Señor va dejando en tu vida.
+              </p>
+
+              <p>
+                Nuestros sacerdotes encargados de la pastoral vocacional tienen amplia experiencia en el acompañamiento para el discernimiento. Haz clic en el botón para encontrar un sacerdote que te acompañe.
+              </p>
+              <a  class="button">Buscar acompañamiento</a>
+            </div>
+            <div class="col col1 first">
+              <div class="image round fit">
+                <img src="images/acompanamiento.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section -->
+      <section class="wrapper style1">
+        <div class="inner">
+          <div class="flex flex-2">
+            <div class="col col1">
+              <div class="image round fit">
+                <img src="images/atrevete.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col col2">
+              <h2>3. Valentía</h2>
+              <p>
+                Puede que sientas que no estas capacitado, que te da miedo o que te cuesta dejar algo, pero ¿quién mejor que Dios sabe lo que necesita tu corazón? ¡No tengas miedo de Cristo! Él no quita nada y lo da todo. Quien se da a Él, recibe el ciento por uno. Sí, abre, abre de par en par las puertas a Cristo, y encontrarás la verdadera vida.
+              </p>
+
+              <p>
+                ¡Atrévete a dejarte tocar por Cristo! Ven a conocer el
+                seminario o participa en una de las muchas actividades que organiza la pastoral
+                vocacional y que tanto nos ha ayudado a muchos a discernir nuestra vocación.
+              </p>
+
+              <a  class="button">Ver actividades</a>
+              <a  class="button">Contactar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="wrapper style2">
+        <div class="inner">
+          <div class="flex flex-2">
+            <div class="col col2">
+              <h1>Sacerdocio</h1>
+              <p>La vocación al sacerdocio se fundamenta en Cristo, quien viendo sufrir a su pueblo, nos pide usar nuestras manos para poder entregarse en la Eucaristía, para poder escuchar a todo el que se acerca y perdonarle los pecados... Es Cristo quien nos pide salir a las encrucijadas de los caminos para anunciar la buena noticia y acompañar a su pueblo hacia su amor.</p>
+
+              <p>El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos capacita a través de su Gracia.</p>
+
+              <div style="padding: 20px; position: relative;">
+                <blockquote class="slides">Si no consigo barco [para ir a evangelizar el oriente], iré nadando (San Francisco Javier)</blockquote>
+
+                <blockquote  class="slides">Id, pues, y haced discípulos a todos los pueblos, bautizándolos en el nombre del Padre y del Hijo y del Espíritu Santo; enseñándoles a guardar lo que os he mandado. Y sabed que yo estoy con vosotros todos los días, hasta el final de los tiempos (Mt 18, 19-20)</blockquote>
+
+
+                <blockquote  class="slides">“¡Oh, qué grande es el sacerdote! Si se diese cuenta, moriría... Dios le obedece: pronuncia dos palabras y Nuestro Señor baja del cielo al oír su voz y se encierra en una pequeña hostia: si desapareciese el sacramento del Orden, no tendríamos al Señor. ¿Quién lo ha puesto en el sagrario? El sacerdote. ¿Quién ha recibido vuestra alma apenas nacidos? El sacerdote. ¿Quién la nutre para que pueda terminar su peregrinación? El sacerdote. ¿Quién la preparará para comparecer ante Dios, lavándola por última vez en la sangre de Jesucristo? El sacerdote, siempre el sacerdote" (San Juan María Vianney, el santo cura de Ars, patrono de los sacerdotes)</blockquote>
+                <div class="navigation">
+                  <a onclick="showDivs(1)" class="pip pip--active"></a>
+                  <a onclick="showDivs(2)" class="pip"></a>
+                  <a onclick="showDivs(3)" class="pip"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col col1 first">
+              <div class="image round fit">
+                <img src="images/sacerdote.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <section id="seminario" class="wrapper style1">
+        <div class="inner">
+          <div class="flex flex-2">
+            <div class="col col1">
+              <div class="image round fit">
+                <img src="images/fachada.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col col2">
+              <h1>Seminario</h1>
+
+              <p>El seminario es una etapa de profunda formación y de intenso discernimiento. Una etapa en la que Dios va moldeando nuestro corazón a y imagen y semejanza del suyo, en la que crecemos en amistad con Cristo y nos formamos humana e intelectualmente para desempeñar nuestra futura labor como sacerdotes.</p>
+
+              <p>En nuestro día a día, nos levantamos, rezamos, celebramos la santa misa y, tras un potente desayuno, vamos a las clases de filosofía y teología. Después de comer, hacemos deporte y estudiamos, aunque eso sí, nunca puede faltar un pequeño parón para merendar. Pero ahí no acaba nuestra jornada: aún incluimos diversas actividades formativas y un ratico con el Señor antes de cenar. Finalmente, toca descansar. Durante el fin de semana, nos vamos a casa para estar con nuestras familias y participar en las actividades pastorales de las distintas parroquias.</p>
+
+              <p>La mejor forma de conocer más a fondo la realidad del seminario es venir a vernos un jueves para compartir con nosotros el rato de adoración ante el Santísimo y la cena. Te dejamos también algunos vídeos de nuestros seminaristas, para que así nos pongas cara.</p>
+
+              <p>
+                <a  class="button">Contacto</a>
+                <a  class="button">Ven a conocernos</a>
+              </p>
+
+              <div class="video-gallery gallery">
+                <a data-sub-html="Jose Angel Zubiaur" href="https://www.youtube.com/watch?v=CSqnkjlqZx0">
+                  <img src="https://i.ytimg.com/vi_webp/CSqnkjlqZx0/maxresdefault.webp" />
+                  <!--<span class="tip">José Ángel Zubiaur</span>-->
+                </a>
+                <a href="https://www.youtube.com/watch?v=k-i5Zox0K9I" data-sub-html="Pedro Luis">
+                  <img src="https://i.ytimg.com/vi_webp/k-i5Zox0K9I/maxresdefault.webp" />
+                </a>
+                <a href="https://www.youtube.com/watch?v=m0To2flk_Lg">
+                  <img src="https://i.ytimg.com/vi_webp/m0To2flk_Lg/maxresdefault.webp" />
+                </a>   
+              </div>
+
+
+
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+                    
+
+
+      <!-- Section -->
+
+      <section class="wrapper style2">
+        <div class="inner">
+          <div class="flex flex-2">
+            <div class="col col2">
+              <h1>Recursos</h1>
+
+              <h4>Vídeos</h4>
+
+              <div class="video-gallery gallery">
+                <a data-sub-html="SM Dani al descubierto | El sacerdote que tiende puentes en Youtube"
+                  href="https://www.youtube.com/watch?v=24JdG4uMW20">
+                  <img src="https://i.ytimg.com/vi_webp/24JdG4uMW20/maxresdefault.webp" />
+                </a>
+                <a data-sub-html="¿Hay monjes benedictinos jóvenes? El testimonio de Fray Eduardo"
+                  href="https://www.youtube.com/watch?v=x33Fi_iEEFM">
+                  <img src="https://i.ytimg.com/vi_webp/x33Fi_iEEFM/maxresdefault.webp" />
+                </a>
+                <a data-sub-html="Testimonio de Fray Ignacio, monje benedictino y millennial" 
+                  href="https://www.youtube.com/watch?v=k-i5Zox0K9I">
+                  <img src="https://i.ytimg.com/vi_webp/k-i5Zox0K9I/maxresdefault.webp" />
+                </a>
+                <a data-sub-html="Signos de la vocación" class="hidden" 
+                  href="https://www.youtube.com/watch?v=zURt1o1cQrA">
+                  <img src="https://img.youtube.com/vi/zURt1o1cQrA/default.jpg" />
+                </a>
+                <a data-sub-html="LA VOCACION Mons Munilla" 
+                  href="https://www.youtube.com/watch?v=w5FTJrEx5ro">
+                  <img src="https://i.ytimg.com/vi_webp/w5FTJrEx5ro/maxresdefault.webp" />
+                </a>
+                <a data-sub-html="Carlos Cabrera | ''Ser sacerdote es una apertura a la vida''" 
+                  href="https://www.youtube.com/watch?v=RhZFjkmX894">
+                  <img src="https://i.ytimg.com/vi_webp/RhZFjkmX894/maxresdefault.webp" />
+                </a>
+                <a href="https://www.youtube.com/watch?v=LvqPshrX8cg">
+                  <img src="https://i.ytimg.com/vi_webp/LvqPshrX8cg/maxresdefault.webp" />
+                </a>
+                <a href="https://www.youtube.com/watch?v=m0To2flk_Lg">
+                  <img src="https://i.ytimg.com/vi_webp/m0To2flk_Lg/maxresdefault.webp" />
+                </a>
+                <a data-sub-html="Testimonio Scout" class="hidden"
+                  href="https://www.youtube.com/watch?v=og6i0VZFzgc">
+                  <img src="https://i.ytimg.com/vi_webp/og6i0VZFzgc/maxresdefault.webp" />
+                </a>
+
+                
+                <!--
+                <a href="https://www.youtube.com/watch?v=80msIR5Zs6s">
+                  <img src="https://i.ytimg.com/vi_webp/80msIR5Zs6s/maxresdefault.webp" />
+                </a>
+                <a href="https://www.youtube.com/watch?v=kTjh0OODwEg" >
+                  <img src="https://i.ytimg.com/vi_webp/kTjh0OODwEg/maxresdefault.webp" />
+                </a>
+                <a href="https://www.youtube.com/watch?v=EJX3pW84HtA">
+                  <img src="https://i.ytimg.com/vi_webp/EJX3pW84HtA/maxresdefault.webp" />
+                </a>-->   
+              </div>
+
+              <br><br>
+
+              <h4>Lecturas</h4>
+
+              <div class="gallery books">
+                <a data-sub-html="Servidor De Vuestra Alegria (Joseph Card. Ratzinger)" 
+                  href="assets/docs/servidor_de_vuestra_alegria.pdf" target="_blank" download>
+                  <img src="">
+                </a>
+                <a data-sub-html="Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)" 
+                  target="_blank" download>
+                  <img src="images/caminandovalles.jpeg">
+                  
+                </a>
+                <a data-sub-html="Hasta la Cumbre: Testamento espiritual (Pablo Domínguez Prieto)" 
+                  target="_blank" download>
+                  <img src="images/hastalacumbre.jpg">
+                </a>
+
+                
+
+
+              </div>
+            </div>
+
+              <!--<a  class="button">Contactar</a>-->
+            <div class="col col1 first"> 
+              <div class="image round fit">
+                <img src="images/sagrado-corazon.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+          <div class="flex flex-2">
+            <div class="col col1 enlaces">
+            <h5>Contacto</h5>
+              <a href="">Av. de la Baja Navarra, 64, 31006 Pamplona, Navarra</a>
+              <a href="">948 29 10 00</a>
+              <br>
+            <h5>Enlaces</h5>
+              <a href="">Iglesia Navarra</a>
+              <a href="">Seminario Redemptoris Mater</a>
+              <a href="">Seminario de San Sebastián</a>
+              <a href="">Biblioteca</a>
+              <a href="">Instituto CSET e ISCR</a>
+              <a href="">Santa Sede</a>
+              <a href="">Conferencia Episcopal</a>
+            </div>
+            <div class="col col2">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5853.590045692121!2d-1.6329783521847316!3d42.81381744298423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x613ab1bc1ae4af18!2sSeminario%20Conciliar%20de%20San%20Miguel!5e0!3m2!1ses!2ses!4v1608804137907!5m2!1ses!2ses" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+        </div>
+        <br><br>
+      <div class="copyright">
+        <!--<ul class="icons">
+          <li>
+            <a  class="icon fa-twitter"><span class="label">Twitter</span></a>
+          </li>
+          <li>
+            <a  class="icon fa-facebook"><span class="label">Facebook</span></a>
+          </li>
+          <li>
+            <a  class="icon fa-instagram"><span class="label">Instagram</span></a>
+          </li>
+          <li>
+            <a  class="icon fa-snapchat"><span class="label">Snapchat</span></a>
+          </li>
+        </ul>-->
+        <p>
+          &copy; Seminario Pamplona. All rights reserved. Diseño:
+          <a href="https://templated.co">TEMPLATED</a>. Dibujos:
+          <a href="https://www.patite.es">pati.te</a> y 
+          <a href="https://creativecommons.org/about/cclicenses/">CC-BY</a>.
+          
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/lightgallery.min.js"></script>
+    <script src="assets/js/lg-video.min.js"></script>
+    <script src="assets/js/lg-thumbnail.js"></script>
+    <script>
+      var slideIndex = 0;
+      carousel();
+
+      function showDivs(n) {
+        slideIndex = n;
+        var x = document.getElementsByClassName("slides");
+        var t = document.getElementsByClassName("pip");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (var i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+          t[i].classList.remove("pip--active");
+        }
+        x[slideIndex-1].style.display = "block";
+        t[slideIndex-1].classList.add("pip--active"); 
+      }
+
+      function carousel() {
+        showDivs(slideIndex += 1)
+        setTimeout(carousel, 10000); // Change image every 10 seconds
+      }
+
+
+
+      function show( id ) {
+        var hidden = document.getElementsByClassName('hidden')
+        for (var i = 0; i < hidden.length; i++) {
+          hidden[i].style.display = 'none';
+        }
+
+        var elem = document.getElementById(id)
+        elem.style.display = 'block';
+        elem.scrollIntoView({behavior: "smooth"})
+      }
+
+
+
+
+      var galleries = document.getElementsByClassName('video-gallery');
+      for (var i = galleries.length - 1; i >= 0; i--) {
+        lightGallery(galleries[i], {
+          loadYoutubeThumbnail: true,
+          youtubeThumbSize: 'default',
+          mode: 'lg-fade',
+          youtubePlayerParams: {
+            modestbranding: 1,
+            rel: 0,
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
