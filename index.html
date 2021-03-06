@@ -191,7 +191,7 @@
     </nav>-->
 
     <!-- Banner -->
-    <section class="banner parallax" id="portada" style="background-image: url('images/jpii.jpg')">
+    <section class="banner parallax" id="portada" style="background-image: url('images/jpii.jpg');">
       <div class="inner">
         <header>
           <h1>Tienes una llamada del Señor</h1>
@@ -225,11 +225,11 @@
                 Santo te ilumine con su Gracia.
               </p>
               <div class="flex flex-2">
-                <textarea class="col col2" name="message" placeholder="Cuéntanos algo sobre ti, ej: Tengo 23 años y creo que Dios me puede estar llamando al sacerdocio, pero me da miedo lo que puedan pensar mis amigos..." rows="4"></textarea>
+                <textarea class="col col2" id="mensaje" placeholder="Cuéntanos algo sobre ti, ej: Tengo 23 años y creo que Dios me puede estar llamando al sacerdocio, pero me da miedo lo que puedan pensar mis amigos..." rows="4"></textarea>
                 <div class="col col1">
-                  <input type="text" name="name" value="" placeholder="Nombre (o pseudónimo)">
+                  <input type="text" id="nombre" value="" placeholder="Nombre (o pseudónimo)">
                   <br>
-                  <a class="button">Pedir oraciones</a>
+                  <a class="button" onclick="oraciones()">Pedir oraciones</a>
                 </div>
               </div>
             </div>
@@ -526,6 +526,23 @@
     <script src="assets/js/lg-video.min.js"></script>
     <script src="assets/js/lg-thumbnail.js"></script>
     <script>
+      function oraciones() {
+        var mensaje = document.getElementById('mensaje')
+        var nombre = document.getElementById('nombre')
+        var request = new XMLHttpRequest();
+        var url='https://arrietaeguren.es/webSeminario/email'
+        url += '?message='+mensaje.value+'&name='+nombre.value;
+        request.open("GET", url);
+        request.send();
+        request.onreadystatechange = (e) => {
+          mensaje.value = '¡Gracias! Cuenta con nuestras oraciones '+nombre.value
+          nombre.value = ''
+        }
+      }
+
+
+
+
       var slideIndex = 0;
       carousel();
 
