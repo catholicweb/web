@@ -93,14 +93,14 @@
 
       .gallery img:hover {
         /*transform: scale(1.05);*/
-        opacity: 0.9;
+        opacity: 0.8;
       }
 
       .video-gallery img {
         height: 25vw;
       }
       .books-gallery img {
-        height: 40vw;
+        height: 45vw;
       }
 
       .image-gallery img {
@@ -134,7 +134,7 @@
         }
 
         .books-gallery img {
-          height: 30vw;
+          height: 35vw;
         }
 
         .image-gallery img {
@@ -156,7 +156,7 @@
           height: 12vw;
         }
         .books-gallery img {
-          height: 15vw;
+          height: 16vw;
         }
 
         .image-gallery img {
@@ -185,7 +185,7 @@
     <section
       class="banner parallax"
       id="portada"
-      style="background-image: url('./assets/img/jpii.jpg')"
+      style="background-image: url('./assets/img/jpii.jpg'); background-size:contain;"
     >
       <div class="inner">
         <header>
@@ -326,7 +326,7 @@
                 capacita a través de su Gracia.
               </p>
 
-              <div style="padding: 20px; position: relative">
+              <!--<div style="padding: 20px; position: relative">
                 <blockquote class="slides">
                   Si no consigo barco [para ir a evangelizar el oriente], iré nadando (San Francisco
                   Javier)
@@ -360,6 +360,12 @@
                   <a onclick="showDivs(3)" class="pip"></a>
                   <a onclick="showDivs(4)" class="pip"></a>
                 </div>
+              </div>-->
+
+              <div class="video-gallery gallery light-gallery">
+                <a v-for="video in testimonios" :href="'https://www.youtube.com/watch?v='+video.yid" :data-sub-html="video.caption" :class="video.class">
+                  <img :src="'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
+                </a>
               </div>
 
               
@@ -414,9 +420,11 @@
                 <a class="button">Ven a conocernos</a>
               </p>
 
-              <div class="video-gallery gallery">
-                <a v-for="video in testimonios" :href="'https://www.youtube.com/watch?v='+video.yid" :data-sub-html="video.caption" :class="video.class">
-                  <img :src="'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
+              
+
+              <div class="image-gallery gallery light-gallery">
+                <a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
+                  <img :src="foto.thumb" />
                 </a>
               </div>
 
@@ -435,7 +443,7 @@
 
               <h4>Vídeos</h4>
 
-              <div class="video-gallery gallery">
+              <div class="video-gallery gallery light-gallery">
                 <a v-for="video in videos" :href="'https://www.youtube.com/watch?v='+video.yid" :data-sub-html="video.caption" :class="video.class">
                   <img :src="'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
                 </a>
@@ -446,45 +454,18 @@
               <h4>Lecturas</h4>
 
               <div class="gallery books-gallery">
-                <a
-                  data-sub-html="Servidor De Vuestra Alegria (Joseph Card. Ratzinger)"
-                  href="assets/docs/servidor_de_vuestra_alegria.pdf"
-                  target="_blank"
-                  download
-                >
-                  <img src="" />
-                </a>
-                <a
-                  data-sub-html="Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)"
-                  target="_blank"
-                  download
-                >
-                  <img src="./assets/img/caminandovalles.jpeg" />
-                </a>
-                <a
-                  data-sub-html="Hasta la Cumbre: Testamento espiritual (Pablo Domínguez Prieto)"
-                  target="_blank"
-                  download
-                >
-                  <img src="./assets/img/hastalacumbre.jpg" />
-                </a>
-                <a data-sub-html="Muchos son los llamados (Scott Hahn)" target="_blank" download>
-                  <img src="./assets/img/muchos-son-los-llamados.jpg" />
+                <a v-for="book in books" target="_blank" :href="book.src" :data-sub-html="book.caption" :class="book.class">
+                  <img :src="book.thumb" />
                 </a>
               </div>
-
-              <h4>Fotos del seminario</h4>
-              <div class="image-gallery gallery">
-                <a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
-                  <img :src="foto.thumb" />
-                </a>
-              </div>
+              <br><br>
+              
             </div>
 
             <!--<a  class="button">Contactar</a>-->
             <div class="col col1 first">
               <div class="image round fit">
-                <img src="./assets/img/logo_c.png" alt="" />
+                <img src="./assets/img/logo.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -496,17 +477,21 @@
     <footer id="footer">
       <div class="inner">
         <div class="flex flex-2">
-          <div class="col col2 enlaces">
+          <div class="col col1 enlaces">
             <h5>Contacto</h5>
             <a href="">Av. de la Baja Navarra, 64, 31006 Pamplona, Navarra</a>
             <a href="">948 29 10 00</a>
-            <br />
-            <h5>Enlaces</h5>
-            <a href="">Iglesia Navarra</a>
+          </div>
+          <div class="col col1 enlaces">
+            <h5>Seminario</h5>
             <a href="">Seminario Redemptoris Mater</a>
             <a href="">Seminario de San Sebastián</a>
             <a href="">Biblioteca</a>
             <a href="">Instituto CSET e ISCR</a>
+          </div>
+          <div class="col col1 enlaces">
+            <h5>Iglesia</h5>
+            <a href="">Iglesia Navarra</a>
             <a href="">Santa Sede</a>
             <a href="">Conferencia Episcopal</a>
           </div>
@@ -562,7 +547,7 @@
         /* Carousel de textos */
 
         var slideIndex = 0;
-        carousel();
+        //carousel();
 
         function showDivs(n) {
           slideIndex = n;
@@ -601,14 +586,14 @@
           fotos.push({
             "src": './assets/fotos/'+i+'.jpeg',
             'thumb': './assets/fotos/'+i+'.jpeg',
-            'caption': 'Seminario de Pamplona. Foto de PJ'
+            'caption': 'Seminario de Pamplona (PJ)'
           })
         }
         for (var i = 1; i <= 2; i++) {
           fotos.push({
             "src": './assets/fotos/d'+i+'.jpg',
             'thumb': './assets/fotos/d'+i+'.jpg',
-            'caption': 'San José. Foto de DC'
+            'caption': 'San José (DC)'
           })
         }
 
@@ -655,16 +640,43 @@
               yid:"m0To2flk_Lg"
             }]
 
+        var books = [
+        {
+          caption:"Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)",
+          thumb: "./assets/img/caminandovalles.jpeg",
+          src:"https://www.amazon.es/Caminando-por-valles-oscuros-Arcaduz-ebook/dp/B00W9AX060"
+        },{
+          caption:"Hasta la Cumbre: Testamento espiritual (Pablo Domínguez Prieto)",
+          thumb: "./assets/img/hastalacumbre.jpg",
+          src: "https://www.amazon.es/Hasta-cumbre-Colecci%C3%B3n-Horizontes-Spanish-ebook/dp/B0082YTOI0"
+        },{
+          caption: "Muchos son los llamados (Scott Hahn)",
+          thumb: "./assets/img/muchos-son-los-llamados.jpg",
+          src:"https://www.rialp.com/libro/muchos-son-los-llamados_92905/"
+        },{
+          caption: "Patris corde y otros materiales",
+          src: "./assets/docs/Patris corde y otros materiales.pdf",
+          thumb: "./assets/img/sanjose.png"
+        },{
+          caption:"Servidor De Vuestra Alegria (Joseph Card. Ratzinger)",
+          src:"./assets/docs/servidor_de_vuestra_alegria.pdf",
+          thumb:"./assets/img/servidor-alegria.jpg"
+        }
+        ]
+
+        
+
         var app = new Vue({
           el: '#main',
           data: {
             fotos: fotos,
             videos: videos,
+            books: books
           }
         })
 
 
-        var gallery = document.getElementsByClassName('gallery');
+        var gallery = document.getElementsByClassName('light-gallery');
         for (var i = gallery.length - 1; i >= 0; i--) {
           lightGallery(gallery[i], {
             thumbnail:true,
