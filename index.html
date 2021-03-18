@@ -17,6 +17,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
     <style type="text/css">
+
+      .lg-video-cont {
+        margin-bottom: 80px;
+      }
       /* On all screens */
       html {
         scroll-behavior: smooth;
@@ -312,18 +316,11 @@
             <div class="col col2">
               <h1>Sacerdocio</h1>
               <p>
-                La vocación al sacerdocio se fundamenta en Cristo, quien viendo sufrir a su pueblo,
-                nos pide usar nuestras manos para poder entregarse en la Eucaristía, para poder
-                escuchar a todo el que se acerca y perdonarle los pecados... Es Cristo quien nos
-                pide salir a las encrucijadas de los caminos para anunciar la buena noticia y
-                acompañar a su pueblo hacia su amor.
+                La vocación al sacerdocio es Cristo que, viendo sufrir a su pueblo, nos pide poder usar nuestras manos para así entregarse en la Eucaristía, para poder escuchar a todo el que se acerca y perdonarle los pecados... Es Cristo que nos pide salir a las encrucijadas de los caminos para anunciar la buena noticia y acompañar a su pueblo hacia su amor.
               </p>
 
               <p>
-                El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que
-                somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a
-                través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos
-                capacita a través de su Gracia.
+                El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos capacita a través de su Gracia.
               </p>
 
               <!--<div style="padding: 20px; position: relative">
@@ -364,7 +361,7 @@
 
               <div class="video-gallery gallery light-gallery">
                 <a v-for="video in testimonios" :href="'https://www.youtube.com/watch?v='+video.yid" :data-sub-html="video.caption" :class="video.class">
-                  <img :src="'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
+                  <img :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
                 </a>
               </div>
 
@@ -392,9 +389,8 @@
               <h1>Seminario</h1>
 
               <p>
-                El seminario es una etapa de profunda formación y de intenso discernimiento. Una
-                etapa en la que Dios va moldeando nuestro corazón a y imagen y semejanza del suyo,
-                en la que crecemos en amistad con Cristo y nos formamos humana e intelectualmente
+                El seminario es una etapa de profunda formación e intenso discernimiento. Una
+                etapa en la que Dios va moldeando nuestro corazón a imagen y semejanza del suyo. Una etapa en la que crecemos en amistad con Cristo y nos formamos humana e intelectualmente
                 para desempeñar nuestra futura labor como sacerdotes.
               </p>
 
@@ -632,11 +628,16 @@
               yid:"CSqnkjlqZx0"
             },
             {
+              caption: "¿Por qué eres sacerdote? La vocación después de 1, 2 ¡o 30 años!",
+              yid: "Qrf8LVmzWPk",
+              thumb: 'https://i3.ytimg.com/vi/Qrf8LVmzWPk/hqdefault.jpg'
+            },
+            {
               caption:"Pedro Luis",
               yid:"k-i5Zox0K9I"
             },
             {
-              caption:"Jose Angel Zubiaur",
+              caption:"¿Y por qué no sacerdote?",
               yid:"m0To2flk_Lg"
             }]
 
