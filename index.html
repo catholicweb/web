@@ -17,7 +17,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
     <style type="text/css">
-
       .lg-video-cont {
         margin-bottom: 80px;
       }
@@ -189,7 +188,7 @@
     <section
       class="banner parallax"
       id="portada"
-      style="background-image: url('./assets/img/jpii.jpg'); background-size:contain;"
+      style="background-image: url('./assets/img/jpii.jpg'); background-size: contain"
     >
       <div class="inner">
         <header>
@@ -303,8 +302,8 @@
                 ayudado a muchos a discernir nuestra vocación.
               </p>
 
-              <a class="button">Ver actividades</a>
-              <a class="button">Contactar</a>
+              <!--<a class="button">Ver actividades</a>-->
+              <a href="#footer" class="button scrolly">Contactar</a>
             </div>
           </div>
         </div>
@@ -316,11 +315,18 @@
             <div class="col col2">
               <h1>Sacerdocio</h1>
               <p>
-                La vocación al sacerdocio es Cristo que, viendo sufrir a su pueblo, nos pide poder usar nuestras manos para así entregarse en la Eucaristía, para poder escuchar a todo el que se acerca y perdonarle los pecados... Es Cristo que nos pide salir a las encrucijadas de los caminos para anunciar la buena noticia y acompañar a su pueblo hacia su amor.
+                La vocación al sacerdocio es Cristo que, viendo sufrir a su pueblo, nos pide poder
+                usar nuestras manos para así entregarse en la Eucaristía, para poder escuchar a todo
+                el que se acerca y perdonarle los pecados... Es Cristo que nos pide salir a las
+                encrucijadas de los caminos para anunciar la buena noticia y acompañar a su pueblo
+                hacia su amor.
               </p>
 
               <p>
-                El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos capacita a través de su Gracia.
+                El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que
+                somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a
+                través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos
+                capacita a través de su Gracia.
               </p>
 
               <!--<div style="padding: 20px; position: relative">
@@ -360,13 +366,17 @@
               </div>-->
 
               <div class="video-gallery gallery light-gallery">
-                <a v-for="video in testimonios" :href="'https://www.youtube.com/watch?v='+video.yid" :data-sub-html="video.caption" :class="video.class">
-                  <img :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
+                <a
+                  v-for="video in sacerdocio"
+                  :href="'https://www.youtube.com/watch?v='+video.yid"
+                  :data-sub-html="video.caption"
+                  :class="video.class"
+                >
+                  <img
+                    :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
+                  />
                 </a>
               </div>
-
-              
-
             </div>
             <div class="col col1 first">
               <div class="image round fit">
@@ -389,8 +399,9 @@
               <h1>Seminario</h1>
 
               <p>
-                El seminario es una etapa de profunda formación e intenso discernimiento. Una
-                etapa en la que Dios va moldeando nuestro corazón a imagen y semejanza del suyo. Una etapa en la que crecemos en amistad con Cristo y nos formamos humana e intelectualmente
+                El seminario es una etapa de profunda formación e intenso discernimiento. Una etapa
+                en la que Dios va moldeando nuestro corazón a imagen y semejanza del suyo. Una etapa
+                en la que crecemos en amistad con Cristo y nos formamos humana e intelectualmente
                 para desempeñar nuestra futura labor como sacerdotes.
               </p>
 
@@ -412,18 +423,15 @@
               </p>
 
               <p>
-                <a class="button">Contacto</a>
-                <a class="button">Ven a conocernos</a>
+                <a href="#footer" class="button scrolly">Contacto</a>
+                <a href="#footer" class="button scrolly">Ven a conocernos</a>
               </p>
-
-              
 
               <div class="image-gallery gallery light-gallery">
                 <a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
                   <img :src="foto.thumb" />
                 </a>
               </div>
-
             </div>
           </div>
         </div>
@@ -440,7 +448,12 @@
               <h4>Vídeos</h4>
 
               <div class="video-gallery gallery light-gallery">
-                <a v-for="video in videos" :href="'https://www.youtube.com/watch?v='+video.yid" :data-sub-html="video.caption" :class="video.class">
+                <a
+                  v-for="video in videos"
+                  :href="'https://www.youtube.com/watch?v='+video.yid"
+                  :data-sub-html="video.caption"
+                  :class="video.class"
+                >
                   <img :src="'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
                 </a>
               </div>
@@ -450,12 +463,17 @@
               <h4>Lecturas</h4>
 
               <div class="gallery books-gallery">
-                <a v-for="book in books" target="_blank" :href="book.src" :data-sub-html="book.caption" :class="book.class">
+                <a
+                  v-for="book in books"
+                  target="_blank"
+                  :href="book.src"
+                  :data-sub-html="book.caption"
+                  :class="book.class"
+                >
                   <img :src="book.thumb" />
                 </a>
               </div>
-              <br><br>
-              
+              <br /><br />
             </div>
 
             <!--<a  class="button">Contactar</a>-->
@@ -469,28 +487,34 @@
       </section>
     </div>
 
+
     <!-- Footer -->
     <footer id="footer">
       <div class="inner">
+        <h1>Contacto</h1>
         <div class="flex flex-2">
-          <div class="col col1 enlaces">
-            <h5>Contacto</h5>
-            <a href="">Av. de la Baja Navarra, 64, 31006 Pamplona, Navarra</a>
-            <a href="">948 29 10 00</a>
+          <div class="col col1">
+            <h4>Ven a conocernos</h4>
+            <a href="https://goo.gl/maps/CVF3dCctoJX9gP8x7" target="_blank">Av. de la Baja Navarra, 64, 31006 Pamplona, Navarra</a>
+            <br><br>
+            <h4>Llamanos</h4>
+            <a href="tel:948291000">948 29 10 00</a>
           </div>
-          <div class="col col1 enlaces">
-            <h5>Seminario</h5>
-            <a href="">Seminario Redemptoris Mater</a>
-            <a href="">Seminario de San Sebastián</a>
-            <a href="">Biblioteca</a>
-            <a href="">Instituto CSET e ISCR</a>
-          </div>
-          <div class="col col1 enlaces">
-            <h5>Iglesia</h5>
-            <a href="">Iglesia Navarra</a>
-            <a href="">Santa Sede</a>
-            <a href="">Conferencia Episcopal</a>
-          </div>
+          <div class="col col2">
+            <h4>Dejanos un mensaje</h4>
+            <div class="flex flex-2">
+              <div class="col col2">
+                <textarea id="mensaje2" placeholder="Mensaje" rows="10" ></textarea>
+              </div>
+              <div class="col col1">
+                <input type="text" id="nombre2" placeholder="Nombre" />
+                <br />
+                <input type="text" id="email" placeholder="Email" />
+                <br />
+                <a class="button" onclick="contacto()">Enviar</a>
+              </div>
+            </div>
+          </div>        
         </div>
       </div>
       <br /><br />
@@ -523,174 +547,207 @@
     <script src="assets/js/lg-video.min.js"></script>
     <script src="assets/js/lg-thumbnail.js"></script>
     <script>
-
       /* Rezamos por ti */
 
-        function oraciones() {
-          var mensaje = document.getElementById('mensaje')
-          var nombre = document.getElementById('nombre')
-          var request = new XMLHttpRequest();
-          var url='https://arrietaeguren.es/webSeminario/email'
-          url += '?message='+mensaje.value+'&name='+nombre.value;
-          request.open("GET", url);
-          request.send();
-          request.onreadystatechange = (e) => {
-            mensaje.value = '¡Gracias! Cuenta con nuestras oraciones '+nombre.value
-            nombre.value = ''
-          }
+      function oraciones() {
+        var mensaje = document.getElementById('mensaje');
+        var nombre = document.getElementById('nombre');
+        var request = new XMLHttpRequest();
+        var url = 'https://arrietaeguren.es/webSeminario/email';
+        url += '?message=' + mensaje.value + '&name=' + nombre.value;
+        request.open('GET', url);
+        request.send();
+        request.onreadystatechange = (e) => {
+          mensaje.value = '¡Gracias! Cuenta con nuestras oraciones ' + nombre.value;
+          nombre.value = '';
+        };
+      }
+
+      function contacto() {
+        var mensaje = document.getElementById('mensaje2');
+        var nombre = document.getElementById('nombre2');
+        var email = document.getElementById('email');
+        var request = new XMLHttpRequest();
+        var url = 'https://arrietaeguren.es/webSeminario/email';
+        url += '?message=' + mensaje.value + '&name=' + nombre.value;
+        request.open('GET', url+'&email=' + email.value);
+        request.send();
+        request.onreadystatechange = (e) => {
+          mensaje.value = '¡Gracias!'
+          if (nombre.value) mensaje.value = '¡Gracias ' + nombre.value+'!';
+          nombre.value = '';
+          email.value = '';
+        };
+      }
+
+      /* Carousel de textos */
+
+      var slideIndex = 0;
+      //carousel();
+
+      function showDivs(n) {
+        slideIndex = n;
+        var x = document.getElementsByClassName('slides');
+        var t = document.getElementsByClassName('pip');
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (var i = 0; i < x.length; i++) {
+          x[i].style.display = 'none';
+          t[i].classList.remove('pip--active');
+        }
+        x[slideIndex - 1].style.display = 'block';
+        t[slideIndex - 1].classList.add('pip--active');
+      }
+
+      function carousel() {
+        showDivs((slideIndex += 1));
+        setTimeout(carousel, 10000); // Change image every 10 seconds
+      }
+
+      function show(id) {
+        var hidden = document.getElementsByClassName('hidden');
+        for (var i = 0; i < hidden.length; i++) {
+          hidden[i].style.display = 'none';
         }
 
-        /* Carousel de textos */
+        var elem = document.getElementById(id);
+        elem.style.display = 'block';
+        elem.scrollIntoView({ behavior: 'smooth' });
+      }
 
-        var slideIndex = 0;
-        //carousel();
+      /* Fotos del seminario */
+      var fotos = [];
+      for (var i = 1; i <= 27; i++) {
+        fotos.push({
+          src: './assets/fotos/' + i + '.jpeg',
+          thumb: './assets/fotos/' + i + '.jpeg',
+          caption: 'Seminario de Pamplona (PJ)',
+        });
+      }
+      for (var i = 1; i <= 2; i++) {
+        fotos.push({
+          src: './assets/fotos/d' + i + '.jpg',
+          thumb: './assets/fotos/d' + i + '.jpg',
+          caption: 'San José (DC)',
+        });
+      }
 
-        function showDivs(n) {
-          slideIndex = n;
-          var x = document.getElementsByClassName("slides");
-          var t = document.getElementsByClassName("pip");
-          if (n > x.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = x.length}
-          for (var i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-            t[i].classList.remove("pip--active");
-          }
-          x[slideIndex-1].style.display = "block";
-          t[slideIndex-1].classList.add("pip--active");
-        }
-
-        function carousel() {
-          showDivs(slideIndex += 1)
-          setTimeout(carousel, 10000); // Change image every 10 seconds
-        }
-
-        function show( id ) {
-          var hidden = document.getElementsByClassName('hidden')
-          for (var i = 0; i < hidden.length; i++) {
-            hidden[i].style.display = 'none';
-          }
-
-          var elem = document.getElementById(id)
-          elem.style.display = 'block';
-          elem.scrollIntoView({behavior: "smooth"})
-        }
-
-
-        /* Fotos del seminario */
-        var fotos = []
-        for (var i = 1; i <= 27; i++) {
-          fotos.push({
-            "src": './assets/fotos/'+i+'.jpeg',
-            'thumb': './assets/fotos/'+i+'.jpeg',
-            'caption': 'Seminario de Pamplona (PJ)'
-          })
-        }
-        for (var i = 1; i <= 2; i++) {
-          fotos.push({
-            "src": './assets/fotos/d'+i+'.jpg',
-            'thumb': './assets/fotos/d'+i+'.jpg',
-            'caption': 'San José (DC)'
-          })
-        }
-
-        var videos = [{
-            "caption":"SM Dani al descubierto | El sacerdote que tiende puentes en Youtube",
-            "yid":"24JdG4uMW20"
-         },{
-            "caption":"¿Hay monjes benedictinos jóvenes? El testimonio de Fray Eduardo",
-            "yid":"x33Fi_iEEFM"
-         },{
-            "caption":"Testimonio de Fray Ignacio, monje benedictino y millennial",
-            "yid":"k-i5Zox0K9I"
-         },{
-            "caption":"Signos de la vocación",
-            "class":"hidden",
-            "yid":"zURt1o1cQrA"
-         },{
-            "caption":"La vocación Mons Munilla",
-            "yid":"w5FTJrEx5ro"
-         },{
-            "caption":"Carlos Cabrera | Ser sacerdote es una apertura a la vida",
-            "yid":"RhZFjkmX894"
-         },{
-            "yid":"LvqPshrX8cg"
-         },{
-            "yid":"m0To2flk_Lg"
-         },{
-            "caption":"Testimonio Scout",
-            "class":"hidden",
-            "yid":"og6i0VZFzgc"
-         }]
-
-         var testimonios = [
-            {
-              caption:"Jose Angel Zubiaur",
-              yid:"CSqnkjlqZx0"
-            },
-            {
-              caption: "¿Por qué eres sacerdote? La vocación después de 1, 2 ¡o 30 años!",
-              yid: "Qrf8LVmzWPk",
-              thumb: 'https://i3.ytimg.com/vi/Qrf8LVmzWPk/hqdefault.jpg'
-            },
-            {
-              caption:"Pedro Luis",
-              yid:"k-i5Zox0K9I"
-            },
-            {
-              caption:"¿Y por qué no sacerdote?",
-              yid:"m0To2flk_Lg"
-            }]
-
-        var books = [
+      var videos = [
         {
-          caption:"Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)",
-          thumb: "./assets/img/caminandovalles.jpeg",
-          src:"https://www.amazon.es/Caminando-por-valles-oscuros-Arcaduz-ebook/dp/B00W9AX060"
-        },{
-          caption:"Hasta la Cumbre: Testamento espiritual (Pablo Domínguez Prieto)",
-          thumb: "./assets/img/hastalacumbre.jpg",
-          src: "https://www.amazon.es/Hasta-cumbre-Colecci%C3%B3n-Horizontes-Spanish-ebook/dp/B0082YTOI0"
-        },{
-          caption: "Muchos son los llamados (Scott Hahn)",
-          thumb: "./assets/img/muchos-son-los-llamados.jpg",
-          src:"https://www.rialp.com/libro/muchos-son-los-llamados_92905/"
-        },{
-          caption: "Patris corde y otros materiales",
-          src: "./assets/docs/Patris corde y otros materiales.pdf",
-          thumb: "./assets/img/sanjose.png"
-        },{
-          caption:"Servidor De Vuestra Alegria (Joseph Card. Ratzinger)",
-          src:"./assets/docs/servidor_de_vuestra_alegria.pdf",
-          thumb:"./assets/img/servidor-alegria.jpg"
-        }
-        ]
+          caption: 'SM Dani al descubierto | El sacerdote que tiende puentes en Youtube',
+          yid: '24JdG4uMW20',
+        },
+        {
+          caption: '¿Hay monjes benedictinos jóvenes? El testimonio de Fray Eduardo',
+          yid: 'x33Fi_iEEFM',
+        },
+        {
+          caption: 'Testimonio de Fray Ignacio, monje benedictino y millennial',
+          yid: 'k-i5Zox0K9I',
+        },
+        {
+          caption: 'Signos de la vocación',
+          class: 'hidden',
+          yid: 'zURt1o1cQrA',
+        },
+        {
+          caption: 'La vocación Mons Munilla',
+          yid: 'w5FTJrEx5ro',
+        },
+        {
+          caption: 'Carlos Cabrera | Ser sacerdote es una apertura a la vida',
+          yid: 'RhZFjkmX894',
+        },
+        {
+          yid: 'LvqPshrX8cg',
+        },
+        {
+          yid: 'm0To2flk_Lg',
+        },
+        {
+          caption: 'Testimonio Scout',
+          class: 'hidden',
+          yid: 'og6i0VZFzgc',
+        },
+      ];
 
-        
+      var sacerdocio = [
+        {
+          caption: 'Jose Angel Zubiaur',
+          yid: 'CSqnkjlqZx0',
+        },
+        {
+          caption: '¿Por qué eres sacerdote? La vocación después de 1, 2 ¡o 30 años!',
+          yid: 'Qrf8LVmzWPk',
+          thumb: 'https://i3.ytimg.com/vi/Qrf8LVmzWPk/hqdefault.jpg',
+        },
+        {
+          caption: 'Pedro Luis',
+          yid: 'k-i5Zox0K9I',
+        },
+        {
+          caption: '¿Y por qué no sacerdote?',
+          yid: 'm0To2flk_Lg',
+        },
+      ];
 
-        var app = new Vue({
-          el: '#main',
-          data: {
-            fotos: fotos,
-            videos: videos,
-            books: books
-          }
-        })
+      var books = [
+        {
+          caption:
+            'Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)',
+          thumb: './assets/img/caminandovalles.jpeg',
+          src: 'https://www.amazon.es/Caminando-por-valles-oscuros-Arcaduz-ebook/dp/B00W9AX060',
+        },
+        {
+          caption: 'Hasta la Cumbre: Testamento espiritual (Pablo Domínguez Prieto)',
+          thumb: './assets/img/hastalacumbre.jpg',
+          src:
+            'https://www.amazon.es/Hasta-cumbre-Colecci%C3%B3n-Horizontes-Spanish-ebook/dp/B0082YTOI0',
+        },
+        {
+          caption: 'Muchos son los llamados (Scott Hahn)',
+          thumb: './assets/img/muchos-son-los-llamados.jpg',
+          src: 'https://www.rialp.com/libro/muchos-son-los-llamados_92905/',
+        },
+        {
+          caption: 'Patris corde y otros materiales',
+          src: './assets/docs/Patris corde y otros materiales.pdf',
+          thumb: './assets/img/sanjose.png',
+        },
+        {
+          caption: 'Servidor De Vuestra Alegria (Joseph Card. Ratzinger)',
+          src: './assets/docs/servidor_de_vuestra_alegria.pdf',
+          thumb: './assets/img/servidor-alegria.jpg',
+        },
+      ];
 
+      var app = new Vue({
+        el: '#main',
+        data: {
+          fotos: fotos,
+          videos: videos,
+          books: books,
+        },
+      });
 
-        var gallery = document.getElementsByClassName('light-gallery');
-        for (var i = gallery.length - 1; i >= 0; i--) {
-          lightGallery(gallery[i], {
-            thumbnail:true,
-            mode: 'lg-fade',
-            loadYoutubeThumbnail: true,
-            youtubeThumbSize: 'default',
-            mode: 'lg-fade',
-            youtubePlayerParams: {
-              modestbranding: 1,
-              rel: 0,
-            },
-          });
-        }
+      var gallery = document.getElementsByClassName('light-gallery');
+      for (var i = gallery.length - 1; i >= 0; i--) {
+        lightGallery(gallery[i], {
+          thumbnail: true,
+          mode: 'lg-fade',
+          loadYoutubeThumbnail: true,
+          youtubeThumbSize: 'default',
+          mode: 'lg-fade',
+          youtubePlayerParams: {
+            modestbranding: 1,
+            rel: 0,
+          },
+        });
+      }
     </script>
   </body>
 </html>
