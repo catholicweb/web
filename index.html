@@ -78,7 +78,7 @@
         overflow: auto;
       }
 
-      .hidden {
+      .hidden:not(.active) {
         display: none !important;
       }
 
@@ -302,8 +302,17 @@
                 ayudado a muchos a discernir nuestra vocación.
               </p>
 
-              <!--<a class="button">Ver actividades</a>-->
-              <a href="#footer" class="button scrolly">Contactar</a>
+              <div class="hidden" id="actividades" style="padding: 8px;">
+                <h4>Actividades</h4>
+                <ul>
+                  <li>Estaremos disponibles para hablar todos los primeros viernes de mes, en la <a href="https://delejunavarra.es/oracion-obispo/">oración con el Obispo</a></li>
+                  <li>Tambien puedes venir a vernos al seminario cualquier jueves para el rezo de vispera y la cena</li>
+                  <li>EE de pastoral vocacional, ordenaciones…</li>
+                  <li>Y por supuesto, para cualquier cosa, <a href="#footer" class="scrolly">no dudes en contactar con nosotros.</a></li>
+                </ul>
+              </div>
+
+              <a class="button hidden active" onclick="show('actividades')">Ver actividades</a>
             </div>
           </div>
         </div>
@@ -613,14 +622,15 @@
       }
 
       function show(id) {
+        console.log('showing ', id)
         var hidden = document.getElementsByClassName('hidden');
         for (var i = 0; i < hidden.length; i++) {
-          hidden[i].style.display = 'none';
+          hidden[i].classList.remove('active')
         }
 
         var elem = document.getElementById(id);
-        elem.style.display = 'block';
-        elem.scrollIntoView({ behavior: 'smooth' });
+        elem.classList.add('active')
+        //elem.scrollIntoView({ behavior: 'smooth' });
       }
 
       /* Fotos del seminario */
