@@ -188,7 +188,7 @@
     <section
       class="banner parallax"
       id="portada"
-      style="background-image: url('./assets/img/jpii.jpg'); background-size: contain"
+      style="background-image: url('./assets/img/cristo-llama.jpg')"
     >
       <div class="inner">
         <header>
@@ -558,7 +558,11 @@
         request.open('GET', url);
         request.send();
         request.onreadystatechange = (e) => {
-          mensaje.value = '¡Gracias! Cuenta con nuestras oraciones ' + nombre.value;
+          if (nombre.value){
+            mensaje.value = 'Gracias '+nombre.value+'. ¡Cuenta con nuestras oraciones! ';
+          } else {
+            mensaje.value = '¡Gracias! Cuanta con nuestras oraciones'  
+          }
           nombre.value = '';
         };
       }
