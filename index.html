@@ -135,15 +135,12 @@
         .video-gallery img {
           height: 18vw;
         }
-
         .books-gallery img {
-          height: 35vw;
+          height: 32vw;
         }
-
         .image-gallery img {
           height: 18vw;
         }
-
         /* Create the parallax scrolling effect */
         .parallax {
           background-attachment: fixed;
@@ -159,9 +156,8 @@
           height: 12vw;
         }
         .books-gallery img {
-          height: 16vw;
+          height: 20vw;
         }
-
         .image-gallery img {
           height: 12vw;
         }
@@ -195,7 +191,7 @@
           <h1>Tienes una llamada del Señor</h1>
         </header>
         <b style="width: 80%"
-          ><p>
+          ><p style="text-align: center;">
             Todos estamos llamados al Amor, a entregarnos 100% a Dios. ¿Quieres descubrir tu camino?
           </p></b
         >
@@ -441,6 +437,19 @@
                   <img :src="foto.thumb" />
                 </a>
               </div>
+
+              <div class="video-gallery gallery light-gallery">
+                <a
+                  v-for="video in diario"
+                  :href="'https://www.youtube.com/watch?v='+video.yid"
+                  :data-sub-html="video.caption"
+                  :class="video.class"
+                >
+                  <img
+                    :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -661,7 +670,7 @@
         },
         {
           caption: 'Testimonio de Fray Ignacio, monje benedictino y millennial',
-          yid: 'k-i5Zox0K9I',
+          yid: 'LvqPshrX8cg',
         },
         {
           caption: 'Signos de la vocación',
@@ -677,9 +686,6 @@
           yid: 'RhZFjkmX894',
         },
         {
-          yid: 'LvqPshrX8cg',
-        },
-        {
           yid: 'm0To2flk_Lg',
         },
         {
@@ -691,7 +697,7 @@
 
       var sacerdocio = [
         {
-          caption: 'Jose Angel Zubiaur',
+          caption: 'Testimonio Jose Angel Zubiaur',
           yid: 'CSqnkjlqZx0',
         },
         {
@@ -700,7 +706,7 @@
           thumb: 'https://i3.ytimg.com/vi/Qrf8LVmzWPk/hqdefault.jpg',
         },
         {
-          caption: 'Pedro Luis',
+          caption: 'Testimonio Pedro Luis',
           yid: 'k-i5Zox0K9I',
         },
         {
@@ -748,6 +754,29 @@
           thumb: './assets/img/servidor-alegria.jpg',
         },
       ];
+
+      var diario = [
+        {
+          caption: 'Excursión',
+          yid: 'C-3VZU4tq1I',
+          thumb: 'http://i3.ytimg.com/vi/C-3VZU4tq1I/hqdefault.jpg',
+        },
+        {
+          caption: 'Excursión',
+          yid: 'NHqP8LAjT4E',
+          thumb: 'http://i3.ytimg.com/vi/NHqP8LAjT4E/hqdefault.jpg',
+        },
+        {
+          caption: 'Excursión',
+          yid: 'U2P-ZvncuaY',
+          thumb: 'http://i3.ytimg.com/vi/U2P-ZvncuaY/hqdefault.jpg',
+        },
+        {
+          caption: 'Excursión',
+          yid: 'zlqZk8tnb0E',
+          thumb: 'http://i3.ytimg.com/vi/zlqZk8tnb0E/hqdefault.jpg',
+        },
+      ]
 
       var app = new Vue({
         el: '#main',
