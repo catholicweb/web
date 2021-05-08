@@ -226,7 +226,7 @@
                 Y, como no estás solo, nos encantaría ayudarte pidiendo a Dios que el Espíritu Santo
                 te ilumine con su Gracia.
               </p>
-              <div class="flex flex-2">
+              <!--<div class="flex flex-2">
                 <textarea
                   class="col col2"
                   id="mensaje"
@@ -235,10 +235,11 @@
                 ></textarea>
                 <div class="col col1">
                   <input type="text" id="nombre" value="" placeholder="Nombre (o pseudónimo)" />
-                  <br />
+                  <br />                  
                   <a class="button" onclick="oraciones()">Pedir oraciones</a>
                 </div>
-              </div>
+              </div>-->
+              <a href="#footer" class="button scrolly">Pedir oraciones</a>
             </div>
           </div>
         </div>
@@ -520,14 +521,15 @@
           </div>
           <div class="col col2">
             <h4>Dejanos un mensaje</h4>
+            <h5 style="color: red">¡Importante! Debido a un fallo técnico no hemos podido registrar el campo 'email' de los últimos mensajes recidos, así que nos es imposible contestaros. ¡Lo siento! Ahora ya esta arreglado :)</h5>
             <div class="flex flex-2">
               <div class="col col2">
                 <textarea id="mensaje2" placeholder="Mensaje" rows="10" ></textarea>
               </div>
               <div class="col col1">
-                <input type="text" id="nombre2" placeholder="Nombre" />
+                <input type="text" id="nombre2" placeholder="Nombre (opcional)" />
                 <br />
-                <input type="text" id="email" placeholder="Email" />
+                <input type="text" id="email" placeholder="Email (opcional)" />
                 <br />
                 <a class="button" onclick="contacto()">Enviar</a>
               </div>
@@ -758,13 +760,13 @@
       var diario = [
         {
           caption: 'Excursión',
-          yid: 'C-3VZU4tq1I',
-          thumb: 'http://i3.ytimg.com/vi/C-3VZU4tq1I/hqdefault.jpg',
+          yid: 'NHqP8LAjT4E',
+          thumb: 'http://i3.ytimg.com/vi/NHqP8LAjT4E/hqdefault.jpg',
         },
         {
           caption: 'Excursión',
-          yid: 'NHqP8LAjT4E',
-          thumb: 'http://i3.ytimg.com/vi/NHqP8LAjT4E/hqdefault.jpg',
+          yid: 'zlqZk8tnb0E',
+          thumb: 'http://i3.ytimg.com/vi/zlqZk8tnb0E/hqdefault.jpg',
         },
         {
           caption: 'Excursión',
@@ -773,9 +775,12 @@
         },
         {
           caption: 'Excursión',
-          yid: 'zlqZk8tnb0E',
-          thumb: 'http://i3.ytimg.com/vi/zlqZk8tnb0E/hqdefault.jpg',
+          yid: 'C-3VZU4tq1I',
+          thumb: 'http://i3.ytimg.com/vi/C-3VZU4tq1I/hqdefault.jpg',
         },
+
+        
+        
       ]
 
       var app = new Vue({
