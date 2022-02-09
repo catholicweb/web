@@ -252,7 +252,7 @@
             <div class="col col2">
               <h2>2. Acompañamiento</h2>
               <p>
-                Dios habla de muchas maneras: unas veces alto, otras bajito... la vocación y el
+                Dios habla de muchas maneras: unas veces alto, otras bajito... La vocación y el
                 proceso de discernimiento son siempre únicos. Además, nadie es buen juez en causa
                 propia. Por eso, es importante que busques un sacerdote de confianza que te acompañe
                 en tu proceso y te ayude a interpretar los signos que el Señor va dejando en tu
@@ -260,11 +260,9 @@
               </p>
 
               <p>
-                Nuestros sacerdotes encargados de la pastoral vocacional tienen amplia experiencia
-                en el acompañamiento para el discernimiento. Haz clic en el botón para encontrar un
-                sacerdote que te acompañe.
+                Haz clic en el botón dejarnos un mensaje y encontrar un sacerdote que te acompañe.
               </p>
-              <a class="button">Buscar acompañamiento</a>
+              <a href="#footer" class="button scrolly">Buscar acompañamiento</a>
             </div>
             <div class="col col1 first">
               <div class="image round fit">
@@ -294,22 +292,15 @@
               </p>
 
               <p>
-                ¡Atrévete a dejarte tocar por Cristo! Ven a conocer el seminario o participa en una
-                de las muchas actividades que organiza la pastoral vocacional y que tanto nos ha
-                ayudado a muchos a discernir nuestra vocación.
+                Atrévete a dejarte tocar por Cristo en una de las siguientes actividades:
               </p>
-
-              <div class="hidden" id="actividades" style="padding: 8px;">
-                <h4>Actividades</h4>
                 <ul>
-                  <li>Estaremos disponibles para hablar todos los primeros viernes de mes, en la <a href="https://delejunavarra.es/oracion-obispo/">oración con el Obispo</a></li>
-                  <li>Tambien puedes venir a vernos al seminario cualquier jueves para el rezo de vispera y la cena</li>
-                  <li>EE de pastoral vocacional, ordenaciones…</li>
-                  <li>Y por supuesto, para cualquier cosa, <a href="#footer" class="scrolly">no dudes en contactar con nosotros.</a></li>
+                  <li>Uneté al curso de discernimiento, sábados por la mañana cada quince días</li>
+                  <li>Escribenos para venir un día a conocer el seminario</li>
+                  <li>Acercate a hablar con nosotros en la <a href="https://delejunavarra.es/oracion-obispo/">oración con el Obispo</a></li>
+                  <li>Y mucho más...</li>
                 </ul>
-              </div>
-
-              <a class="button hidden active" onclick="show('actividades')">Ver actividades</a>
+              <a href="#footer" class="button scrolly">Participar actividades</a>
             </div>
           </div>
         </div>
@@ -432,13 +423,7 @@
                 <a href="#footer" class="button scrolly">Ven a conocernos</a>
               </p>
 
-              <div class="image-gallery gallery light-gallery">
-                <a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
-                  <img :src="foto.thumb" />
-                </a>
-              </div>
-
-              <div class="video-gallery gallery light-gallery">
+              <div class="video-gallery image-gallery gallery light-gallery">
                 <a
                   v-for="video in diario"
                   :href="'https://www.youtube.com/watch?v='+video.yid"
@@ -448,6 +433,9 @@
                   <img
                     :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
                   />
+                </a>
+                <a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
+                  <img :src="foto.thumb" />
                 </a>
               </div>
             </div>
@@ -673,11 +661,11 @@
           caption: 'Testimonio de Fray Ignacio, monje benedictino y millennial',
           yid: 'LvqPshrX8cg',
         },
-        {
+        /*{
           caption: 'Pescadores de hombres',
           yid: 'gN3ROP4akbs',
           thumb: 'http://i3.ytimg.com/vi/gN3ROP4akbs/hqdefault.jpg',
-        },
+        },*/
         {
           caption: 'Signos de la vocación',
           class: 'hidden',
@@ -719,24 +707,13 @@
           caption: '¿Y por qué no sacerdote?',
           yid: 'm0To2flk_Lg',
         },
-        {
+        /*{
           caption: 'Pescadores de hombres',
           yid: 'gN3ROP4akbs',
-        },
+        },*/
       ];
 
       var books = [
-        {
-          caption:
-            'Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)',
-          thumb: './assets/img/caminandovalles.jpeg',
-          src: 'https://www.amazon.es/Caminando-por-valles-oscuros-Arcaduz-ebook/dp/B00W9AX060',
-        },
-        {
-          caption: 'Vasija de barro (Leo John Trese)',
-          thumb: 'https://d3s1b1zelykba8.cloudfront.net/Articulo/Original/572.jpg',
-          src: 'https://www.palabra.es/vasija-de-barro-0572.html',
-        },
         {
           caption: 'Hasta la Cumbre: Testamento espiritual (Pablo Domínguez Prieto)',
           thumb: './assets/img/hastalacumbre.jpg',
@@ -744,14 +721,31 @@
             'https://www.amazon.es/Hasta-cumbre-Colecci%C3%B3n-Horizontes-Spanish-ebook/dp/B0082YTOI0',
         },
         {
-          caption: 'Muchos son los llamados (Scott Hahn)',
-          thumb: './assets/img/muchos-son-los-llamados.jpg',
-          src: 'https://www.rialp.com/libro/muchos-son-los-llamados_92905/',
+          caption:
+            'Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)',
+          thumb: './assets/img/caminandovalles.jpeg',
+          src: 'https://www.amazon.es/Caminando-por-valles-oscuros-Arcaduz-ebook/dp/B00W9AX060',
+        },
+        {
+          caption: 'El cura de Ars (Francis Trochu)',
+          thumb: 'https://d3s1b1zelykba8.cloudfront.net/Articulo/Grande/541.jpg',
+          src: 'https://www.palabra.es/el-cura-de-ars-digital-0541.html',          
         },
         {
           caption: 'Se Buscan Rebeldes: Y luego, que sea lo que Dios quiera',
           thumb:  './assets/img/sebuscanrebeldes.jpg',
           src: 'https://www.amazon.es/buscan-rebeldes-Religi%C3%B3n-Fuera-Colecci%C3%B3n/dp/8432150126',
+        },
+        {
+          caption: 'Muchos son los llamados (Scott Hahn)',
+          thumb: './assets/img/muchos-son-los-llamados.jpg',
+          src: 'https://www.rialp.com/libro/muchos-son-los-llamados_92905/',
+        },
+        {
+          caption: 'Vasija de barro (Leo John Trese)',
+          //thumb: 'https://d3s1b1zelykba8.cloudfront.net/Articulo/Original/572.jpg',
+          thumb: 'https://static.serlogal.com/imagenes_big/9788471/978847118055.JPG',
+          src: 'https://www.palabra.es/vasija-de-barro-0572.html',
         },
         {
           caption: 'La Paternidad espiritual del Sacerdote: Un tesoro en vasos de barro (Jacques Philippe)',
