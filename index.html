@@ -5,110 +5,110 @@
   Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-  <head>
-    <title>Seminario de Pamplona</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="assets/css/lightgallery.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+<head>
+  <title>Seminario de Pamplona</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="assets/css/lightgallery.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-    <link rel="icon" href="./assets/img/logo.ico" />
+  <link rel="icon" href="./assets/img/logo.ico" />
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
-    <style type="text/css">
-      .lg-video-cont {
-        margin-bottom: 80px;
-      }
-      /* On all screens */
-      html {
-        scroll-behavior: smooth;
-      }
+  <style type="text/css">
+    .lg-video-cont {
+      margin-bottom: 80px;
+    }
+    /* On all screens */
+    html {
+      scroll-behavior: smooth;
+    }
 
-      /* Works on Firefox */
-      * {
-        scrollbar-width: thin;
-        scrollbar-height: thin;
-        scrollbar-color: #444 rgba(0, 0, 0, 0);
-      }
+    /* Works on Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-height: thin;
+      scrollbar-color: #444 rgba(0, 0, 0, 0);
+    }
 
-      /* Works on Chrome, Edge, and Safari */
-      *::-webkit-scrollbar {
-        width: 7px;
-        height: 7px;
-      }
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
 
-      *::-webkit-scrollbar-thumb {
-        background-color: #444;
-        border-radius: 10px;
-      }
+    *::-webkit-scrollbar-thumb {
+      background-color: #444;
+      border-radius: 10px;
+    }
 
-      .slides {
-        display: none;
-        width: 100%;
-      }
+    .slides {
+      display: none;
+      width: 100%;
+    }
 
-      .navigation {
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        text-align: center; /* buttons align like text */
-      }
+    .navigation {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center; /* buttons align like text */
+    }
 
-      .pip {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        padding: 0;
+    .pip {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      padding: 0;
 
-        border: 0;
-        border-radius: 9999px;
-        cursor: pointer;
-        background: rgba(255, 255, 255, 0.5) !important;
-      }
+      border: 0;
+      border-radius: 9999px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.5) !important;
+    }
 
-      .pip--active {
-        background: rgba(255, 255, 255, 1) !important;
-      }
+    .pip--active {
+      background: rgba(255, 255, 255, 1) !important;
+    }
 
-      .gallery {
-        justify-content: space-evenly;
-        white-space: nowrap;
-        width: 100%;
-        overflow: auto;
-      }
+    .gallery {
+      justify-content: space-evenly;
+      white-space: nowrap;
+      width: 100%;
+      overflow: auto;
+    }
 
-      .hidden:not(.active) {
-        display: none !important;
-      }
+    .hidden:not(.active) {
+      display: none !important;
+    }
 
-      .gallery a {
-        display: inline;
-      }
+    .gallery a {
+      display: inline;
+    }
 
-      .gallery img {
-        /*object-fit: cover;*/
-        /*width: 100%;*/
-        width: auto;
-        position: relative;
-        padding: 2px;
-      }
+    .gallery img {
+      /*object-fit: cover;*/
+      /*width: 100%;*/
+      width: auto;
+      position: relative;
+      padding: 2px;
+    }
 
-      .gallery img:hover {
-        /*transform: scale(1.05);*/
-        opacity: 0.8;
-      }
+    .gallery img:hover {
+      /*transform: scale(1.05);*/
+      opacity: 0.8;
+    }
 
-      .video-gallery img {
-        height: 25vw;
-      }
-      .books-gallery img {
-        height: 45vw;
-      }
+    .video-gallery img {
+      height: 25vw;
+    }
+    .books-gallery img {
+      height: 45vw;
+    }
 
-      .image-gallery img {
-        height: 25vw;
-      }
+    .image-gallery img {
+      height: 25vw;
+    }
 
       /*.video-gallery img::after {
         content: url('./assets/img/play.svg');
@@ -182,50 +182,51 @@
 
     <!-- Banner -->
     <section
-      class="banner parallax"
-      id="portada"
-      style="background-image: url('./assets/img/cristo-llama.jpg')"
+    class="banner parallax"
+    id="portada"
+    style="background-image: url('./assets/img/cristo-llama.jpg')"
     >
+    <div class="inner">
+      <header>
+        <h1>Tienes una llamada del Señor</h1>
+      </header>
+      <b style="width: 80%"
+      ><p style="text-align: center;">
+        Todos estamos llamados al Amor, a entregarnos 100% a Dios. ¿Quieres descubrir tu camino?
+      </p></b
+      >
+      <a href="#main" class="button scrolly">Responder</a>
+      <!--<a href="#main" style="margin-left: 10px;" class="button scrolly">Ayudar</a>-->
+    </div>
+  </section>
+
+  <!-- Main -->
+  <div id="main">
+    <!-- Section -->
+    <section class="wrapper style1" id="claves-discernimiento">
       <div class="inner">
-        <header>
-          <h1>Tienes una llamada del Señor</h1>
-        </header>
-        <b style="width: 80%"
-          ><p style="text-align: center;">
-            Todos estamos llamados al Amor, a entregarnos 100% a Dios. ¿Quieres descubrir tu camino?
-          </p></b
-        >
-        <a href="#main" class="button scrolly">Responder</a>
-      </div>
-    </section>
-
-    <!-- Main -->
-    <div id="main">
-      <!-- Section -->
-      <section class="wrapper style1" id="claves-discernimiento">
-        <div class="inner">
-          <h1>Tres claves para el discernimiento</h1>
-          <br /><br />
-          <div class="flex flex-2">
-            <div class="col col1">
-              <div class="image round fit">
-                <img src="./assets/img/oracion.jpg" alt="" />
-              </div>
+        <h1>Tres claves para el discernimiento</h1>
+        <br /><br />
+        <div class="flex flex-2">
+          <div class="col col1">
+            <div class="image round fit">
+              <img src="./assets/img/oracion.jpg" alt="" />
             </div>
-            <div class="col col2">
-              <h2>1. Oración</h2>
-              <p>
-                La vocación es fruto del encuentro con Cristo, respuesta al encuentro con Aquel que
-                nos conoce y nos ama con locura. Es Cristo quien nos mira, nos llama por nuestro
-                nombre y nos dice "ven y sígueme". Ponte a tiro, deja que el Señor se te acerque,
-                pasa muchos ratos a solas con Él y pregúntale: ¿Señor, qué camino, qué regalo,
-                tienes pensado para mí?
-              </p>
+          </div>
+          <div class="col col2">
+            <h2>1. Oración</h2>
+            <p>
+              La vocación es fruto del encuentro con Cristo, respuesta al encuentro con Aquel que
+              nos conoce y nos ama con locura. Es Cristo quien nos mira, nos llama por nuestro
+              nombre y nos dice "ven y sígueme". Ponte a tiro, deja que el Señor se te acerque,
+              pasa muchos ratos a solas con Él y pregúntale: ¿Señor, qué camino, qué regalo,
+              tienes pensado para mí?
+            </p>
 
-              <p>
-                Y, como no estás solo, nos encantaría ayudarte pidiendo a Dios que el Espíritu Santo
-                te ilumine con su Gracia.
-              </p>
+            <p>
+              Y, como no estás solo, nos encantaría ayudarte pidiendo a Dios que el Espíritu Santo
+              te ilumine con su Gracia.
+            </p>
               <!--<div class="flex flex-2">
                 <textarea
                   class="col col2"
@@ -239,7 +240,7 @@
                   <a class="button" onclick="oraciones()">Pedir oraciones</a>
                 </div>
               </div>-->
-              <a href="#footer" class="button scrolly">Pedir oraciones</a>
+              <a href="#contacto" class="button scrolly">Pedir oraciones</a>
             </div>
           </div>
         </div>
@@ -262,7 +263,7 @@
               <p>
                 Haz clic en el botón dejarnos un mensaje y encontrar un sacerdote que te acompañe.
               </p>
-              <a href="#footer" class="button scrolly">Buscar acompañamiento</a>
+              <a href="#contacto" class="button scrolly">Buscar acompañamiento</a>
             </div>
             <div class="col col1 first">
               <div class="image round fit">
@@ -294,13 +295,13 @@
               <p>
                 Atrévete a dejarte tocar por Cristo en una de las siguientes actividades:
               </p>
-                <ul>
-                  <li>Uneté al curso de discernimiento, sábados por la mañana cada quince días</li>
-                  <li>Escribenos para venir un día a conocer el seminario</li>
-                  <li>Acercate a hablar con nosotros en la <a href="https://delejunavarra.es/oracion-obispo/">oración con el Obispo</a></li>
-                  <li>Y mucho más...</li>
-                </ul>
-              <a href="#footer" class="button scrolly">Participar actividades</a>
+              <ul>
+                <li>Uneté al curso de discernimiento, sábados por la mañana cada quince días</li>
+                <li>Escribenos para venir un día a conocer el seminario</li>
+                <li>Acercate a hablar con nosotros en la <a href="https://delejunavarra.es/oracion-obispo/">oración con el Obispo</a></li>
+                <li>Y mucho más...</li>
+              </ul>
+              <a href="#contacto" class="button scrolly">Participar actividades</a>
             </div>
           </div>
         </div>
@@ -364,168 +365,192 @@
 
               <div class="video-gallery gallery light-gallery">
                 <a
-                  v-for="video in sacerdocio"
-                  :href="'https://www.youtube.com/watch?v='+video.yid"
-                  :data-sub-html="video.caption"
-                  :class="video.class"
+                v-for="video in sacerdocio"
+                :href="'https://www.youtube.com/watch?v='+video.yid"
+                :data-sub-html="video.caption"
+                :class="video.class"
                 >
-                  <img
-                    :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="col col1 first">
-              <div class="image round fit">
-                <img src="./assets/img/sacerdote.jpg" alt="" />
-              </div>
+                <img
+                :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
+                />
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="seminario" class="wrapper style1">
-        <div class="inner">
-          <div class="flex flex-2">
-            <div class="col col1">
-              <div class="image round fit">
-                <img src="./assets/img/fachada.jpg" alt="" />
-              </div>
-            </div>
-            <div class="col col2">
-              <h1>Seminario</h1>
-              <p>
-                El seminario es una etapa de profunda formación e intenso discernimiento. Una etapa
-                en la que Dios va moldeando nuestro corazón a imagen y semejanza del suyo. Una etapa
-                en la que crecemos en amistad con Cristo y nos formamos humana e intelectualmente
-                para desempeñar nuestra futura labor como sacerdotes.
-              </p>
-
-              <p>
-                En nuestro día a día, nos levantamos, rezamos, celebramos la santa misa y, tras un
-                potente desayuno, vamos a las clases de filosofía y teología. Después de comer,
-                hacemos deporte y estudiamos, aunque eso sí, nunca puede faltar un pequeño parón
-                para merendar. Pero ahí no acaba nuestra jornada: aún incluimos diversas actividades
-                formativas y un ratico con el Señor antes de cenar. Finalmente, toca descansar.
-                Durante el fin de semana, nos vamos a casa para estar con nuestras familias y
-                participar en las actividades pastorales de las distintas parroquias.
-              </p>
-
-              <p>
-                La mejor forma de conocer más a fondo la realidad del seminario es venir a vernos un
-                jueves para compartir con nosotros el rato de adoración ante el Santísimo y la cena.
-                Te dejamos también algunos vídeos de nuestros seminaristas, para que así nos pongas
-                cara.
-              </p>
-
-              <p>
-                <a href="#footer" class="button scrolly">Contacto</a>
-                <a href="#footer" class="button scrolly">Ven a conocernos</a>
-              </p>
-
-              <div class="video-gallery image-gallery gallery light-gallery">
-                <a
-                  v-for="video in diario"
-                  :href="'https://www.youtube.com/watch?v='+video.yid"
-                  :data-sub-html="video.caption"
-                  :class="video.class"
-                >
-                  <img
-                    :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
-                  />
-                </a>
-                <a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
-                  <img :src="foto.thumb" />
-                </a>
-              </div>
+          <div class="col col1 first">
+            <div class="image round fit">
+              <img src="./assets/img/sacerdote.jpg" alt="" />
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Section -->
-
-      <section class="wrapper style2">
-        <div class="inner">
-          <div class="flex flex-2">
-            <div class="col col2">
-              <h1>Recursos</h1>
-
-              <h4>Vídeos</h4>
-
-              <div class="video-gallery gallery light-gallery">
-                <a
-                  v-for="video in videos"
-                  :href="'https://www.youtube.com/watch?v='+video.yid"
-                  :data-sub-html="video.caption"
-                  :class="video.class"
-                >
-                  <img :src="'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
-                </a>
-              </div>
-
-              <br /><br />
-
-              <h4>Lecturas</h4>
-
-              <div class="gallery books-gallery">
-                <a
-                  v-for="book in books"
-                  target="_blank"
-                  :href="book.src"
-                  :data-sub-html="book.caption"
-                  :class="book.class"
-                >
-                  <img :src="book.thumb" />
-                </a>
-              </div>
-              <br /><br />
-            </div>
-
-            <!--<a  class="button">Contactar</a>-->
-            <div class="col col1 first">
-              <div class="image round fit">
-                <img src="./assets/img/logo.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="inner">
-        <h1>Contacto</h1>
-        <div class="flex flex-2">
-          <div class="col col1">
-            <h4>Ven a conocernos</h4>
-            <a href="https://goo.gl/maps/qrZgaNzF3Gxrie4e8" target="_blank">Av. de la Baja Navarra, 64, 31006 Pamplona, Navarra</a>
-            <br><br>
-            <h4>Llamanos</h4>
-            <a href="tel:948291000">948 29 10 00</a>
-          </div>
-          <div class="col col2">
-            <h4>Dejanos un mensaje</h4>
-            <!--<h5 style="color: red">¡Importante! Debido a un fallo técnico no hemos podido registrar el campo 'email' de los últimos mensajes recidos, así que nos es imposible contestaros. ¡Lo siento! Ahora ya esta arreglado :)</h5>-->
-            <div class="flex flex-2">
-              <div class="col col2">
-                <textarea id="mensaje2" placeholder="Mensaje" rows="10" ></textarea>
-              </div>
-              <div class="col col1">
-                <input type="text" id="nombre2" placeholder="Nombre (opcional)" />
-                <br />
-                <input type="text" id="email" placeholder="Email (opcional)" />
-                <br />
-                <a class="button" onclick="contacto()">Enviar</a>
-              </div>
-            </div>
-          </div>        
         </div>
       </div>
+    </section>
+
+    <section id="seminario" class="wrapper style1">
+      <div class="inner">
+        <div class="flex flex-2">
+          <div class="col col1">
+            <div class="image round fit">
+              <img src="./assets/img/fachada.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col col2">
+            <h1>Seminario</h1>
+            <p>
+              El seminario es una etapa de profunda formación e intenso discernimiento. Una etapa
+              en la que Dios va moldeando nuestro corazón a imagen y semejanza del suyo. Una etapa
+              en la que crecemos en amistad con Cristo y nos formamos humana e intelectualmente
+              para desempeñar nuestra futura labor como sacerdotes.
+            </p>
+
+            <p>
+              En nuestro día a día, nos levantamos, rezamos, celebramos la santa misa y, tras un
+              potente desayuno, vamos a las clases de filosofía y teología. Después de comer,
+              hacemos deporte y estudiamos, aunque eso sí, nunca puede faltar un pequeño parón
+              para merendar. Pero ahí no acaba nuestra jornada: aún incluimos diversas actividades
+              formativas y un ratico con el Señor antes de cenar. Finalmente, toca descansar.
+              Durante el fin de semana, nos vamos a casa para estar con nuestras familias y
+              participar en las actividades pastorales de las distintas parroquias.
+            </p>
+
+            <p>
+              La mejor forma de conocer más a fondo la realidad del seminario es venir a vernos un
+              jueves para compartir con nosotros el rato de adoración ante el Santísimo y la cena.
+              Te dejamos también algunos vídeos de nuestros seminaristas, para que así nos pongas
+              cara.
+            </p>
+
+            <p>
+              <a href="#contacto" class="button scrolly">Contacto</a>
+              <a href="#contacto" class="button scrolly">Ven a conocernos</a>
+            </p>
+
+            <div class="video-gallery image-gallery gallery light-gallery">
+              <a
+              v-for="video in diario"
+              :href="'https://www.youtube.com/watch?v='+video.yid"
+              :data-sub-html="video.caption"
+              :class="video.class"
+              >
+              <img
+              :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
+              />
+            </a>
+            <a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
+              <img :src="foto.thumb" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section -->
+
+  <section class="wrapper style2">
+    <div class="inner">
+      <div class="flex flex-2">
+        <div class="col col2">
+          <h1>Recursos</h1>
+
+          <h4>Vídeos</h4>
+
+          <div class="video-gallery gallery light-gallery">
+            <a
+            v-for="video in videos"
+            :href="'https://www.youtube.com/watch?v='+video.yid"
+            :data-sub-html="video.caption"
+            :class="video.class"
+            >
+            <img :src="'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
+          </a>
+        </div>
+
+        <br /><br />
+
+        <h4>Lecturas</h4>
+
+        <div class="gallery books-gallery">
+          <a
+          v-for="book in books"
+          target="_blank"
+          :href="book.src"
+          :data-sub-html="book.caption"
+          :class="book.class"
+          >
+          <img :src="book.thumb" />
+        </a>
+      </div>
       <br /><br />
-      <div class="copyright">
+    </div>
+
+    <!--<a  class="button">Contactar</a>-->
+    <div class="col col1 first">
+      <div class="image round fit">
+        <img src="./assets/img/logo.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+
+<!-- Footer -->
+<section id="contacto" class="wrapper style1">
+  <div class="inner">
+    <h1>Contacto</h1>
+    <div class="flex flex-2">
+      <div class="col col1">
+        <h4>Ven a conocernos</h4>
+        <a href="https://goo.gl/maps/qrZgaNzF3Gxrie4e8" target="_blank">Av. de la Baja Navarra, 64, 31006 Pamplona, Navarra</a>
+        <br><br>
+        <h4>Llamanos</h4>
+        <a href="tel:948291000">948 29 10 00</a>
+      </div>
+      <div class="col col2">
+        <h4>Dejanos un mensaje</h4>
+        <!--<h5 style="color: red">¡Importante! Debido a un fallo técnico no hemos podido registrar el campo 'email' de los últimos mensajes recidos, así que nos es imposible contestaros. ¡Lo siento! Ahora ya esta arreglado :)</h5>-->
+        <div class="flex flex-2">
+          <div class="col col2">
+            <textarea id="mensaje2" placeholder="Mensaje" rows="10" ></textarea>
+          </div>
+          <div class="col col1">
+            <input type="text" id="nombre2" placeholder="Nombre (opcional)" />
+            <br />
+            <input type="text" id="email" placeholder="Email (opcional)" />
+            <br />
+            <a class="button" onclick="contacto()">Enviar</a>
+          </div>
+        </div>
+      </div>        
+    </div>
+  </div>
+</section>
+
+
+<section id="ayudanos" class="wrapper style1">
+  <div class="inner">
+    <div class="flex flex-2">
+      <div class="col col2">
+        <h1>Colabora</h1>
+
+        La formación y cuidado de los seminaristas es tarea de todos. Hay muchas formas en las que puedes ayudarnos. Rezar es siempre la más importante. Puedes tambien hacer un donativo a través de nuestro <b>BIZUM 04698</b>
+
+      </div>
+        <div class="col col1">
+          <div class="image round fit">
+            <img src="./assets/img/fachada.jpg" alt="" />
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="wrapper style1">
+  <div class="copyright">
         <!--<ul class="icons">
           <li>
             <a  class="icon fa-twitter"><span class="label">Twitter</span></a>
@@ -653,14 +678,6 @@
           caption: 'SM Dani al descubierto | El sacerdote que tiende puentes en Youtube',
           yid: '24JdG4uMW20',
         },*/
-        {
-          caption: '¿Hay monjes benedictinos jóvenes? El testimonio de Fray Eduardo',
-          yid: 'x33Fi_iEEFM',
-        },
-        {
-          caption: 'Testimonio de Fray Ignacio, monje benedictino y millennial',
-          yid: 'LvqPshrX8cg',
-        },
         /*{
           caption: 'Pescadores de hombres',
           yid: 'gN3ROP4akbs',
@@ -687,9 +704,17 @@
           class: 'hidden',
           yid: 'og6i0VZFzgc',
         },
-      ];
+        {
+          caption: '¿Hay monjes benedictinos jóvenes? El testimonio de Fray Eduardo',
+          yid: 'x33Fi_iEEFM',
+        },
+        {
+          caption: 'Testimonio de Fray Ignacio, monje benedictino y millennial',
+          yid: 'LvqPshrX8cg',
+        },
+        ];
 
-      var sacerdocio = [
+        var sacerdocio = [
         {
           caption: 'Testimonio Jose Angel Zubiaur',
           yid: 'CSqnkjlqZx0',
@@ -711,18 +736,18 @@
           caption: 'Pescadores de hombres',
           yid: 'gN3ROP4akbs',
         },*/
-      ];
+        ];
 
-      var books = [
+        var books = [
         {
           caption: 'Hasta la Cumbre: Testamento espiritual (Pablo Domínguez Prieto)',
           thumb: './assets/img/hastalacumbre.jpg',
           src:
-            'https://www.amazon.es/Hasta-cumbre-Colecci%C3%B3n-Horizontes-Spanish-ebook/dp/B0082YTOI0',
+          'https://www.amazon.es/Hasta-cumbre-Colecci%C3%B3n-Horizontes-Spanish-ebook/dp/B0082YTOI0',
         },
         {
           caption:
-            'Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)',
+          'Caminando por valles oscuros: Memorias de un jesuita en el Gulag (Walter J. Ciszek)',
           thumb: './assets/img/caminandovalles.jpeg',
           src: 'https://www.amazon.es/Caminando-por-valles-oscuros-Arcaduz-ebook/dp/B00W9AX060',
         },
@@ -762,9 +787,9 @@
           src: './assets/docs/servidor_de_vuestra_alegria.pdf',
           thumb: './assets/img/servidor-alegria.jpg',
         },
-      ];
+        ];
 
-      var diario = [
+        var diario = [
         {
           caption: 'Excursión',
           yid: 'NHqP8LAjT4E',
@@ -788,31 +813,31 @@
 
         
         
-      ]
+        ]
 
-      var app = new Vue({
-        el: '#main',
-        data: {
-          fotos: fotos,
-          videos: videos,
-          books: books,
-        },
-      });
-
-      var gallery = document.getElementsByClassName('light-gallery');
-      for (var i = gallery.length - 1; i >= 0; i--) {
-        lightGallery(gallery[i], {
-          thumbnail: true,
-          mode: 'lg-fade',
-          loadYoutubeThumbnail: true,
-          youtubeThumbSize: 'default',
-          mode: 'lg-fade',
-          youtubePlayerParams: {
-            modestbranding: 1,
-            rel: 0,
+        var app = new Vue({
+          el: '#main',
+          data: {
+            fotos: fotos,
+            videos: videos,
+            books: books,
           },
         });
-      }
-    </script>
-  </body>
-</html>
+
+        var gallery = document.getElementsByClassName('light-gallery');
+        for (var i = gallery.length - 1; i >= 0; i--) {
+          lightGallery(gallery[i], {
+            thumbnail: true,
+            mode: 'lg-fade',
+            loadYoutubeThumbnail: true,
+            youtubeThumbSize: 'default',
+            mode: 'lg-fade',
+            youtubePlayerParams: {
+              modestbranding: 1,
+              rel: 0,
+            },
+          });
+        }
+      </script>
+    </body>
+    </html>
