@@ -162,6 +162,20 @@
           height: 12vw;
         }
       }
+
+
+      /* YOUTUBE VIDEO */
+
+iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+
     </style>
   </head>
   <body>
@@ -181,7 +195,10 @@
     </nav>-->
 
     <!-- Banner -->
-    <section
+
+
+
+    <!--<section
     class="banner parallax"
     id="portada"
     style="background-image: url('./assets/img/cristo-llama.jpg')"
@@ -196,9 +213,19 @@
       </p></b
       >
       <a href="#main" class="button scrolly">Responder</a>
-      <!--<a href="#main" style="margin-left: 10px;" class="button scrolly">Ayudar</a>-->
     </div>
-  </section>
+  </section>-->
+
+  <section id="portada"
+  style="min-height: 100vh;">
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/6VBJGh9U-Rw?controls=1&autoplay=0&mute=0&playlist=6VBJGh9U-Rw&loop=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+
+ </iframe>
+      <!--<iframe src="https://www.youtube.com/embed/6VBJGh9U-Rw" title="Día del seminario" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    </div>
+    </section>
 
   <!-- Main -->
   <div id="main">
