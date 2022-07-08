@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Seminario Pamplona by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Seminario Pamplona</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Load Seminario Specific stuff-->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>-->
+		<link rel="stylesheet" href="assets/css/seminario.css" />
+	</head>
+	<body class="is-preload">
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="index.html">Seminario Pamplona</a></h1>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+			<!-- Menu -->
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2>
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html">Generic</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+					<a href="#" class="close">Cerrar</a>
+				</div>
+			</nav>
+			<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<div class="logo"><span class="icon fa-gem"></span></div>
+					<h2>Seminario Pamplona</h2>
+					<p>Dios te llama a una aventura apasionante...</p>
+				</div>
+			</section>
+			<!-- Wrapper -->
+			<section id="wrapper">
+				<!-- One -->
+				<section id="one" class="wrapper spotlight style1">
+					<div class="inner">
+						<div class="content">
+							<h1 class="major">¿Sacerdote? ¿Hoy?</h1>
+							<p>Dios nos pide poder usar nuestras manos para entregarse a su pueblo. Esta es una tarea apasionante, que nos supera y sobrecoge, pero para la cual Dios nos capacita...
+								Pero veamos algunos ejemplos...
+								<!--La vocación al sacerdocio es Cristo que, viendo sufrir a su pueblo, nos pide poder usar nuestras manos para así entregarse en la Eucaristía, para poder escuchar a todo el que se acerca y perdonarle los pecados... Es Cristo que nos pide salir a las encrucijadas de los caminos para anunciar la buena noticia y acompañar a su pueblo hacia su amor.
+								El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos capacita a través de su Gracia.-->
+							</p>
+						</div>
+					</div>
+					<div class="inner" v-for="(santo, index) in santos" v-show="index == sliderIndex">
+						<span href="#" class="image"><img :src="santo.image" ></span>
+						<div class="content">
+							<h3>{{santo.title}}</h3>
+							<p>{{santo.text}}</p>
+							<a class="special" v-on:click="slider()"></a>
+						</div>
+					</div>
+					
+					
+				</section>
+				<!-- Two -->
+				<section id="two" class="wrapper alt spotlight style2">
+					<div class="inner">
+						<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+						<div class="content">
+							<h1 class="major">Seminario</h1>
+							<p>
+								El seminario es una etapa de formación y discernimiento. En nuestro día a día, nos levantamos, rezamos, celebramos la santa misa y, tras un
+								potente desayuno, vamos a las clases de filosofía y teología. Después de comer,
+								hacemos deporte y estudiamos. Pero ahí no acaba nuestra jornada: aún incluimos diversas actividades formativas y un ratico con el Señor antes de cenar. Finalmente, toca descansar.
+								Durante el fin de semana, nos vamos a casa para estar con nuestras familias y
+								participar en las actividades pastorales de las distintas parroquias.
+							</p>
+							<p>
+								La mejor forma de conocer más a fondo la realidad del seminario es venir a vernos un jueves para compartir con nosotros el rato de adoración ante el Santísimo y la cena. Te dejamos también algunos vídeos de nuestros seminaristas, para que así nos pongas cara.
+							</p>
+							<p>
+								<a href="#contacto" class="button scrolly">Contacto</a>
+								<a href="#contacto" class="button scrolly">Ven a conocernos</a>
+							</p>
+							<!--<div class="video-gallery image-gallery gallery light-gallery">
+												<a
+																	v-for="video in diario"
+																	:href="'https://www.youtube.com/watch?v='+video.yid"
+																	:data-sub-html="video.caption"
+																	:class="video.class"
+																	>
+																	<img
+																	:src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
+																	/>
+												</a>
+												<a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
+																	<img :src="foto.thumb" />
+												</a>
+							</div>-->
+						</div>
+					</div>
+				</section>
+				<!-- Three -->
+				<section id="three" class="wrapper spotlight style3">
+					<div class="inner">
+						<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+						<div class="content">
+							<h1 class="major">Discernimiento</h1>
+							<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+							<a href="#" class="special">Learn more</a>
+						</div>
+					</div>
+				</section>
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Contacto</h2>
+						<p>Para cualquier cosa que necesites, no dudes en escribirnos o llamarnos. Además, como el cuidado y la formación de los futuros sacerdotes es tarea de todos, te dejamos tambien nuestro bizum, por si te animas a poner tu granito de arena :)</p>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="mensaje">Mensaje</label>
+									<textarea name="mensaje" id="mensaje" rows="4"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" onclick="contacto()" value="Enviar" /></li>
+							</ul>
+						</form>
+						<ul class="contact">
+							<li class="icon solid fa-home">
+								<a href="https://goo.gl/maps/qrZgaNzF3Gxrie4e8" target="_blank">Av. de la Baja Navarra, 64,<br>31006 Pamplona, Navarra</a>
+							</li>
+							<li class="icon solid fa-phone"><a href="tel:948291000">948 29 10 00</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:seminario@iglesianavarra.org">seminario@iglesianavarra.org</a></li>
+							<li class="icon solid fa-donate"><a href="#">BIZUM 04698</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+			</div>
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/seminario.js"></script>
+		</body>
+	</html>
