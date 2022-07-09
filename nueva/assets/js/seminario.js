@@ -176,7 +176,7 @@ let santos = [
   "text": "Puede parecer una locura (lo es), pero a algunos hombres Dios nos pide poder usar nuestras manos para entregarse a su pueblo. Esta es una tarea apasionante, que nos supera y sobrecoge, pero para la cual Dios nos capacita... Pero veamos algunos ejemplos...",
                 //La vocación al sacerdocio es Cristo que, viendo sufrir a su pueblo, nos pide poder usar nuestras manos para así entregarse en la Eucaristía, para poder escuchar a todo el que se acerca y perdonarle los pecados... Es Cristo que nos pide salir a las encrucijadas de los caminos para anunciar la buena noticia y acompañar a su pueblo hacia su amor.
 //  El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos capacita a través de su Gracia.
-  "image": "https://www.archgh.org/media/12019/texas-catholic-herald-priesthood-ordinations-28.jpg",
+  //"image": "https://www.archgh.org/media/12019/texas-catholic-herald-priesthood-ordinations-28.jpg",
 },
 {
     "title": "Santo Cura de Ars",

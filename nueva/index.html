@@ -41,7 +41,8 @@
 			<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h2> <span class="icon logo solid fa-church"></span> Seminario Pamplona</h2>
+					<div class="logo"><span class="icon solid fa-church"></span></div>
+					<h2>Seminario Pamplona</h2>
 					<p><b><i style="text-transform: none;">Dios te llama a una aventura apasionante...</b></i></p>
 				</div>
 			</section>
@@ -50,7 +51,7 @@
 				<!-- One -->
 				<section id="one" class="wrapper spotlight style1 clipped">
 					<div class="inner" v-for="(santo, index) in santos" v-show="index == sliderIndex">
-						<span href="#" class="image"><img :src="santo.image" ></span>
+						<span v-if="santo.image" href="#" class="image"><img :src="santo.image" ></span>
 						<div class="content">
 							<h1 class="major">¿Sacerdote?</h1>
 							<h3>{{santo.title}}</h3>
