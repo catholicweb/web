@@ -41,38 +41,28 @@
 			<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<div class="logo"><span class="icon fa-gem"></span></div>
-					<h2>Seminario Pamplona</h2>
-					<p>Dios te llama a una aventura apasionante...</p>
+					<h2> <span class="icon logo solid fa-church"></span> Seminario Pamplona</h2>
+					<p><b><i style="text-transform: none;">Dios te llama a una aventura apasionante...</b></i></p>
 				</div>
 			</section>
 			<!-- Wrapper -->
 			<section id="wrapper">
 				<!-- One -->
-				<section id="one" class="wrapper spotlight style1">
-					<div class="inner">
-						<div class="content">
-							<h1 class="major">¿Sacerdote? ¿Hoy?</h1>
-							<p>Dios nos pide poder usar nuestras manos para entregarse a su pueblo. Esta es una tarea apasionante, que nos supera y sobrecoge, pero para la cual Dios nos capacita...
-								Pero veamos algunos ejemplos...
-								<!--La vocación al sacerdocio es Cristo que, viendo sufrir a su pueblo, nos pide poder usar nuestras manos para así entregarse en la Eucaristía, para poder escuchar a todo el que se acerca y perdonarle los pecados... Es Cristo que nos pide salir a las encrucijadas de los caminos para anunciar la buena noticia y acompañar a su pueblo hacia su amor.
-								El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos capacita a través de su Gracia.-->
-							</p>
-						</div>
-					</div>
+				<section id="one" class="wrapper spotlight style1 clipped">
 					<div class="inner" v-for="(santo, index) in santos" v-show="index == sliderIndex">
 						<span href="#" class="image"><img :src="santo.image" ></span>
 						<div class="content">
+							<h1 class="major">¿Sacerdote?</h1>
 							<h3>{{santo.title}}</h3>
 							<p>{{santo.text}}</p>
-							<a class="special" v-on:click="slider()"></a>
+							<div class="navigation">
+								<a v-for="(santo, index) in santos" v-on:click="function(){slider(index)}" :class="index == sliderIndex? 'pip pip--active' : 'pip'"></a>
+							</div>
 						</div>
 					</div>
-					
-					
 				</section>
 				<!-- Two -->
-				<section id="two" class="wrapper alt spotlight style2">
+				<section id="two" class="wrapper alt spotlight style2 parallax">
 					<div class="inner">
 						<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 						<div class="content">
@@ -91,38 +81,48 @@
 								<a href="#contacto" class="button scrolly">Contacto</a>
 								<a href="#contacto" class="button scrolly">Ven a conocernos</a>
 							</p>
-							<!--<div class="video-gallery image-gallery gallery light-gallery">
-												<a
-																	v-for="video in diario"
-																	:href="'https://www.youtube.com/watch?v='+video.yid"
-																	:data-sub-html="video.caption"
-																	:class="video.class"
-																	>
-																	<img
-																	:src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
-																	/>
-												</a>
-												<a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
-																	<img :src="foto.thumb" />
-												</a>
-							</div>-->
+							<div class="video-gallery image-gallery gallery light-gallery">
+								<a
+									v-for="video in diario"
+									:href="'https://www.youtube.com/watch?v='+video.yid"
+									:data-sub-html="video.caption"
+									:class="video.class"
+									>
+									<img
+									:src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
+									/>
+								</a>
+								<a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
+									<img :src="foto.thumb" />
+								</a>
+							</div>
 						</div>
 					</div>
 				</section>
 				<!-- Three -->
-				<section id="three" class="wrapper spotlight style3">
+				<section id="three" class="wrapper spotlight style3 clipped">
 					<div class="inner">
-						<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+						<a href="#" class="image"><img src="https://seminario.iglesianavarra.org/assets/img/atrevete.jpg" alt="" /></a>
 						<div class="content">
 							<h1 class="major">Discernimiento</h1>
-							<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-							<a href="#" class="special">Learn more</a>
+							<p>
+								Si crees que el señor te puede estar llamando, no lo dudes, uneté a uno de nuestros <b>grupos de discernimiento</b>, sábados por la mañana cada quince días. También puedes <b>escribirnos</b> para venir a conocer el seminario, o acercate a hablar con nosotros.
+							</p>
+							
+							<p>
+								<b>1. Oración</b> La vocación es siempre fruto del encuentro con Cristo, que nos mira y nos llama a seguirle "ven y sígueme".
+								<b>2. Acompañamiento</b>
+								La vocación y el discernimiento son siempre únicos y personales, por eso, es importante que busques un sacerdote de confianza que te acompañe.
+								<b>3. Entrega</b>
+								Puede que te sientas incapaz, que te de miedo o que te cueste dejar algo, pero ¿quién mejor que Dios sabe lo que necesita tu corazón? ¡No tengas miedo de Cristo! Él no quita nada y lo da todo.
+							</p>
+							<a href="#contacto" class="button scrolly">Contacto</a>
 						</div>
 					</div>
 				</section>
 				<!-- Footer -->
 				<section id="footer">
-					<div class="inner">
+					<div class="inner" id="contacto">
 						<h2 class="major">Contacto</h2>
 						<p>Para cualquier cosa que necesites, no dudes en escribirnos o llamarnos. Además, como el cuidado y la formación de los futuros sacerdotes es tarea de todos, te dejamos tambien nuestro bizum, por si te animas a poner tu granito de arena :)</p>
 						<form method="post" action="#">
