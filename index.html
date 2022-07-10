@@ -41,7 +41,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         </div>
       </nav>
       <!-- Banner -->
-      <section id="banner">
+      <section id="banner" style="padding-bottom: 2em">
         <div class="inner">
           <h2><span class="logo"><span style="font-size: 1em;" class="icon solid fa-church"></span></span> Seminario Pamplona</h2>
           <p><b><i style="text-transform: none;">Dios te llama a una aventura apasionante...</b></i></p>
@@ -51,10 +51,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
       <section id="wrapper">
         <!-- One -->
         <section id="one" class="wrapper spotlight style1 clipped">
+          <div class="inner">
+            <div class="content">
+              <h1 class="major" style="margin-bottom: -20px">¿Sacerdote?</h1>
+            </div>
+          </div>
           <div class="inner" v-for="(santo, index) in santos" v-show="index == sliderIndex">
             <span v-if="santo.image" href="#" class="image"><img :src="santo.image" ></span>
             <div class="content">
-              <h1 class="major">¿Sacerdote?</h1>
               <h3>{{santo.title}}</h3>
               <p >{{santo.text}}</p>
             <blockquote v-if="santo.cita">{{santo.cita}}</blockquote>
@@ -110,7 +114,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
       </section>
       <section id="four" class="wrapper spotlight alt style6 clipped">
         <div class="inner">
-          <a href="#" class="image"><img src="https://seminario.iglesianavarra.org/assets/img/atrevete.jpg" alt="" /></a>
           <div class="content">
             <h1 class="major">Recursos</h1>
             <h4>Vídeos</h4>
