@@ -207,6 +207,13 @@ let santos = [
     notas: "Zduńska Wola, 8 de enero de 1894 - Auschwitz, 14 de agosto de 1941). Ordenado 1918 (24 años). 'el odio és inútil, solo el amor crea'",
   },
   {
+    title: "Mártires seminaristas de Barbastro",
+    image: "assets/img/barbastro.jpeg",
+    text: ``,
+    cita: ``,
+    notas: `https://www.xn--elespaoldigital-3qb.com/martires-seminaristas-de-barbastro/?reload=913122`
+  },
+  {
     title: "San Fermín",
     image: "assets/img/sanfermin.jpeg",
     text: `Nacido en Pamplona (c. 272), hijo de altos funcionarios romanos convertidos al cristianismo por San Saturnino, fue ordenado en Tolosa y nombrado obispo de Amiens a los 24 años. Su defensa de la doctrina cristiana le granjeó la cárcel, donde, tras negarse a cesar su predica fue degollado a los 31 años`,
@@ -246,7 +253,7 @@ let santos = [
   },
   {
     title: "San Juan de Ávila",
-    image: "assets/img/x.jpeg",
+    image: "assets/img/juan-de-avila.jpeg",
     text: ``,
     cita: ``,
     notas: `https://www.vidasacerdotal.org/index.php/valores-sacerdotales/sacerdotes-santos/425-san-juan-de-avila-modelo-de-vida-sacerdotal.html`,
@@ -287,25 +294,35 @@ let santos = [
   },
 ];
 
+let santo = santos[0]
+let timeout;
 var app = new Vue({
   el: "#page-wrapper",
   data: {
     fotos: fotos,
     videos: videos,
     books: books,
-    santos: santos,
+    santo: santo,
     sliderIndex: 0,
   },
   methods: {
     slider(diff) {
       if (!diff) diff = 1
       this.sliderIndex = (santos.length + this.sliderIndex + diff) % santos.length;
+      this.santo = santos[this.sliderIndex]
+      this.resetTimer()
       console.log(this.sliderIndex, diff);
     },
+    resetTimer(){
+      clearTimeout(timeout);
+      timeout = setTimeout(this.slider, 25000);  
+    }
   },
   mounted() {
-    setInterval(this.slider, 25000);
-  },
+    this.resetTimer()
+  }
 });
+
+
 
 console.log("Seminario Loaded...");
