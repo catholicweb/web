@@ -31,9 +31,11 @@
 				<div class="inner">
 					<h2>Menu</h2>
 					<ul class="links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
+						<li><a href="#">Portada</a></li>
+						<li><a href="#">¿Sacerdote?</a></li>
+						<li><a href="#">Seminario</a></li>
+						<li><a href="#">Discernimiento</a></li>
+						<li><a href="#contacto">Contacto</a></li>
 					</ul>
 					<a href="#" class="close">Cerrar</a>
 				</div>
@@ -41,8 +43,7 @@
 			<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<div class="logo"><span class="icon solid fa-church"></span></div>
-					<h2>Seminario Pamplona</h2>
+					<h2><span class="logo"><span style="font-size: 1em;" class="icon solid fa-church"></span></span> Seminario Pamplona</h2>
 					<p><b><i style="text-transform: none;">Dios te llama a una aventura apasionante...</b></i></p>
 				</div>
 			</section>
@@ -55,113 +56,99 @@
 						<div class="content">
 							<h1 class="major">¿Sacerdote?</h1>
 							<h3>{{santo.title}}</h3>
-							<p>{{santo.text}}</p>
-							<div class="navigation">
-								<a v-for="(santo, index) in santos" v-on:click="function(){slider(index)}" :class="index == sliderIndex? 'pip pip--active' : 'pip'"></a>
-							</div>
+							<p >{{santo.text}}</p>
+						<blockquote v-if="santo.cita">{{santo.cita}}</blockquote>
+						<div class="navigation">
+							<a v-for="(santo, index) in santos" v-on:click="function(){slider(index)}" :class="index == sliderIndex? 'pip pip--active' : 'pip'"></a>
 						</div>
 					</div>
-				</section>
-				<!-- Two -->
-				<section id="two" class="wrapper alt spotlight style2 parallax">
-					<div class="inner">
-						<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-						<div class="content">
-							<h1 class="major">Seminario</h1>
-							<p>
-								El seminario es una etapa de formación y discernimiento. En nuestro día a día, nos levantamos, rezamos, celebramos la santa misa y, tras un
-								potente desayuno, vamos a las clases de filosofía y teología. Después de comer,
-								hacemos deporte y estudiamos. Pero ahí no acaba nuestra jornada: aún incluimos diversas actividades formativas y un ratico con el Señor antes de cenar. Finalmente, toca descansar.
-								Durante el fin de semana, nos vamos a casa para estar con nuestras familias y
-								participar en las actividades pastorales de las distintas parroquias.
-							</p>
-							<p>
-								La mejor forma de conocer más a fondo la realidad del seminario es venir a vernos un jueves para compartir con nosotros el rato de adoración ante el Santísimo y la cena. Te dejamos también algunos vídeos de nuestros seminaristas, para que así nos pongas cara.
-							</p>
-							<p>
-								<a href="#contacto" class="button scrolly">Contacto</a>
-								<a href="#contacto" class="button scrolly">Ven a conocernos</a>
-							</p>
-							<div class="video-gallery image-gallery gallery light-gallery">
-								<a
-									v-for="video in diario"
-									:href="'https://www.youtube.com/watch?v='+video.yid"
-									:data-sub-html="video.caption"
-									:class="video.class"
-									>
-									<img
-									:src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'"
-									/>
-								</a>
-								<a v-for="foto in fotos" :href="foto.src" :data-sub-html="foto.caption">
-									<img :src="foto.thumb" />
-								</a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- Three -->
-				<section id="three" class="wrapper spotlight style3 clipped">
-					<div class="inner">
-						<a href="#" class="image"><img src="https://seminario.iglesianavarra.org/assets/img/atrevete.jpg" alt="" /></a>
-						<div class="content">
-							<h1 class="major">Discernimiento</h1>
-							<p>
-								Si crees que el señor te puede estar llamando, no lo dudes, uneté a uno de nuestros <b>grupos de discernimiento</b>, sábados por la mañana cada quince días. También puedes <b>escribirnos</b> para venir a conocer el seminario, o acercate a hablar con nosotros.
-							</p>
-							
-							<p>
-								<b>1. Oración</b> La vocación es siempre fruto del encuentro con Cristo, que nos mira y nos llama a seguirle "ven y sígueme".
-								<b>2. Acompañamiento</b>
-								La vocación y el discernimiento son siempre únicos y personales, por eso, es importante que busques un sacerdote de confianza que te acompañe.
-								<b>3. Entrega</b>
-								Puede que te sientas incapaz, que te de miedo o que te cueste dejar algo, pero ¿quién mejor que Dios sabe lo que necesita tu corazón? ¡No tengas miedo de Cristo! Él no quita nada y lo da todo.
-							</p>
+				</div>
+			</section>
+			<!-- Two -->
+			<section id="two" class="wrapper alt spotlight style2 parallax">
+				<div class="inner">
+					<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+					<div class="content">
+						<h1 class="major">Seminario</h1>
+						<p>
+							El seminario es una etapa de formación y discernimiento, una etapa de noviazgo para conocerse y crecer en el amor antes de dar el paso definitivo. En nuestro día a día, tenemos clases por la mañana, estudio y deporte por las tardes... todo regado de grandes momentos de oración y diversas actividades para profundizar en el sentido del sacerdocio. Durante el fin de semana, nos vamos a casa para estar con nuestras familias y participar en vida pastorales de las distintas parroquias.
+						</p>
+						<p>
+							La mejor forma de conocer más a fondo la realidad del seminario es venir a vernos un jueves para compartir con nosotros el rato de adoración ante el Santísimo y la cena. Te dejamos también algunos vídeos de nuestros seminaristas, para que así nos pongas cara.
+						</p>
+						<p>
 							<a href="#contacto" class="button scrolly">Contacto</a>
+						</p>
+						<div class="video-container">
+							<iframe src="https://www.youtube.com/embed/uroYqWIaec4?controls=1&autoplay=0&mute=0&playlist=uroYqWIaec4&loop=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+							</iframe>
+							<!--<iframe src="https://www.youtube.com/embed/6VBJGh9U-Rw" title="Día del seminario" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 						</div>
 					</div>
-				</section>
-				<!-- Footer -->
-				<section id="footer">
-					<div class="inner" id="contacto">
-						<h2 class="major">Contacto</h2>
-						<p>Para cualquier cosa que necesites, no dudes en escribirnos o llamarnos. Además, como el cuidado y la formación de los futuros sacerdotes es tarea de todos, te dejamos tambien nuestro bizum, por si te animas a poner tu granito de arena :)</p>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="mensaje">Mensaje</label>
-									<textarea name="mensaje" id="mensaje" rows="4"></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" onclick="contacto()" value="Enviar" /></li>
-							</ul>
-						</form>
-						<ul class="contact">
-							<li class="icon solid fa-home">
-								<a href="https://goo.gl/maps/qrZgaNzF3Gxrie4e8" target="_blank">Av. de la Baja Navarra, 64,<br>31006 Pamplona, Navarra</a>
-							</li>
-							<li class="icon solid fa-phone"><a href="tel:948291000">948 29 10 00</a></li>
-							<li class="icon solid fa-envelope"><a href="mailto:seminario@iglesianavarra.org">seminario@iglesianavarra.org</a></li>
-							<li class="icon solid fa-donate"><a href="#">BIZUM 04698</a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
+				</div>
+			</section>
+			<!-- Three -->
+			<section id="three" class="wrapper spotlight style3 clipped">
+				<div class="inner">
+					<a href="#" class="image"><img src="https://seminario.iglesianavarra.org/assets/img/atrevete.jpg" alt="" /></a>
+					<div class="content">
+						<h1 class="major">Discernimiento</h1>
+						<p>
+							Si crees que el señor te puede estar llamando, no lo dudes, uneté a uno de nuestros <b>grupos de discernimiento</b>, sábados por la mañana cada quince días. También puedes <b>escribirnos</b> para venir a conocer el seminario, o acercate a hablar con nosotros.
+						</p>
+						
+						<p>
+							<b>1. Oración</b> La vocación es siempre fruto del encuentro con Cristo, que nos mira y nos llama a seguirle "ven y sígueme".
+							<b>2. Acompañamiento</b>
+							La vocación y el discernimiento son siempre únicos y personales, por eso, es importante que busques un sacerdote de confianza que te acompañe.
+							<b>3. Entrega</b>
+							Puede que te sientas incapaz, que te de miedo o que te cueste dejar algo, pero ¿quién mejor que Dios sabe lo que necesita tu corazón? ¡No tengas miedo de Cristo! Él no quita nada y lo da todo.
+						</p>
+						<a href="#contacto" class="button scrolly">Contacto</a>
 					</div>
-				</section>
-			</div>
-			<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/seminario.js"></script>
-		</body>
-	</html>
+				</div>
+			</section>
+			<!-- Footer -->
+			<section id="footer">
+				<div class="inner" id="contacto">
+					<h2 class="major">Contacto</h2>
+					<p>Para cualquier cosa que necesites, no dudes en escribirnos o llamarnos. Además, como el cuidado y la formación de los futuros sacerdotes es tarea de todos, te dejamos tambien nuestro bizum, por si te animas a poner tu granito de arena :)</p>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="mensaje">Mensaje</label>
+								<textarea name="mensaje" id="mensaje" rows="4"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" onclick="contacto()" value="Enviar" /></li>
+						</ul>
+					</form>
+					<ul class="contact">
+						<li class="icon solid fa-home">
+							<a href="https://goo.gl/maps/qrZgaNzF3Gxrie4e8" target="_blank">Av. de la Baja Navarra, 64,<br>31006 Pamplona, Navarra</a>
+						</li>
+						<li class="icon solid fa-phone"><a href="tel:948291000">948 29 10 00</a></li>
+						<li class="icon solid fa-envelope"><a href="mailto:seminario@iglesianavarra.org">seminario@iglesianavarra.org</a></li>
+						<li class="icon solid fa-donate"><a href="#">BIZUM 04698</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/seminario.js"></script>
+	</body>
+</html>

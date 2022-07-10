@@ -180,43 +180,56 @@ let santos = [
 },
 {
     "title": "Santo Cura de Ars",
-    "image": "https://live.staticflickr.com/65535/51357127718_0b19d34782_o.jpg",
-    "text": "Ordenado en ... tras estudiar... se levantaba muy de mañana a confesar..."
+    "image": "images/ars.jpeg",
+    "text": `Expulsado del seminario por su escaso intelecto, ordenado tras muchos esfuerzos en 1815 (29 años) fue destinado a una pequeña parroquia rural. Desprovisto de otros recursos, se entrego a la oración y penitencia extrema por la conversión de las alamas. En sus 41 años de ministerio, llegó a confesar durante 18 horas al día a más de 20.000 peregrinos al año de toda Europa, alimentandose de un poco de leche y pan seco.`,
+    "cita":"El sacerdocio es el amor del corazón de Jesús",
+    "notas":"Juan Bautista María Vianney (Dardilly, 8 de mayo de 1786-Ars-sur-Formans, 4 de agosto de 1859), ordenado 13 de agosto de 1815 (29 años). Se ponía a confesar a la 1am. con una intensa predicación, oración y ejemplos de penitencia. Diariamente catequizaba a niños y adultos, reconciliaba a los arrepentidos y con su ardiente caridad, alimentada en la fuente de la Eucaristía, brilló de tal modo, que difundió sus consejos a lo largo y a lo ancho de toda Europa y con su sabiduría llevó a Dios a muchísimas almas (†1859). Fecha de canonización: 31 de mayo de 1925 por el Papa Pío XI."
   },
   {
     "title": "San Fancisco Javier",
-    "image": "https://www.españaconfidencial.com/wp-content/uploads/2016/12/sfj.jpg",
-    "text": "Francisco de Jasso y Azpilicueta (7 de abril de 1506-3 de diciembre de 1552), más conocido como San Francisco Javier o también como Francisco Xavier, Francisco de Javier o Francés de Jaso, fue un religioso y misionero navarro de la Compañía de Jesús nacido en la localidad de Javier (Reino de Navarra) y fallecido en la isla Shangchuan (China). Fue canonizado por la Iglesia católica con el nombre de san Francisco Javier."
+    "image": "images/sfj.jpeg",
+    "text": `De familia noble, fue a estudiar a París (con intención promocionar canonigo...), donde conoce a Iñigo de Loyola y hace sus ejercicios espirituales, encontrandose con Cristo. Junto con cinco compañeros funda la Compañia de Jesús. Es ordenado en 1537 y enviado a evangelizar las Indias en sustitución de un compañero enfermo. Incansable evangelizador, aprendió la lengua local, realizo gran cantidad de viajes misioneros, bautizando a decenas de miles de personas y estableciendo misiones en distintos paises. Murió desgastado con 46 años a las puertas de china.`,
+    "cita":`¿De qué le servirá al hombre ganar el mundo entero, si pierde su alma?" (Mt 16, 26)`,
+    "notas":"Francisco de Jasso y Azpilicueta (7 de abril de 1506-3 de diciembre de 1552). Ordenado 24 de junio de 1537 (31 años)"
   },
   {
     "title": "San Damián de Molokai",
-    "image": "https://www.revistaecclesia.com/wp-content/uploads/2020/04/molokai-1200x1128.jpg",
-    "text": ""
-  },
-  {
-    "title": "San Juan Nepomuceno",
-    "image": "https://combonipca.org/wp-content/uploads/2019/07/s8-e1386087288703.jpg",
-    "text": ""
+    "image": "images/molokai.jpeg",
+    "text": `Ordenado en 1864 pidio ser enviado a la isla de Molokai, donde enfermos de lepra eran abandonados, y desesperados luchaban por los escasos recursos que recibian. Su ministerio transformo radicalmente la isla, devolviendo la paz y esperanza a los enfermos. Trato a todos los enfermos con gran cariño y cercanía, contagiandose finalmente de lepra y muriendo en 1889.`,
+    "cita":`Sé que voy a un perpetuo destierro, y que tarde o temprano me contagiaré de la lepra. Pero ningún sacrificio es demasiado grande si se hace por Cristo`,
+    "notas":"Jozef de Veuster (Tremelo, Reino de Bélgica, 3 de enero de 1840 – Molokai, Reino de Hawái, 15 de abril de 1889). Ordenado 24 marzo 1864 (24 años). (24 años) sustituyo a un compañero como misionero,'No importa que el cuerpo se vaya volviendo deforme y feo, si el alma se va volviendo hermosa y agradable a Dios', 'Sé que voy a un perpetuo destierro, y que tarde o temprano me contagiaré de la lepra. Pero ningún sacrificio es demasiado grande si se hace por Cristo' 'San Francisco Javier, por favor alcánzame de Dios la gracia de ser un misionero, como tú' (fue finalmente enviado en sustitución de un compañero suyo). Ténía prohibido salir de la isla "
   },
   {
     "title": "San Maximiliano Kolbe",
-    "image": "https://1.bp.blogspot.com/-y1YfhIlSA-k/XzcDdIDdO0I/AAAAAAAKJOc/SK60lNob15MBHQ2txJh5Q-jzoSk9LUr3gCLcBGAsYHQ/s1600/maximiliano-kolbe-removebg-preview.png",
-    "text": ""
-  },
-  {
-    "title": "San Luis Versiglia",
-    "image": "https://docplayer.es/docs-images/73/69504284/images/13-2.jpg",
-    "text": ""
+    "image": "images/maximiliano.jpeg",
+    "text": `Ordenado sacerdote en 1918, fue formador del seminario y predico la devoción a los coracones de Jesús y María. Tras la invasión alemana rechazo abandonar el país y organizo un hospital, dando refugio a más de 2000 judios y publicando obras contra el nacismo. Arrestado y transferido a Auschwitz, se ofrecio para ser ajusticiado por inanición en lugar de un padre de familia. Durante las dos semanas que tardo en morir, reconforto y guió a sus compañeros en la oración, impresionando a los SS por su serenidad..`,
+    "cita":`El odio és inútil, solo el amor crea`,
+    "notas": "Zduńska Wola, 8 de enero de 1894 - Auschwitz, 14 de agosto de 1941). Ordenado 1918 (24 años). 'el odio és inútil, solo el amor crea'"
   },
   {
     "title": "San Fermín",
-    "image": "https://dbe.rah.es/sites/default/files/styles/wide/public/imagenes/biografias/San-Fermin.jpg",
-    "text": ""
+    "image": "images/sanfermin.jpeg",
+    "text": `Nacido en Pamplona (c. 272), hijo de altos funcionarios romanos convertidos al cristianismo por San Saturnino, fue ordenado en Tolosa y nombrado obispo de Amiens a los 24 años. Su defensa de la doctrina cristiana le granjeó la cárcel, donde, tras negarse a cesar su predica fue degollado a los 31 años`,
+    "cita":``,
   },
   {
     "title": "San Tarsicio",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Statue-Orsay-03.jpg",
-    "text": ""
+    "image": "images/tarsicio.jpeg",
+    "text": `Muchacho romano de 14 años, encargado de llevar la comunión a los presos durante la persecución de Valeriano. Preguntado por un grupo de jovenes que guardaba bajo su manto, se nego a decir, siendo apedreado y apaleado hasta la muerte, prefiriendo morir antes que entregar el tesoro que custodiaba (c. 267-268). Es venerado como mártir de la Eucaristía y patrono de los monaguillos `,
+    "notas":`Martir de la eucaristia, patrono monaguillos. Nace 253 muere 267 a 268 (14-15años)`,
+  },
+  {
+    "title": "Mateo Correa Magallanes",
+    "image": "images/magallanes.jpeg",
+    "text": `.`,
+    "cita":``,
+    "notas":``
+  },
+  {
+    "title": "San Luis Versiglia",
+    "image": "images/versiglia.jpeg",
+    "text": `.`,
+    "cita":``,
   }
 ]
 
