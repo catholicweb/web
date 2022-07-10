@@ -108,6 +108,38 @@
 					</div>
 				</div>
 			</section>
+			<section id="four" class="wrapper spotlight alt style6 clipped">
+				<div class="inner">
+					<a href="#" class="image"><img src="https://seminario.iglesianavarra.org/assets/img/atrevete.jpg" alt="" /></a>
+					<div class="content">
+						<h1 class="major">Recursos</h1>
+						<h4>Vídeos</h4>
+						<div class="video-gallery gallery light-gallery">
+							<a
+								v-for="video in videos"
+								:href="'https://www.youtube.com/watch?v='+video.yid"
+								:data-sub-html="video.caption"
+								:class="video.class"
+								>
+								<img :src="'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
+							</a>
+						</div>
+						<br /><br />
+						<h4>Lecturas</h4>
+						<div class="gallery books-gallery">
+							<a
+								v-for="book in books"
+								target="_blank"
+								:href="book.src"
+								:data-sub-html="book.caption"
+								:class="book.class"
+								>
+								<img :src="book.thumb" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
 			<!-- Footer -->
 			<section id="footer">
 				<div class="inner" id="contacto">
