@@ -193,6 +193,10 @@
   padding-bottom: 3em;
 }
 
+.right {
+  text-align: right;
+}
+
       /* On large screens */
       @media screen and (min-width: 980px) {
         .video-gallery img {
