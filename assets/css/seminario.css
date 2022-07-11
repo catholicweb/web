@@ -185,6 +185,14 @@
     }*/
       }
 
+      .inner {
+  padding-top: 0 !important;
+}
+#banner {
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
+
       /* On large screens */
       @media screen and (min-width: 980px) {
         .video-gallery img {
@@ -198,10 +206,14 @@
         }
       }
 
+      @media screen and (min-width: 1280px) {
+        #banner {
+          padding-top: 8em;
+          padding-bottom: 0em;
+        }
+      }
 
-      /* YOUTUBE VIDEO */
-
-
+/* YOUTUBE VIDEO */
 iframe .fullsize {
   position: absolute;
   top: 50%;
@@ -209,6 +221,19 @@ iframe .fullsize {
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
+}
+
+.video-container {
+position: relative;
+width: 100%;
+padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+}
+iframe{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 

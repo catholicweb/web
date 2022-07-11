@@ -1,23 +1,7 @@
-function contacto() {
-  var mensaje = document.getElementById("mensaje");
-  var nombre = document.getElementById("nombre");
-  var email = document.getElementById("email");
-  var request = new XMLHttpRequest();
-  var url = "https://arrietaeguren.es/webSeminario/email";
-  url += "?message=" + mensaje.value + "&name=" + nombre.value;
-  request.open("GET", url + "&email=" + email.value);
-  request.send();
-  request.onreadystatechange = (e) => {
-    mensaje.value = "¡Gracias!";
-    if (nombre.value) mensaje.value = "¡Gracias " + nombre.value + "!";
-    nombre.value = "";
-    email.value = "";
-  };
-}
 
-/* Fotos del seminario */
+// Fotos del seminario 
 var fotos = [];
-for (var i = 1; i <= 0; i++) {
+/*for (var i = 1; i <= 0; i++) {
   //27
   fotos.push({
     src: "./assets/fotos/" + i + ".jpeg",
@@ -31,7 +15,7 @@ for (var i = 1; i <= 2; i++) {
     thumb: "./assets/fotos/d" + i + ".jpg",
     caption: "San José (DC)",
   });
-}
+}*/
 
 var videos = [
   /*{
@@ -189,7 +173,7 @@ let santos = [
     title: "San Fancisco Javier",
     image: "assets/img/sfj.jpeg",
     text: `De familia noble, fue a estudiar a París (con intención promocionar canonigo...), donde conoce a Iñigo de Loyola y hace sus ejercicios espirituales, encontrandose con Cristo. Junto con cinco compañeros funda la Compañia de Jesús. Es ordenado en 1537 y enviado a evangelizar las Indias en sustitución de un compañero enfermo. Incansable evangelizador, aprendió la lengua local, realizo gran cantidad de viajes misioneros, bautizando a decenas de miles de personas y estableciendo misiones en distintos paises. Murió desgastado con 46 años a las puertas de china.`,
-    cita: `¿De qué le servirá al hombre ganar el mundo entero, si pierde su alma?" (Mt 16, 26)`,
+    cita: `¿De qué le sirve al hombre ganar el mundo entero, si pierde su alma?`,
     notas: "Francisco de Jasso y Azpilicueta (7 de abril de 1506-3 de diciembre de 1552). Ordenado 24 de junio de 1537 (31 años)",
   },
   {
@@ -323,6 +307,23 @@ var app = new Vue({
   }
 });
 
+
+function contacto() {
+  var mensaje = document.getElementById("mensaje");
+  var nombre = document.getElementById("nombre");
+  var email = document.getElementById("email");
+  var request = new XMLHttpRequest();
+  var url = "https://arrietaeguren.es/webSeminario/email";
+  url += "?message=" + mensaje.value + "&name=" + nombre.value;
+  request.open("GET", url + "&email=" + email.value);
+  request.send();
+  request.onreadystatechange = (e) => {
+    mensaje.value = "¡Gracias!";
+    if (nombre.value) mensaje.value = "¡Gracias " + nombre.value + "!";
+    nombre.value = "";
+    email.value = "";
+  };
+}
 
 
 console.log("Seminario Loaded...");
