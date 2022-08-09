@@ -158,6 +158,10 @@
         .image-gallery img {
           height: 18vw;
         }
+
+        .button {
+          padding: 0 1.5em !important;
+        }
         /* Create the parallax scrolling effect */
         .parallax {
           background-attachment: fixed;
