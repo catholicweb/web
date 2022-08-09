@@ -54,15 +54,22 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <section id="sacerdote" class="wrapper spotlight style1 clipped">
           <div class="inner">
             <div class="content">
-              <h1 class="major" style="margin-bottom: -10px">¿Sacerdote?</h1>
+              <h1 class="major">¿Sacerdote?</h1>
             </div>
           </div>
-          <div class="inner">
+          <div class="inner" v-for="(santo, index) in santos" v-show="index == sliderIndex">
             <span v-if="santo.image" href="#" class="image"><img :src="santo.image" ></span>
             <div class="content">
               <h3 v-if="santo.title">{{santo.title}}</h3>
               <p>{{santo.text}}</p>
             <blockquote v-if="santo.cita">{{santo.cita}}</blockquote>
+          <!--<div class="inner">
+            <span v-if="santo.image" href="#" class="image"><img :src="santo.image" ></span>
+            <div class="content">
+              <h3 v-if="santo.title">{{santo.title}}</h3>
+              <p>{{santo.text}}</p>
+            <blockquote v-if="santo.cita">{{santo.cita}}</blockquote>-->
+
             <!--<a v-for="(santo, index) in santos" v-on:click="function(){slider(index)}" :class="index == sliderIndex? 'pip pip--active' : 'pip'"></a>
             <div v-on:click="function(){slider(-1)}" class="backward"></div>
             <div v-on:click="function(){slider(1)}" class="forward"></div>
@@ -79,13 +86,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <div class="content">
           <h1 class="major">Seminario</h1>
           <p>
-            El seminario es una etapa de formación y discernimiento, una etapa de noviazgo para conocerse y crecer en el amor antes de dar el paso definitivo. En nuestro día a día, tenemos clases por la mañana, estudio y deporte por las tardes... todo regado de grandes momentos de oración y diversas actividades para profundizar en el sentido del sacerdocio. Durante el fin de semana, nos vamos a casa para estar con nuestras familias y participar en vida pastorales de las distintas parroquias.
+            El seminario es una etapa de formación y discernimiento, una etapa de noviazgo para conocerse y crecer en el amor antes de dar el paso definitivo. En nuestro día a día, tenemos clases, estudio, deporte... todo regado de grandes momentos de oración y diversas actividades para profundizar en el sentido del sacerdocio. Durante el fin de semana, nos vamos a casa para estar con nuestras familias y participar en vida pastorales de las distintas parroquias.
           </p>
           <p>
-            La mejor forma de conocer más a fondo la realidad del seminario es venir a vernos un jueves para compartir con nosotros el rato de adoración ante el Santísimo y la cena. Te dejamos también algunos vídeos de nuestros seminaristas, para que así nos pongas cara.
-          </p>
-          <p>
-            <a href="#contacto" class="button scrolly">Contacto</a>
+            Aquí te dejamos también algunos vídeos de nuestros seminaristas, para que así nos pongas cara. Si tienes cualquier duda o quieres venir a conocernos, no dudes en <a href="#contacto" class="scrolly">escribirnos</a>.
           </p>
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/uroYqWIaec4?controls=1&autoplay=0&mute=0&playlist=uroYqWIaec4&loop=1" width="100%" height="100%" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -102,7 +106,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <div class="content">
           <h1 class="major">Discernimiento</h1>
           <p>
-            Si crees que el señor te puede estar llamando, no lo dudes, uneté a uno de nuestros <b>grupos de discernimiento</b>, sábados por la mañana cada quince días. También puedes <b>escribirnos</b> para venir a conocer el seminario, o acercate a hablar con nosotros.
+            Si crees que el señor te puede estar llamando, no lo dudes, uneté a uno de nuestros <b>grupos de discernimiento</b>, sábados por la mañana cada quince días. También puedes <a href="#contacto" class="scrolly">escribirnos</a> para venir a conocer el seminario, o acercate a hablar con nosotros.
           </p>
           
           <p>

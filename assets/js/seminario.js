@@ -193,9 +193,13 @@ let santos = [
   {
     title: "Mártires seminaristas de Barbastro",
     image: "assets/img/barbastro.jpeg",
-    text: ``,
-    cita: ``,
-    notas: `https://www.xn--elespaoldigital-3qb.com/martires-seminaristas-de-barbastro/?reload=913122`
+    text: `
+    El 20 julio de 1936 milicianos anarquistas entran en el seminario y se llevan presos a los seminaristas.
+    Maltratados de palabra y de obra, son tentados con prostitutas y la liberdad si cuelgan la sotana y se unen a los revolucionarios...
+    Negandose a renunciar a Cristo, se preparan para el martirio, rezan, se confiesan y reciben la comunión que el cocinero les esconde en la comida.
+    Son finalmente fusilados entre el 12 y el 15 de agosto (fiesta de la Inmaculada)`,
+    cita: `Cuando llega el momento de designar las víctimas hay en todos serenidad santa y ansia de oír el nombre para adelantar y ponernos en la fila de los elegidos; esperamos el momento con generosa impaciencia, y cuando ha llegado, hemos visto a unos besar los cordeles con que los ataban, y a otros dirigir palabras de perdón a la turba armada`,
+    notas: `https://www.xn--elespaoldigital-3qb.com/martires-seminaristas-de-barbastro/?reload=913122 claretianos  "Morimos todos contentos sin que nadie sienta desmayos ni pesares; morimos todos rogando a Dios que la sangre que caiga de nuestras heridas no sea sangre vengadora, sino sangre que entrando roja y viva por tus venas, estimule tu desarrollo y expansión por todo el mundo" a Salvador Pigem un amigo le ofrece escapar, pero se niega a abandonar a sus compañeros.`
   },
   {
     title: "San Fermín",

@@ -42,6 +42,10 @@
     }
 */
 
+    .button {
+      padding: 0 1.5em !important;
+    }
+
     .lg-video-cont {
       margin-bottom: 80px;
     }
