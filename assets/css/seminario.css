@@ -22,6 +22,24 @@
       display: none;
     }
 
+
+    /**/
+    @media screen and (max-width: 736px){
+      #seminario {
+        margin-top: -2.5em;
+        padding-top: 2.5em;
+        z-index: -1;
+        margin-bottom: -2.5em;
+        padding-bottom: 2.5em;
+      }
+    }
+
+
+    h1.major {
+      padding-bottom: 0.25em;  
+    }    
+    /**/
+
   /*.wrapper:before, .wrapper:after {
       content: none !important;
   }
