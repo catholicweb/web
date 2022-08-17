@@ -213,7 +213,7 @@ let santos = [
     text: `Muchacho romano de 14 años, encargado de llevar la comunión a los presos durante la persecución de Valeriano. Preguntado por un grupo de jovenes que guardaba bajo su manto, se nego a decir, siendo apedreado y apaleado hasta la muerte, prefiriendo morir antes que entregar el tesoro que custodiaba (c. 267-268). Es venerado como mártir de la Eucaristía y patrono de los monaguillos `,
     notas: `Martir de la eucaristia, patrono monaguillos. Nace 253 muere 267 a 268 (14-15años)`,
   },
-  {
+/*  {
     title: "Beato Jerzy Popieluszko",
     image: "assets/img/popieluszko.jpeg",
     text: ``,
@@ -260,13 +260,6 @@ let santos = [
     cita: ``,
     notas: `  https://www.vidasacerdotal.org/index.php/valores-sacerdotales/sacerdotes-santos/579-san-manuel-gonzalez-el-obispo-de-los-sagrarios-abandonados.html`,
   },
-  /*{
-    title: "",
-    image: "assets/img/x.jpeg",
-    text: ``,
-    cita: ``,
-    notas: ``,
-  },*/
   {
     title: "Mateo Correa Magallanes",
     image: "assets/img/magallanes.jpeg",
@@ -280,6 +273,13 @@ let santos = [
     text: `.`,
     cita: ``,
   },
+    /*{
+    title: "",
+    image: "assets/img/x.jpeg",
+    text: ``,
+    cita: ``,
+    notas: ``,
+  },*/
 ];
 
 let santo = santos[0]
