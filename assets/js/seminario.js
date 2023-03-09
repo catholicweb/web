@@ -155,13 +155,13 @@ var diario = [
 ];
 
 let santos = [
-  {
+/*  {
     title: "",
     text: "Puede parecer una locura (lo es), pero Dios pide a algunos hombres poder usar sus manos para entregarse a su pueblo, en la Eucaristía, en la confesión... Tarea y regalo apasionante, que nos supera y sobrecoge, pero para la cual Dios nos capacita... Pero, ¿qué significa ser sacerdote? Veamos algunos ejemplos...",
     //La vocación al sacerdocio es Cristo que, viendo sufrir a su pueblo, nos pide poder usar nuestras manos para así entregarse en la Eucaristía, para poder escuchar a todo el que se acerca y perdonarle los pecados... Es Cristo que nos pide salir a las encrucijadas de los caminos para anunciar la buena noticia y acompañar a su pueblo hacia su amor.
     //  El sacerdocio es un regalo que nos sobrepasa infinitamente. Un servicio para el que somos absolutamente indignos, pero que, misteriosamente, Dios ha querido realizar a través de nosotros. Es una tarea que nos supera y sobrecoge, pero para la cual nos capacita a través de su Gracia.
     //"image": "https://www.archgh.org/media/12019/texas-catholic-herald-priesthood-ordinations-28.jpg",
-  },
+  },*/
   {
     title: "Santo Cura de Ars",
     image: "assets/img/ars.jpeg",
@@ -219,7 +219,7 @@ let santos = [
     text: `Ordenado sacerdote en 1526 (26 años). Espiritu misionero, es convencido obispo sevillapasa un año entero en la carcel falsamente acusado por envidias (por su incomididad) ante la inquisición 31-33, convierte a muchos con su predicación (ej. san Juan de Dios. Desde 1554 la enfermedad le obliga a vivir retirado en Montilla, ofreciendo su enformedad por la Iglesia, y dedicado a la escritura (ej. Audi, Filia) y el apostolado de la pluma de todas partes se le pedia consejo...`,
     cita: `No puedo estar en mejores manos... |  “Señor, habeos conmigo como el herrero: con una mano me tened, y con otra dadme con el martillo”`,
     notas: `https://www.vidasacerdotal.org/index.php/valores-sacerdotales/sacerdotes-santos/425-san-juan-de-avila-modelo-de-vida-sacerdotal.html`,
-  },
+  }/*,
   {
     title: "San Ignacio de Loyola",
     image: "assets/img/ignacio.jpeg",
@@ -296,7 +296,7 @@ let santos = [
     text: ``,
     cita: ``,
     notas: ``,
-  },
+  },*/
 /*  {
     title: "Beato Jerzy Popieluszko",
     image: "assets/img/popieluszko.jpeg",
