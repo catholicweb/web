@@ -163,17 +163,11 @@ let santos = [
     //"image": "https://www.archgh.org/media/12019/texas-catholic-herald-priesthood-ordinations-28.jpg",
   },*/
   {
-    title: "Santo Cura de Ars",
-    image: "assets/img/ars.jpeg",
-    text: `Expulsado del seminario por sus malos resultados académicos, ordenado tras muchos esfuerzos en 1815 (29 años) fue destinado a una pequeña parroquia rural. Desprovisto de otros recursos, se entrego a la oración y penitencia extrema por la conversión de las alamas. En sus 41 años de ministerio, llegó a confesar durante 18 horas al día a más de 20.000 peregrinos al año de toda Europa, alimentandose de un poco de leche y pan seco.`,
-    cita: "El sacerdocio es el amor del corazón de Jesús",
-    notas: "Juan Bautista María Vianney (Dardilly, 8 de mayo de 1786-Ars-sur-Formans, 4 de agosto de 1859), ordenado 13 de agosto de 1815 (29 años). Se ponía a confesar a la 1am. con una intensa predicación, oración y ejemplos de penitencia. Diariamente catequizaba a niños y adultos, reconciliaba a los arrepentidos y con su ardiente caridad, alimentada en la fuente de la Eucaristía, brilló de tal modo, que difundió sus consejos a lo largo y a lo ancho de toda Europa y con su sabiduría llevó a Dios a muchísimas almas (†1859). Fecha de canonización: 31 de mayo de 1925 por el Papa Pío XI.",
-  },
-  {
     title: "San Fancisco Javier",
     image: "assets/img/sfj.jpeg",
     text: `De familia noble, fue a estudiar a París (con intención promocionar canonigo...), donde conoce a Iñigo de Loyola y hace sus ejercicios espirituales, encontrandose con Cristo. Junto con cinco compañeros funda la Compañia de Jesús. Es ordenado en 1537 y enviado a evangelizar las Indias en sustitución de un compañero enfermo. Incansable evangelizador, aprendió la lengua local, realizo gran cantidad de viajes misioneros, bautizando a decenas de miles de personas y estableciendo misiones en distintos paises. Murió desgastado con 46 años a las puertas de china.`,
     cita: `¿De qué le sirve al hombre ganar el mundo entero, si pierde su alma?`,
+    cita2: `Si no encuentro una barca, iré nadando. Si en esas islas hubiera minas de oro, los cristianos se precipitarían allá. Pero no hay sino almas para salvar`,
     notas: "Francisco de Jasso y Azpilicueta (7 de abril de 1506-3 de diciembre de 1552). Ordenado 24 de junio de 1537 (31 años)",
   },
   {
@@ -182,6 +176,13 @@ let santos = [
     text: `Ordenado en 1864 pidio ser enviado a la isla de Molokai, donde enfermos de lepra eran abandonados, y desesperados luchaban por los escasos recursos que recibian. Su ministerio transformo radicalmente la isla, devolviendo la paz y esperanza a los enfermos. Trato a todos los enfermos con gran cariño y cercanía, contagiandose finalmente de lepra y muriendo en 1889.`,
     cita: `Sé que voy a un perpetuo destierro, y que tarde o temprano me contagiaré de la lepra. Pero ningún sacrificio es demasiado grande si se hace por Cristo`,
     notas: "Jozef de Veuster (Tremelo, Reino de Bélgica, 3 de enero de 1840 – Molokai, Reino de Hawái, 15 de abril de 1889). Ordenado 24 marzo 1864 (24 años). (24 años) sustituyo a un compañero como misionero,'No importa que el cuerpo se vaya volviendo deforme y feo, si el alma se va volviendo hermosa y agradable a Dios', 'Sé que voy a un perpetuo destierro, y que tarde o temprano me contagiaré de la lepra. Pero ningún sacrificio es demasiado grande si se hace por Cristo' 'San Francisco Javier, por favor alcánzame de Dios la gracia de ser un misionero, como tú' (fue finalmente enviado en sustitución de un compañero suyo). Ténía prohibido salir de la isla ",
+  },
+  {
+    title: "Santo Cura de Ars",
+    image: "assets/img/ars.jpeg",
+    text: `Expulsado del seminario por sus malos resultados académicos, ordenado tras muchos esfuerzos en 1815 (29 años) fue destinado a una pequeña parroquia rural. Desprovisto de otros recursos, se entrego a la oración y penitencia extrema por la conversión de las almas. En sus 41 años de ministerio, llegó a confesar durante 18 horas al día a más de 20.000 peregrinos al año de toda Europa, alimentandose de un poco de leche y pan seco.`,
+    cita: "El sacerdocio es el amor del corazón de Jesús",
+    notas: "Juan Bautista María Vianney (Dardilly, 8 de mayo de 1786-Ars-sur-Formans, 4 de agosto de 1859), ordenado 13 de agosto de 1815 (29 años). Se ponía a confesar a la 1am. con una intensa predicación, oración y ejemplos de penitencia. Diariamente catequizaba a niños y adultos, reconciliaba a los arrepentidos y con su ardiente caridad, alimentada en la fuente de la Eucaristía, brilló de tal modo, que difundió sus consejos a lo largo y a lo ancho de toda Europa y con su sabiduría llevó a Dios a muchísimas almas (†1859). Fecha de canonización: 31 de mayo de 1925 por el Papa Pío XI.",
   },
   {
     title: "San Maximiliano Kolbe",

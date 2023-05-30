@@ -22,6 +22,11 @@
       display: none;
     }
 
+    blockquote {
+      font-weight: bold;  
+    }
+    
+
 
     /**/
     @media screen and (max-width: 736px){
