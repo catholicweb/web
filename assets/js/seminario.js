@@ -165,7 +165,7 @@ let santos = [
   {
     title: "Santo Cura de Ars",
     image: "assets/img/ars.jpeg",
-    text: `Expulsado del seminario por su escaso intelecto, ordenado tras muchos esfuerzos en 1815 (29 años) fue destinado a una pequeña parroquia rural. Desprovisto de otros recursos, se entrego a la oración y penitencia extrema por la conversión de las alamas. En sus 41 años de ministerio, llegó a confesar durante 18 horas al día a más de 20.000 peregrinos al año de toda Europa, alimentandose de un poco de leche y pan seco.`,
+    text: `Expulsado del seminario por sus malos resultados académicos, ordenado tras muchos esfuerzos en 1815 (29 años) fue destinado a una pequeña parroquia rural. Desprovisto de otros recursos, se entrego a la oración y penitencia extrema por la conversión de las alamas. En sus 41 años de ministerio, llegó a confesar durante 18 horas al día a más de 20.000 peregrinos al año de toda Europa, alimentandose de un poco de leche y pan seco.`,
     cita: "El sacerdocio es el amor del corazón de Jesús",
     notas: "Juan Bautista María Vianney (Dardilly, 8 de mayo de 1786-Ars-sur-Formans, 4 de agosto de 1859), ordenado 13 de agosto de 1815 (29 años). Se ponía a confesar a la 1am. con una intensa predicación, oración y ejemplos de penitencia. Diariamente catequizaba a niños y adultos, reconciliaba a los arrepentidos y con su ardiente caridad, alimentada en la fuente de la Eucaristía, brilló de tal modo, que difundió sus consejos a lo largo y a lo ancho de toda Europa y con su sabiduría llevó a Dios a muchísimas almas (†1859). Fecha de canonización: 31 de mayo de 1925 por el Papa Pío XI.",
   },
