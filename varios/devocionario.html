@@ -29,7 +29,7 @@
       
 
 
-      function autocomplete(inp, arr) {
+  function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
@@ -61,13 +61,10 @@
           /*insert a input field that will hold the current array item's value:*/
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
-              b.addEventListener("click", function(e) {
-              /*insert the value for the autocomplete text field:*/
-              inp.value = this.getElementsByTagName("input")[0].value;
-              goTo(inp.value)
-              /*close the list of autocompleted values,
-              (or any other open lists of autocompleted values:*/
-              closeAllLists();
+          b.addEventListener("click", function(e) {
+            inp.value = '';
+            goTo(this.getElementsByTagName("input")[0].value)
+            closeAllLists();
           });
           a.appendChild(b);
         }
@@ -130,13 +127,20 @@ document.addEventListener("click", function (e) {
 });
 }
     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
+
+      .autocomplete { width:400px; margin-left: calc(50% - 200px); }
+      @media screen and (max-width: 500px) {
+        .autocomplete { margin-left: 0px; width: calc(100vw - 50px);}
+      }
+
       .cmae { padding-left: 1em; }
-      body { padding: 50px !important; max-width:750px !important; margin: auto;}
-      .dagger:after {
-        content: '\2020';
+      body { padding: 25px !important; max-width:750px !important; margin: auto;}
+      .cross:after {
+        content: '\2720'; /* maltese cross, \2020 dagger */
         display: inline-block;
-        color: red;
+        color: #c00000;
         font-style: normal;
       }
 
@@ -194,7 +198,7 @@ input[type=submit] {
     <style type="text/css">@import url('https://themes.googleusercontent.com/fonts/css?kit=Yeh3y7ciGQhij8XzUSI-wN9BwJ9QSusUFFTiN987YIbNYrB5CTxRmKMoB2HywPdKiqCifR3TH7IhBFO3rSxnT9aS01_LNbiBPaO9Gyy-m45i7MXSNKnQVqUc45ALOx0e');ol{margin:0;padding:0}table td,table th{padding:0}.c5{background-color:#ffffff;padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify}.c12{-webkit-text-decoration-skip:none;color:#000000;font-weight:400;text-decoration:underline;text-decoration-skip-ink:none;font-family:"Corbel";font-style:normal}.c8{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Corbel";font-style:normal}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:13pt;font-family:"Corbel";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify;height:13pt}.c13{color:#000000;font-weight:700;text-decoration:none;font-size:15pt;font-family:"Corbel";font-style:normal}.c6{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:left}.c21{-webkit-text-decoration-skip:none;color:#000000;font-weight:400;text-decoration:underline;text-decoration-skip-ink:none;font-family:"Corbel"}.c22{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:center}.c15{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify}.c10{color:#000000;font-weight:400;text-decoration:none;font-size:15pt;font-family:"Corbel";font-style:normal}.c25{font-weight:400;font-size:11pt;font-family:"Corbel";font-style:normal}.c16{font-weight:400;font-size:14pt;font-family:"Corbel";font-style:normal}.c28{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:justify}.c35{font-size:28pt;font-family:"Corsiva";font-style:normal}.c30{font-weight:700;font-size:15pt;font-family:"Corbel"}.c33{font-size:18pt;font-family:"Century Gothic";font-weight:700}.c2{vertical-align:baseline;font-family:"MS Gothic";font-weight:400}.c27{font-weight:400;font-size:15pt;font-family:"Corbel"}.c18{font-size:28pt;font-family:"Corsiva";font-weight:700}.c38{font-size:16pt;font-family:"Century Gothic"}.c32{font-family:"Century Gothic";font-style:normal}.c24{font-family:"Arial";font-weight:400}.c4{vertical-align:baseline;font-style:italic}.c3{color:inherit;text-decoration:inherit}.c34{font-size:13pt;font-style:normal}.c14{color:#000000;text-decoration:none}.c31{font-size:13pt;font-family:"Corbel"}.c37{max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.c42{margin-left:14.2pt}.c36{font-weight:700}.c19{text-indent:14.2pt}.c40{margin-left:13pt}.c43{font-size:15pt}.c11{font-size:12pt}.c20{margin-left:35.4pt}.c26{text-indent:35.4pt}.c7{height:13pt}.c17{font-size:14pt}.c9{vertical-align:baseline}.c41{font-style:normal}.c29{font-weight:400}.c39{margin-right:9pt}.c45{font-size:18pt}.c46{background-color:#ffffe6}.c44{font-family:"Century Gothic"}.c23{background-color:#ffffff}.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Corbel";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.0;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:13pt;font-family:"Corbel"}p{margin:0;color:#000000;font-size:13pt;font-family:"Corbel"}h1{padding-top:24pt;color:#000000;font-weight:700;font-size:24pt;padding-bottom:6pt;font-family:"Corbel";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:4pt;font-family:"Corbel";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:14pt;color:#000000;font-weight:700;font-size:14pt;padding-bottom:4pt;font-family:"Corbel";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Corbel";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:11pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:2pt;font-family:"Corbel";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Corbel";line-height:1.0;page-break-after:avoid;orphans:2;widows:2;text-align:left}</style>
   </head>
   <body class="c23 c37 doc-content" onload="load()">
-    <div class="autocomplete" style="width:400px; margin-left: calc(50% - 200px);">
+    <div class="autocomplete">
       <input id="myInput" type="text" placeholder="Nombre o autor de la devoción">
     </div>
 <h2 class="active"></h2>
@@ -209,17 +213,16 @@ input[type=submit] {
     <p class="c5 c22"><span class="c9 c33">Oracional y devocionario</span></p>
     <p class="c5 c22"><span class="c36 c9 c38">Seminario Conciliar de San Miguel</span></p>
     <p class="c5 c22"><span class="c38 c36 c9">Pamplona 2019</span></p>
-    <p class="c5 c22"><span class="c36 c17 c9 c44">2&ordf; edición</span></p>
     </div>
     
     </div><h2 id="h.gjdgxs">La señal del cristiano</h2><div>
     <p class="c5"><span class="c0">Al santiguarse:</span></p>
-    <p class="c5"><span class="c0 cmae">En el nombre <i class="dagger"></i> del Padre, y del Hijo, y del Espíritu Santo. Amén.</span></p>
+    <p class="c5"><span class="c0 cmae">En el nombre <i class="cross"></i> del Padre, y del Hijo, y del Espíritu Santo. Amén.</span></p>
     <p class="c5"><span class="c0 cmae">In nomine Patris, et Filii, et Spiritus Sancti. Amen.</span></p>
     <br>
     <p class="c5"><span class="c0">Al signarse:</span></p>
-    <p class="c5"><span class="c0 cmae">Por la señal <i class="dagger"></i> de la Santa Cruz, de nuestros <i class="dagger"></i> enemigos líbranos Señor <i class="dagger"></i>, Dios nuestro. En el nombre del Padre <i class="dagger"></i> y del Hijo y del Espíritu Santo. Amén.</span></p>
-    <p class="c5"><span class="c0 cmae">Per signum crucis <i class="dagger"></i> de inimícis nostris <i class="dagger"></i> líbera nos <i class="dagger"></i>, Deus noster. In nómine Patris, <i class="dagger"></i> et Fílii, et Spíritus Sancti. Amen.</span></p>
+    <p class="c5"><span class="c0 cmae">Por la señal <i class="cross"></i> de la Santa Cruz, de nuestros <i class="cross"></i> enemigos líbranos Señor <i class="cross"></i>, Dios nuestro. En el nombre del Padre <i class="cross"></i> y del Hijo y del Espíritu Santo. Amén.</span></p>
+    <p class="c5"><span class="c0 cmae">Per signum crucis <i class="cross"></i> de inimícis nostris <i class="cross"></i> líbera nos <i class="cross"></i>, Deus noster. In nómine Patris, <i class="cross"></i> et Fílii, et Spíritus Sancti. Amen.</span></p>
     
     </div><h2 id="h.30j0zll">Padrenuestro</h2><div>
     <p class="c5"><span class="c0 cmae">Padre nuestro, que estás en el cielo, santificado sea tu nombre; venga a nosotros tu reino; hágase tu voluntad, en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.</span></p>
@@ -4375,7 +4378,7 @@ input[type=submit] {
     <p class="c5"><span class="c0 cmae">Tú eres el Mesías, el Hijo de Dios vivo.</span></p>
     <p class="c5"><span class="c0 cmae">Jesús, Hijo de David, ten compasión de mí.</span></p>
     <br>
-    </div><h2 id="h.2bxgwvm">Catecismo de la Iglesia Católica,<span class="c30 c4 c14">Las fuentes de la oración</span><span class="c10 c9">(n&ordm; 2652-2660)</span></h2><div>
+    </div><h2 id="h.2bxgwvm">Catecismo de la Iglesia Católica: Las fuentes de la oración<span class="c10 c9"> (n&ordm; 2652-2660)</span></h2><div>
     <br>
     <p class="c15"><span class="c0 cmae">2652. El Espíritu Santo es el &ldquo;agua viva&rdquo; que, en el corazón orante, &ldquo;brota para vida eterna&rdquo; (Jn 4,14). él es quien nos enseña a recogerla en la misma Fuente: Cristo. Pues bien, en la vida cristiana hay manantiales donde Cristo nos espera para darnos a beber el Espíritu Santo.</span></p>
     <br>
@@ -4525,295 +4528,295 @@ input[type=submit] {
     </div><h2>índice</h2><div>
     <p class="c22 c7 c23"><span class="c8"></span></p>
     <p class="c22 c7 c23"><span class="c8"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.gjdgxs">La señal del cristiano</a></span><span class="c8"><a class="c3" href="#h.gjdgxs cmae">3</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.30j0zll">Padrenuestro</a></span><span class="c8"><a class="c3" href="#h.30j0zll cmae">3</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1fob9te">Avemaría</a></span><span class="c8"><a class="c3" href="#h.1fob9te cmae">3</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3znysh7">Gloria</a></span><span class="c8"><a class="c3" href="#h.3znysh7 cmae">3</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2et92p0">Yo confieso (I)</a></span><span class="c8"><a class="c3" href="#h.2et92p0 cmae">3</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.tyjcwt">Yo confieso (II)</a></span><span class="c8"><a class="c3" href="#h.tyjcwt cmae">3</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3dy6vkm">Acto de contrición</a></span><span class="c8"><a class="c3" href="#h.3dy6vkm cmae">4</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1t3h5sf">Gloria a Dios en el cielo</a></span><span class="c8"><a class="c3" href="#h.1t3h5sf cmae">4</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4d34og8">Credo apostólico</a></span><span class="c8"><a class="c3" href="#h.4d34og8 cmae">4</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2s8eyo1">Credo niceno-constantinopolitano</a></span><span class="c8"><a class="c3" href="#h.2s8eyo1 cmae">5</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.17dp8vu">Símbolo Atanasiano (&ldquo;Quicumque&rdquo;)</a></span><span class="c8"><a class="c3" href="#h.17dp8vu cmae">5</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3rdcrjn">Credo del Pueblo de Dios (S. Pablo VI)</a></span><span class="c8"><a class="c3" href="#h.3rdcrjn cmae">6</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.gjdgxs">La señal del cristiano</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.30j0zll">Padrenuestro</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1fob9te">Avemaría</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3znysh7">Gloria</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2et92p0">Yo confieso (I)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.tyjcwt">Yo confieso (II)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3dy6vkm">Acto de contrición</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1t3h5sf">Gloria a Dios en el cielo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4d34og8">Credo apostólico</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2s8eyo1">Credo niceno-constantinopolitano</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.17dp8vu">Símbolo Atanasiano (&ldquo;Quicumque&rdquo;)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3rdcrjn">Credo del Pueblo de Dios (S. Pablo VI)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.lnxbz9">Mandamientos de la Ley de Dios</a></span><span class="c8"><a class="c3" href="#h.lnxbz9 cmae">11</a></span></p>
-    <p class="c6 c40"><span class="c12 c11 c9"><a class="c3" href="#h.35nkun2">Se resumen en dos</a></span><span class="c8"><a class="c3" href="#h.35nkun2 cmae">11</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1ksv4uv">Mandamiento nuevo</a></span><span class="c8"><a class="c3" href="#h.1ksv4uv cmae">11</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.44sinio">Regla de oro de la moral</a></span><span class="c8"><a class="c3" href="#h.44sinio cmae">11</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2jxsxqh">Mandamientos de la Santa Madre Iglesia</a></span><span class="c8"><a class="c3" href="#h.2jxsxqh cmae">11</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.z337ya">Sacramentos</a></span><span class="c8"><a class="c3" href="#h.z337ya cmae">11</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3j2qqm3">Virtudes teologales</a></span><span class="c8"><a class="c3" href="#h.3j2qqm3 cmae">11</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1y810tw">Virtudes cardinales</a></span><span class="c8"><a class="c3" href="#h.1y810tw cmae">11</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4i7ojhp">Obras de misericordia corporales</a></span><span class="c8"><a class="c3" href="#h.4i7ojhp cmae">11</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2xcytpi">Obras de misericordia espirituales</a></span><span class="c8"><a class="c3" href="#h.2xcytpi cmae">12</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1ci93xb">Bienaventuranzas (Mt 5,3-12)</a></span><span class="c8"><a class="c3" href="#h.1ci93xb cmae">12</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3whwml4">Dones del Espíritu Santo</a></span><span class="c8"><a class="c3" href="#h.3whwml4 cmae">12</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2bn6wsx">Frutos del Espíritu Santo</a></span><span class="c8"><a class="c3" href="#h.2bn6wsx cmae">12</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.qsh70q">Pecados capitales y virtudes opuestas</a></span><span class="c8"><a class="c3" href="#h.qsh70q cmae">12</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3as4poj">Pecados contra el Espíritu Santo</a></span><span class="c8"><a class="c3" href="#h.3as4poj cmae">12</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1pxezwc">Pecados que claman al cielo</a></span><span class="c8"><a class="c3" href="#h.1pxezwc cmae">13</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.49x2ik5">Potencias del alma</a></span><span class="c8"><a class="c3" href="#h.49x2ik5 cmae">13</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2p2csry">Milagros de Jesús</a></span><span class="c8"><a class="c3" href="#h.2p2csry cmae">13</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.147n2zr">Parábolas de Jesús</a></span><span class="c8"><a class="c3" href="#h.147n2zr cmae">13</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3o7alnk">Principales discursos de Jesús</a></span><span class="c8"><a class="c3" href="#h.3o7alnk cmae">15</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.23ckvvd">Palabras de Jesús en la Cruz</a></span><span class="c8"><a class="c3" href="#h.23ckvvd cmae">15</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.ihv636">Palabras de Jesús resucitado a sus discípulos</a></span><span class="c8"><a class="c3" href="#h.ihv636 cmae">15</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.32hioqz">El evangelio más usado en la Liturgia católica (Mt 11,25-30)</a></span><span class="c8"><a class="c3" href="#h.32hioqz cmae">16</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.lnxbz9">Mandamientos de la Ley de Dios</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.35nkun2">Se resumen en dos</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1ksv4uv">Mandamiento nuevo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.44sinio">Regla de oro de la moral</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2jxsxqh">Mandamientos de la Santa Madre Iglesia</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.z337ya">Sacramentos</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3j2qqm3">Virtudes teologales</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1y810tw">Virtudes cardinales</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4i7ojhp">Obras de misericordia corporales</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2xcytpi">Obras de misericordia espirituales</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1ci93xb">Bienaventuranzas (Mt 5,3-12)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3whwml4">Dones del Espíritu Santo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2bn6wsx">Frutos del Espíritu Santo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.qsh70q">Pecados capitales y virtudes opuestas</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3as4poj">Pecados contra el Espíritu Santo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1pxezwc">Pecados que claman al cielo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.49x2ik5">Potencias del alma</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2p2csry">Milagros de Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.147n2zr">Parábolas de Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3o7alnk">Principales discursos de Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.23ckvvd">Palabras de Jesús en la Cruz</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.ihv636">Palabras de Jesús resucitado a sus discípulos</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.32hioqz">El evangelio más usado en la Liturgia católica (Mt 11,25-30)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1hmsyys">Benedictus (Lc 1,68-79)</a></span><span class="c8"><a class="c3" href="#h.1hmsyys cmae">17</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.41mghml">Magnificat (Lc 1,46-55)</a></span><span class="c8"><a class="c3" href="#h.41mghml cmae">17</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2grqrue">Nunc dimittis (Lc 2,29-32)</a></span><span class="c8"><a class="c3" href="#h.2grqrue cmae">17</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.vx1227">Te Deum (Niceto de Remesiana)</a></span><span class="c8"><a class="c3" href="#h.vx1227 cmae">18</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3fwokq0">Cántico de los tres jóvenes (Dn 3,57-88)</a></span><span class="c8"><a class="c3" href="#h.3fwokq0 cmae">19</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1v1yuxt">Salmos para el Invitatorio</a></span><span class="c8"><a class="c3" href="#h.1v1yuxt cmae">19</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4f1mdlm">Cánticos litúrgicos del Nuevo Testamento</a></span><span class="c8"><a class="c3" href="#h.4f1mdlm cmae">20</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2u6wntf">Los siete salmos penitenciales</a></span><span class="c8"><a class="c3" href="#h.2u6wntf cmae">22</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.19c6y18">Rorate C&aelig;li (Adviento)</a></span><span class="c8"><a class="c3" href="#h.19c6y18 cmae">25</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3tbugp1">Antífonas de la O (Adviento)</a></span><span class="c8"><a class="c3" href="#h.3tbugp1 cmae">25</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.28h4qwu">Puer natus est nobis (Navidad)</a></span><span class="c8"><a class="c3" href="#h.28h4qwu cmae">26</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.nmf14n">Attende Domine (Cuaresma)</a></span><span class="c8"><a class="c3" href="#h.nmf14n cmae">27</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.37m2jsg">Improperios del Viernes Santo (Adoración de la Cruz)</a></span><span class="c8"><a class="c3" href="#h.37m2jsg cmae">27</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1mrcu09">Victim&aelig; paschali laudes (secuencia de Pascua de Resurrección)</a></span><span class="c8"><a class="c3" href="#h.1mrcu09 cmae">28</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.46r0co2">O filii et fili&aelig; (Laudes de Pascua de Resurrección)</a></span><span class="c8"><a class="c3" href="#h.46r0co2 cmae">28</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1hmsyys">Benedictus (Lc 1,68-79)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.41mghml">Magnificat (Lc 1,46-55)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2grqrue">Nunc dimittis (Lc 2,29-32)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.vx1227">Te Deum (Niceto de Remesiana)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3fwokq0">Cántico de los tres jóvenes (Dn 3,57-88)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1v1yuxt">Salmos para el Invitatorio</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4f1mdlm">Cánticos litúrgicos del Nuevo Testamento</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2u6wntf">Los siete salmos penitenciales</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.19c6y18">Rorate C&aelig;li (Adviento)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3tbugp1">Antífonas de la O (Adviento)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.28h4qwu">Puer natus est nobis (Navidad)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.nmf14n">Attende Domine (Cuaresma)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.37m2jsg">Improperios del Viernes Santo (Adoración de la Cruz)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1mrcu09">Victim&aelig; paschali laudes (secuencia de Pascua de Resurrección)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.46r0co2">O filii et fili&aelig; (Laudes de Pascua de Resurrección)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2lwamvv">Trisagio breve a la Santísima Trinidad</a></span><span class="c8"><a class="c3" href="#h.2lwamvv cmae">29</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.111kx3o">Revísteme de Ti mismo (Sta. Catalina de Siena)</a></span><span class="c8"><a class="c3" href="#h.111kx3o cmae">29</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3l18frh">Elevación a la Santísima Trinidad (Sta. Isabel de la Trinidad)</a></span><span class="c8"><a class="c3" href="#h.3l18frh cmae">29</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.206ipza">Oraciones que el ángel de la Paz enseñó a los pastorcitos de Fátima</a></span><span class="c8"><a class="c3" href="#h.206ipza cmae">30</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4k668n3">Ofrecimiento del día</a></span><span class="c8"><a class="c3" href="#h.4k668n3 cmae">30</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2zbgiuw">Ofrecimiento de obras</a></span><span class="c8"><a class="c3" href="#h.2zbgiuw cmae">30</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1egqt2p">Actos de fe, esperanza y caridad (I)</a></span><span class="c8"><a class="c3" href="#h.1egqt2p cmae">30</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3ygebqi">Actos de fe, esperanza y caridad (II)</a></span><span class="c8"><a class="c3" href="#h.3ygebqi cmae">30</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2dlolyb">Actos de fe, esperanza y caridad (III)</a></span><span class="c8"><a class="c3" href="#h.2dlolyb cmae">31</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.sqyw64">Tarde te amé (S. Agustín)</a></span><span class="c8"><a class="c3" href="#h.sqyw64 cmae">31</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3cqmetx">Busco tu rostro (S. Anselmo de Canterbury)</a></span><span class="c8"><a class="c3" href="#h.3cqmetx cmae">31</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1rvwp1q">Tú eres santo, Señor (S. Francisco de Asís)</a></span><span class="c8"><a class="c3" href="#h.1rvwp1q cmae">32</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4bvk7pj">Cántico de las Criaturas (S. Francisco de Asís)</a></span><span class="c8"><a class="c3" href="#h.4bvk7pj cmae">32</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2r0uhxc">Principio y fundamento (S. Ignacio de Loyola)</a></span><span class="c8"><a class="c3" href="#h.2r0uhxc cmae">32</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1664s55">Acto de confianza (S. Claudio de la Colombi&egrave;re)</a></span><span class="c8"><a class="c3" href="#h.1664s55 cmae">33</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3q5sasy">Acto de amor a Dios (Sto. Cura de Ars)</a></span><span class="c8"><a class="c3" href="#h.3q5sasy cmae">33</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.25b2l0r">Oración del abandono (Bto. Carlos de Foucauld)</a></span><span class="c8"><a class="c3" href="#h.25b2l0r cmae">34</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.kgcv8k">Oración del abandono (Sta. Edith Stein)</a></span><span class="c8"><a class="c3" href="#h.kgcv8k cmae">34</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.34g0dwd">Ocúpate Tú de ello (D. Dolindo Rotuolo)</a></span><span class="c8"><a class="c3" href="#h.34g0dwd cmae">34</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2lwamvv">Trisagio breve a la Santísima Trinidad</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.111kx3o">Revísteme de Ti mismo (Sta. Catalina de Siena)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3l18frh">Elevación a la Santísima Trinidad (Sta. Isabel de la Trinidad)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.206ipza">Oraciones que el ángel de la Paz enseñó a los pastorcitos de Fátima</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4k668n3">Ofrecimiento del día</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2zbgiuw">Ofrecimiento de obras</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1egqt2p">Actos de fe, esperanza y caridad (I)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3ygebqi">Actos de fe, esperanza y caridad (II)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2dlolyb">Actos de fe, esperanza y caridad (III)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.sqyw64">Tarde te amé (S. Agustín)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3cqmetx">Busco tu rostro (S. Anselmo de Canterbury)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1rvwp1q">Tú eres santo, Señor (S. Francisco de Asís)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4bvk7pj">Cántico de las Criaturas (S. Francisco de Asís)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2r0uhxc">Principio y fundamento (S. Ignacio de Loyola)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1664s55">Acto de confianza (S. Claudio de la Colombi&egrave;re)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3q5sasy">Acto de amor a Dios (Sto. Cura de Ars)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.25b2l0r">Oración del abandono (Bto. Carlos de Foucauld)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.kgcv8k">Oración del abandono (Sta. Edith Stein)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.34g0dwd">Ocúpate Tú de ello (D. Dolindo Rotuolo)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1jlao46">Oración de preparación para la Santa Misa (S. Juan Crisóstomo)</a></span><span class="c8"><a class="c3" href="#h.1jlao46 cmae">37</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.43ky6rz">Oración de preparación para la Santa Misa (S. Ambrosio)</a></span><span class="c8"><a class="c3" href="#h.43ky6rz cmae">37</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2iq8gzs">Oración de preparación para la Santa Misa (Sto. Tomás de Aquino)</a></span><span class="c8"><a class="c3" href="#h.2iq8gzs cmae">37</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.xvir7l">Oraciones al revestirse para la celebración de la Santa Misa</a></span><span class="c8"><a class="c3" href="#h.xvir7l cmae">38</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3hv69ve">Oraciones secretas de la Santa Misa</a></span><span class="c8"><a class="c3" href="#h.3hv69ve cmae">38</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4h042r0">Condiciones para recibir dignamente la Comunión</a></span><span class="c8"><a class="c3" href="#h.4h042r0 cmae">40</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2w5ecyt">Efectos de la Comunión</a></span><span class="c8"><a class="c3" href="#h.2w5ecyt cmae">40</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1baon6m">Oración para dar gracias por la Comunión (Sto. Tomás de Aquino)</a></span><span class="c8"><a class="c3" href="#h.1baon6m cmae">40</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3vac5uf">Oración para dar gracias por la Comunión (S. Buenaventura)</a></span><span class="c8"><a class="c3" href="#h.3vac5uf cmae">41</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2afmg28">Oración universal (Clemente XI)</a></span><span class="c8"><a class="c3" href="#h.2afmg28 cmae">41</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.pkwqa1">Invocación a Nuestro Señor Jesucristo (S. Ignacio de Loyola)</a></span><span class="c8"><a class="c3" href="#h.pkwqa1 cmae">42</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.39kk8xu">Ofrecimiento de sí mismo (S. Ignacio de Loyola)</a></span><span class="c8"><a class="c3" href="#h.39kk8xu cmae">42</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1opuj5n">Oblación de la propia vida (S. Ignacio de Loyola)</a></span><span class="c8"><a class="c3" href="#h.1opuj5n cmae">42</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.48pi1tg">Oración al Santísimo Sacramento (S. Alfonso M&ordf; de Ligorio)</a></span><span class="c8"><a class="c3" href="#h.48pi1tg cmae">42</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2nusc19">Visita al Santísimo Sacramento y Comunión espiritual (S. José de Calasanz)</a></span><span class="c8"><a class="c3" href="#h.2nusc19 cmae">42</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1302m92">Comunión espiritual (S. Alfonso M&ordf; de Ligorio)</a></span><span class="c8"><a class="c3" href="#h.1302m92 cmae">43</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3mzq4wv">Oración de adoración universal (S. Francisco de Asís)</a></span><span class="c8"><a class="c3" href="#h.3mzq4wv cmae">43</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2250f4o">Oración a Jesús en el Sagrario (Sta. Teresa del Niño Jesús)</a></span><span class="c8"><a class="c3" href="#h.2250f4o cmae">43</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.haapch">Mírame, oh buen y dulcísimo Jesús</a></span><span class="c8"><a class="c3" href="#h.haapch cmae">43</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.319y80a">Quince minutos en compañía de Jesús sacramentado</a></span><span class="c8"><a class="c3" href="#h.319y80a cmae">43</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1gf8i83">Letanías de agradecimiento</a></span><span class="c8"><a class="c3" href="#h.1gf8i83 cmae">45</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.40ew0vw">Alabanzas de desagravio</a></span><span class="c8"><a class="c3" href="#h.40ew0vw cmae">45</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2fk6b3p">Preces expiatorias (I)</a></span><span class="c8"><a class="c3" href="#h.2fk6b3p cmae">46</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.upglbi">Preces expiatorias (II) (Manual de la Adoración Nocturna Española)</a></span><span class="c8"><a class="c3" href="#h.upglbi cmae">46</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3ep43zb">Hora santa para el Jueves Santo (Manual de la Adoración Nocturna Española)</a></span><span class="c8"><a class="c3" href="#h.3ep43zb cmae">47</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1tuee74">Preces litánicas por las vocaciones sacerdotales (Seminario Conciliar de San Miguel de Pamplona)</a></span><span class="c8"><a class="c3" href="#h.1tuee74 cmae">51</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4du1wux">Preces litánicas por las vocaciones sacerdotales y la santidad de los sacerdotes</a></span><span class="c8"><a class="c3" href="#h.4du1wux cmae">52</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2szc72q">Oración por las vocaciones sacerdotales (Benedicto XVI)</a></span><span class="c8"><a class="c3" href="#h.2szc72q cmae">52</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.184mhaj">Oración por la santificación de los sacerdotes (S. Pablo VI)</a></span><span class="c8"><a class="c3" href="#h.184mhaj cmae">52</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3s49zyc">Oración por los sacerdotes (Siervo de Dios Mons. ángel Riesco Carbajo)</a></span><span class="c8"><a class="c3" href="#h.3s49zyc cmae">53</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.279ka65">Adoro te devote (Sto. Tomás de Aquino)</a></span><span class="c8"><a class="c3" href="#h.279ka65 cmae">53</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.meukdy">Pange, língua (Sto. Tomás de Aquino: Himno de Vísperas del Corpus)</a></span><span class="c8"><a class="c3" href="#h.meukdy cmae">54</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.36ei31r">Verbum supernum (Sto. Tomás de Aquino: Himno de Laudes del Corpus)</a></span><span class="c8"><a class="c3" href="#h.36ei31r cmae">54</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1ljsd9k">Sacris sollemniis (Sto. Tomás de Aquino: Himno de Maitines del Corpus)</a></span><span class="c8"><a class="c3" href="#h.1ljsd9k cmae">55</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.45jfvxd">Lauda, Sion (Sto. Tomás de Aquino: Secuencia del Corpus Christi)</a></span><span class="c8"><a class="c3" href="#h.45jfvxd cmae">56</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2koq656">O salutáris Hóstia (Sto. Tomás de Aquino, final del </a></span><span class="c21 c4 c11"><a class="c3" href="#h.2koq656">Verbum supernum</a></span><span class="c12 c11 c9"><a class="c3" href="#h.2koq656">)</a></span><span class="c8"><a class="c3" href="#h.2koq656 cmae">57</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.zu0gcz">O sacrum convivium (Sto. Tomás de Aquino: Antífona del Magnificat del Corpus)</a></span><span class="c8"><a class="c3" href="#h.zu0gcz cmae">57</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1jlao46">Oración de preparación para la Santa Misa (S. Juan Crisóstomo)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.43ky6rz">Oración de preparación para la Santa Misa (S. Ambrosio)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2iq8gzs">Oración de preparación para la Santa Misa (Sto. Tomás de Aquino)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.xvir7l">Oraciones al revestirse para la celebración de la Santa Misa</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3hv69ve">Oraciones secretas de la Santa Misa</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4h042r0">Condiciones para recibir dignamente la Comunión</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2w5ecyt">Efectos de la Comunión</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1baon6m">Oración para dar gracias por la Comunión (Sto. Tomás de Aquino)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3vac5uf">Oración para dar gracias por la Comunión (S. Buenaventura)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2afmg28">Oración universal (Clemente XI)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.pkwqa1">Invocación a Nuestro Señor Jesucristo (S. Ignacio de Loyola)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.39kk8xu">Ofrecimiento de sí mismo (S. Ignacio de Loyola)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1opuj5n">Oblación de la propia vida (S. Ignacio de Loyola)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.48pi1tg">Oración al Santísimo Sacramento (S. Alfonso M&ordf; de Ligorio)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2nusc19">Visita al Santísimo Sacramento y Comunión espiritual (S. José de Calasanz)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1302m92">Comunión espiritual (S. Alfonso M&ordf; de Ligorio)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3mzq4wv">Oración de adoración universal (S. Francisco de Asís)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2250f4o">Oración a Jesús en el Sagrario (Sta. Teresa del Niño Jesús)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.haapch">Mírame, oh buen y dulcísimo Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.319y80a">Quince minutos en compañía de Jesús sacramentado</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1gf8i83">Letanías de agradecimiento</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.40ew0vw">Alabanzas de desagravio</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2fk6b3p">Preces expiatorias (I)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.upglbi">Preces expiatorias (II) (Manual de la Adoración Nocturna Española)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3ep43zb">Hora santa para el Jueves Santo (Manual de la Adoración Nocturna Española)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1tuee74">Preces litánicas por las vocaciones sacerdotales (Seminario Conciliar de San Miguel de Pamplona)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4du1wux">Preces litánicas por las vocaciones sacerdotales y la santidad de los sacerdotes</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2szc72q">Oración por las vocaciones sacerdotales (Benedicto XVI)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.184mhaj">Oración por la santificación de los sacerdotes (S. Pablo VI)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3s49zyc">Oración por los sacerdotes (Siervo de Dios Mons. ángel Riesco Carbajo)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.279ka65">Adoro te devote (Sto. Tomás de Aquino)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.meukdy">Pange, língua (Sto. Tomás de Aquino: Himno de Vísperas del Corpus)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.36ei31r">Verbum supernum (Sto. Tomás de Aquino: Himno de Laudes del Corpus)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1ljsd9k">Sacris sollemniis (Sto. Tomás de Aquino: Himno de Maitines del Corpus)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.45jfvxd">Lauda, Sion (Sto. Tomás de Aquino: Secuencia del Corpus Christi)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2koq656">O salutáris Hóstia (Sto. Tomás de Aquino, final del </a></span><span class="c21 c4 c11"><a class="c3" href="#h.2koq656">Verbum supernum</a></span><span class="c11 c9"><a class="c3" href="#h.2koq656">)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.zu0gcz">O sacrum convivium (Sto. Tomás de Aquino: Antífona del Magnificat del Corpus)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3jtnz0s">Acto de reparación al Sagrado Corazón de Jesús (Pío XI)</a></span><span class="c8"><a class="c3" href="#h.3jtnz0s cmae">58</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1yyy98l">Novena al Sagrado Corazón de Jesús (S. Pío de Pietrelcina)</a></span><span class="c8"><a class="c3" href="#h.1yyy98l cmae">58</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4iylrwe">Novena de confianza al Sagrado Corazón de Jesús</a></span><span class="c8"><a class="c3" href="#h.4iylrwe cmae">59</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2y3w247">Acto de Ofrenda como víctima al amor misericordioso de Dios (Sta. Teresa del Niño Jesús)</a></span><span class="c8"><a class="c3" href="#h.2y3w247 cmae">59</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1d96cc0">Consagración personal al Sagrado Corazón de Jesús</a></span><span class="c8"><a class="c3" href="#h.1d96cc0 cmae">60</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3x8tuzt">Consagración personal al Sagrado Corazón de Jesús (Sta. Margarita M&ordf; de Alacoque)</a></span><span class="c8"><a class="c3" href="#h.3x8tuzt cmae">60</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2ce457m">Promesas del Sagrado Corazón de Jesús a sus devotos (Sta Margarita M&ordf; de Alacoque)</a></span><span class="c8"><a class="c3" href="#h.2ce457m cmae">60</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.rjefff">Consagración de la familia al Sagrado Corazón de Jesús</a></span><span class="c8"><a class="c3" href="#h.rjefff cmae">61</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3bj1y38">Oración de entronización del Sagrado Corazón de Jesús en el hogar</a></span><span class="c8"><a class="c3" href="#h.3bj1y38 cmae">61</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1qoc8b1">Oración de consagración de Navarra al Sagrado Corazón de Jesús (20 de junio de 2010)</a></span><span class="c8"><a class="c3" href="#h.1qoc8b1 cmae">62</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4anzqyu">Letanías del Sagrado Corazón de Jesús</a></span><span class="c8"><a class="c3" href="#h.4anzqyu cmae">62</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2pta16n">Letanías de la Preciosísima Sangre de Cristo</a></span><span class="c8"><a class="c3" href="#h.2pta16n cmae">63</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.14ykbeg">Letanías del Santo Nombre de Jesús</a></span><span class="c8"><a class="c3" href="#h.14ykbeg cmae">64</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3oy7u29">Acto de consagración del género humano a Jesucristo Rey (Pío XI)</a></span><span class="c8"><a class="c3" href="#h.3oy7u29 cmae">65</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.243i4a2">Oración a Cristo Rey</a></span><span class="c8"><a class="c3" href="#h.243i4a2 cmae">66</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.j8sehv">Oraciones que Nuestra Señora recomendó a Sor Lucía en Fátima</a></span><span class="c8"><a class="c3" href="#h.j8sehv cmae">66</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.338fx5o">Coronilla de la Divina Misericordia</a></span><span class="c8"><a class="c3" href="#h.338fx5o cmae">66</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1idq7dh">Noverim me, noverim te (S. Agustín)</a></span><span class="c8"><a class="c3" href="#h.1idq7dh cmae">67</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.42ddq1a">Iesu dulcis memoria (S. Bernardo)</a></span><span class="c8"><a class="c3" href="#h.42ddq1a cmae">67</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2hio093">Nada te turbe (Sta. Teresa de Jesús)</a></span><span class="c8"><a class="c3" href="#h.2hio093 cmae">67</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.wnyagw">Vuestra soy, para vos nací (Sta. Teresa de Jesús)</a></span><span class="c8"><a class="c3" href="#h.wnyagw cmae">68</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3gnlt4p">Vivo sin vivir en mí (Sta. Teresa de Jesús)</a></span><span class="c8"><a class="c3" href="#h.3gnlt4p cmae">68</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1vsw3ci">Véante mis ojos (popular)</a></span><span class="c8"><a class="c3" href="#h.1vsw3ci cmae">69</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4fsjm0b">&iexcl;Oh llama de amor viva! (S. Juan de la Cruz)</a></span><span class="c8"><a class="c3" href="#h.4fsjm0b cmae">69</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2uxtw84">&iexcl;Qué bien sé la fonte! (S. Juan de la Cruz)</a></span><span class="c8"><a class="c3" href="#h.2uxtw84 cmae">69</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1a346fx">&iquest;Qué tengo yo, que mi amistad procuras? (Lope de Vega)</a></span><span class="c8"><a class="c3" href="#h.1a346fx cmae">70</a></span></p>
-    <p class="c6"><span class="c11 c9 c12"><a class="c3" href="#h.3u2rp3q">Pastor que con tus silbos amorosos (Lope de Vega)</a></span><span class="c8"><a class="c3" href="#h.3u2rp3q cmae">70</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2981zbj">Estate, Señor, conmigo (Fray Damián de Vegas)</a></span><span class="c8"><a class="c3" href="#h.2981zbj cmae">70</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.odc9jc">A Ti me vuelvo (Miguel de Cervantes)</a></span><span class="c8"><a class="c3" href="#h.odc9jc cmae">70</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.38czs75">Oración para irradiar a Cristo (S. John Henry Newman)</a></span><span class="c8"><a class="c3" href="#h.38czs75 cmae">70</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1hx2z1h">Dios mío, tengo necesidad de Ti (S. John Henry Newman)</a></span><span class="c8"><a class="c3" href="#h.1hx2z1h cmae">71</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.47hxl2r">Imitación de Cristo (S. Pablo VI)</a></span><span class="c8"><a class="c3" href="#h.47hxl2r cmae">71</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3jtnz0s">Acto de reparación al Sagrado Corazón de Jesús (Pío XI)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1yyy98l">Novena al Sagrado Corazón de Jesús (S. Pío de Pietrelcina)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4iylrwe">Novena de confianza al Sagrado Corazón de Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2y3w247">Acto de Ofrenda como víctima al amor misericordioso de Dios (Sta. Teresa del Niño Jesús)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1d96cc0">Consagración personal al Sagrado Corazón de Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3x8tuzt">Consagración personal al Sagrado Corazón de Jesús (Sta. Margarita M&ordf; de Alacoque)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2ce457m">Promesas del Sagrado Corazón de Jesús a sus devotos (Sta Margarita M&ordf; de Alacoque)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.rjefff">Consagración de la familia al Sagrado Corazón de Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3bj1y38">Oración de entronización del Sagrado Corazón de Jesús en el hogar</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1qoc8b1">Oración de consagración de Navarra al Sagrado Corazón de Jesús (20 de junio de 2010)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4anzqyu">Letanías del Sagrado Corazón de Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2pta16n">Letanías de la Preciosísima Sangre de Cristo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.14ykbeg">Letanías del Santo Nombre de Jesús</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3oy7u29">Acto de consagración del género humano a Jesucristo Rey (Pío XI)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.243i4a2">Oración a Cristo Rey</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.j8sehv">Oraciones que Nuestra Señora recomendó a Sor Lucía en Fátima</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.338fx5o">Coronilla de la Divina Misericordia</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1idq7dh">Noverim me, noverim te (S. Agustín)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.42ddq1a">Iesu dulcis memoria (S. Bernardo)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2hio093">Nada te turbe (Sta. Teresa de Jesús)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.wnyagw">Vuestra soy, para vos nací (Sta. Teresa de Jesús)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3gnlt4p">Vivo sin vivir en mí (Sta. Teresa de Jesús)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1vsw3ci">Véante mis ojos (popular)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4fsjm0b">&iexcl;Oh llama de amor viva! (S. Juan de la Cruz)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2uxtw84">&iexcl;Qué bien sé la fonte! (S. Juan de la Cruz)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1a346fx">&iquest;Qué tengo yo, que mi amistad procuras? (Lope de Vega)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3u2rp3q">Pastor que con tus silbos amorosos (Lope de Vega)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2981zbj">Estate, Señor, conmigo (Fray Damián de Vegas)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.odc9jc">A Ti me vuelvo (Miguel de Cervantes)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.38czs75">Oración para irradiar a Cristo (S. John Henry Newman)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1hx2z1h">Dios mío, tengo necesidad de Ti (S. John Henry Newman)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.47hxl2r">Imitación de Cristo (S. Pablo VI)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2mn7vak">Pasos del sacramento de la Penitencia</a></span><span class="c8"><a class="c3" href="#h.2mn7vak cmae">73</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.11si5id">Efectos espirituales del sacramento de la Penitencia</a></span><span class="c8"><a class="c3" href="#h.11si5id cmae">73</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3ls5o66">Oración para prepararse a la confesión</a></span><span class="c8"><a class="c3" href="#h.3ls5o66 cmae">73</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.20xfydz">Para un examen de conciencia (S. Cipriano)</a></span><span class="c8"><a class="c3" href="#h.20xfydz cmae">73</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4kx3h1s">Diez consejos de la </a></span><span class="c4 c11 c21"><a class="c3" href="#h.4kx3h1s">Imitación de Cristo</a></span><span class="c12 c11 c9"><a class="c3" href="#h.4kx3h1s">&nbsp;(Tomás de Kempis)</a></span><span class="c8"><a class="c3" href="#h.4kx3h1s cmae">73</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.302dr9l">Para animarse a la confesión (Sto. Cura de Ars)</a></span><span class="c8"><a class="c3" href="#h.302dr9l cmae">74</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3z7bk57">Ad petendam compunctionem cordis (Misal Romano)</a></span><span class="c8"><a class="c3" href="#h.3z7bk57 cmae">74</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2eclud0">Fórmula de la absolución sacramental y una oración aneja</a></span><span class="c8"><a class="c3" href="#h.2eclud0 cmae">74</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.thw4kt">Fórmula de la Bendición apostólica </a></span><span class="c21 c4 c11"><a class="c3" href="#h.thw4kt">in articulo mortis</a></span><span class="c8"><a class="c3" href="#h.thw4kt cmae">75</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3dhjn8m">Oración para después de la confesión</a></span><span class="c8"><a class="c3" href="#h.3dhjn8m cmae">75</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2mn7vak">Pasos del sacramento de la Penitencia</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.11si5id">Efectos espirituales del sacramento de la Penitencia</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3ls5o66">Oración para prepararse a la confesión</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.20xfydz">Para un examen de conciencia (S. Cipriano)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4kx3h1s">Diez consejos de la Imitación de Cristo (Tomás de Kempis)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.302dr9l">Para animarse a la confesión (Sto. Cura de Ars)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3z7bk57">Ad petendam compunctionem cordis (Misal Romano)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2eclud0">Fórmula de la absolución sacramental y una oración aneja</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.thw4kt">Fórmula de la Bendición apostólica </a></span><span class="c21 c4 c11"><a class="c3" href="#h.thw4kt">in articulo mortis</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3dhjn8m">Oración para después de la confesión</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1smtxgf">Vexilla Regis (Venancio Fortunato)</a></span><span class="c8"><a class="c3" href="#h.1smtxgf cmae">77</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4cmhg48">Pange, lingua, gloriosi pr&oelig;lium (Venancio Fortunato)</a></span><span class="c8"><a class="c3" href="#h.4cmhg48 cmae">77</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2rrrqc1">En acetum (Venancio Fortunato)</a></span><span class="c8"><a class="c3" href="#h.2rrrqc1 cmae">78</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.356xmb2">Viacrucis (S. Alfonso M&ordf; de Ligorio)</a></span><span class="c8"><a class="c3" href="#h.356xmb2 cmae">78</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1kc7wiv">Viacrucis breve</a></span><span class="c8"><a class="c3" href="#h.1kc7wiv cmae">81</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.44bvf6o">Viacrucis brevísimo</a></span><span class="c8"><a class="c3" href="#h.44bvf6o cmae">82</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2jh5peh">Ante el crucifijo de San Damián (S. Francisco de Asís)</a></span><span class="c8"><a class="c3" href="#h.2jh5peh cmae">83</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.ymfzma">A Jesús crucificado (Fray Miguel de Guevara)</a></span><span class="c8"><a class="c3" href="#h.ymfzma cmae">83</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3im3ia3">Al Cristo del Calvario (Gabriela Mistral)</a></span><span class="c8"><a class="c3" href="#h.3im3ia3 cmae">83</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1smtxgf">Vexilla Regis (Venancio Fortunato)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4cmhg48">Pange, lingua, gloriosi pr&oelig;lium (Venancio Fortunato)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2rrrqc1">En acetum (Venancio Fortunato)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.356xmb2">Viacrucis (S. Alfonso M&ordf; de Ligorio)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1kc7wiv">Viacrucis breve</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.44bvf6o">Viacrucis brevísimo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2jh5peh">Ante el crucifijo de San Damián (S. Francisco de Asís)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.ymfzma">A Jesús crucificado (Fray Miguel de Guevara)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3im3ia3">Al Cristo del Calvario (Gabriela Mistral)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c14 c9 c25"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1xrdshw">Veni, Creátor (Rabano Mauro)</a></span><span class="c8"><a class="c3" href="#h.1xrdshw cmae">85</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4hr1b5p">Secuencia de Pentecostés</a></span><span class="c8"><a class="c3" href="#h.4hr1b5p cmae">85</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.41wqhpa">Ven, Espíritu Santo</a></span><span class="c8"><a class="c3" href="#h.41wqhpa cmae">86</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1c1lvlb">Al Espíritu Santo (S. Agustín)</a></span><span class="c8"><a class="c3" href="#h.1c1lvlb cmae">86</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3w19e94">Adsumus (S. Isidoro de Sevilla)</a></span><span class="c8"><a class="c3" href="#h.3w19e94 cmae">86</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2b6jogx">Al Espíritu Santo (Card. Mercier)</a></span><span class="c8"><a class="c3" href="#h.2b6jogx cmae">86</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.qbtyoq">Nunc c&oelig;pi (S. Josemaría Escrivá)</a></span><span class="c8"><a class="c3" href="#h.qbtyoq cmae">86</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3abhhcj">Consagración al Espíritu Santo (Siervo de Dios Mons. García Lahiguera)</a></span><span class="c8"><a class="c3" href="#h.3abhhcj cmae">87</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1xrdshw">Veni, Creátor (Rabano Mauro)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4hr1b5p">Secuencia de Pentecostés</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.41wqhpa">Ven, Espíritu Santo</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1c1lvlb">Al Espíritu Santo (S. Agustín)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3w19e94">Adsumus (S. Isidoro de Sevilla)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2b6jogx">Al Espíritu Santo (Card. Mercier)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.qbtyoq">Nunc c&oelig;pi (S. Josemaría Escrivá)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3abhhcj">Consagración al Espíritu Santo (Siervo de Dios Mons. García Lahiguera)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1pgrrkc">Angelus</a></span><span class="c8"><a class="c3" href="#h.1pgrrkc cmae">88</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.49gfa85">Regina c&aelig;li (Pascua)</a></span><span class="c8"><a class="c3" href="#h.49gfa85 cmae">88</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2olpkfy">Antífonas a la Santísima Virgen</a></span><span class="c8"><a class="c3" href="#h.2olpkfy cmae">88</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.13qzunr">Ave Maris Stella (Venancio Fortunato)</a></span><span class="c8"><a class="c3" href="#h.13qzunr cmae">89</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3nqndbk">Stabat Mater (traducción de Lope de Vega)</a></span><span class="c8"><a class="c3" href="#h.3nqndbk cmae">90</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.22vxnjd">Bendita sea tu pureza</a></span><span class="c8"><a class="c3" href="#h.22vxnjd cmae">91</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.i17xr6">Acordaos (S. Bernardo)</a></span><span class="c8"><a class="c3" href="#h.i17xr6 cmae">91</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.320vgez">Mira a la Estrella (S. Bernardo)</a></span><span class="c8"><a class="c3" href="#h.320vgez cmae">91</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1h65qms">Flos Carmeli (S. Simón Stock)</a></span><span class="c8"><a class="c3" href="#h.1h65qms cmae">91</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.415t9al">Ave Stella matutina (S. Simón Stock)</a></span><span class="c8"><a class="c3" href="#h.415t9al cmae">92</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2gb3jie">Santo Rosario</a></span><span class="c8"><a class="c3" href="#h.2gb3jie cmae">92</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.vgdtq7">Letanías lauretanas a la Santísima Virgen</a></span><span class="c8"><a class="c3" href="#h.vgdtq7 cmae">93</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3fg1ce0">Litani&aelig; Lauretan&aelig;</a></span><span class="c8"><a class="c3" href="#h.3fg1ce0 cmae">94</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1ulbmlt">Promesas de la Santísima Virgen a quienes recen el Rosario (Bto. Alano de Rupe)</a></span><span class="c8"><a class="c3" href="#h.1ulbmlt cmae">95</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4ekz59m">Jaculatoria a Nuestra Señora del Pilar</a></span><span class="c8"><a class="c3" href="#h.4ekz59m cmae">95</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2tq9fhf">Oración de consagración a la Santísima Virgen María (S. Luis M&ordf; Grignion de Montfort)</a></span><span class="c8"><a class="c3" href="#h.2tq9fhf cmae">95</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.18vjpp8">Oración de consagración de esclavitud mariana (S. Luis M&ordf; Grignion de Montfort)</a></span><span class="c8"><a class="c3" href="#h.18vjpp8 cmae">96</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3sv78d1">Oración de consagración a la Santísima Virgen María</a></span><span class="c8"><a class="c3" href="#h.3sv78d1 cmae">97</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.280hiku">Oración de consagración a la Inmaculada (S. Maximiliano M&ordf; Kolbe)</a></span><span class="c8"><a class="c3" href="#h.280hiku cmae">97</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.n5rssn">Bendición e imposición del escapulario de la Virgen del Carmen</a></span><span class="c8"><a class="c3" href="#h.n5rssn cmae">97</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.375fbgg">Novena a la Inmaculada Concepción de la Virgen María (S. Alfonso M&ordf; de Ligorio)</a></span><span class="c8"><a class="c3" href="#h.375fbgg cmae">98</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1maplo9">Acto de consagración del mundo al Inmaculado Corazón de María (S. Juan Pablo II)</a></span><span class="c8"><a class="c3" href="#h.1maplo9 cmae">100</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.46ad4c2">Invocación a la Virgen de la Medalla Milagrosa</a></span><span class="c8"><a class="c3" href="#h.46ad4c2 cmae">101</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2lfnejv">Oración a la Virgen de la Medalla Milagrosa (S. Juan Pablo II)</a></span><span class="c8"><a class="c3" href="#h.2lfnejv cmae">101</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.10kxoro">Oración a Nuestra Señora del Perpetuo Socorro (S. Juan Pablo II)</a></span><span class="c8"><a class="c3" href="#h.10kxoro cmae">101</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3kkl7fh">Akáthistos (tradición oriental)</a></span><span class="c8"><a class="c3" href="#h.3kkl7fh cmae">102</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1pgrrkc">Angelus</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.49gfa85">Regina c&aelig;li (Pascua)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2olpkfy">Antífonas a la Santísima Virgen</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.13qzunr">Ave Maris Stella (Venancio Fortunato)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3nqndbk">Stabat Mater (traducción de Lope de Vega)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.22vxnjd">Bendita sea tu pureza</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.i17xr6">Acordaos (S. Bernardo)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.320vgez">Mira a la Estrella (S. Bernardo)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1h65qms">Flos Carmeli (S. Simón Stock)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.415t9al">Ave Stella matutina (S. Simón Stock)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2gb3jie">Santo Rosario</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.vgdtq7">Letanías lauretanas a la Santísima Virgen</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3fg1ce0">Litani&aelig; Lauretan&aelig;</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1ulbmlt">Promesas de la Santísima Virgen a quienes recen el Rosario (Bto. Alano de Rupe)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4ekz59m">Jaculatoria a Nuestra Señora del Pilar</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2tq9fhf">Oración de consagración a la Santísima Virgen María (S. Luis M&ordf; Grignion de Montfort)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.18vjpp8">Oración de consagración de esclavitud mariana (S. Luis M&ordf; Grignion de Montfort)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3sv78d1">Oración de consagración a la Santísima Virgen María</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.280hiku">Oración de consagración a la Inmaculada (S. Maximiliano M&ordf; Kolbe)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.n5rssn">Bendición e imposición del escapulario de la Virgen del Carmen</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.375fbgg">Novena a la Inmaculada Concepción de la Virgen María (S. Alfonso M&ordf; de Ligorio)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1maplo9">Acto de consagración del mundo al Inmaculado Corazón de María (S. Juan Pablo II)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.46ad4c2">Invocación a la Virgen de la Medalla Milagrosa</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2lfnejv">Oración a la Virgen de la Medalla Milagrosa (S. Juan Pablo II)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.10kxoro">Oración a Nuestra Señora del Perpetuo Socorro (S. Juan Pablo II)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3kkl7fh">Akáthistos (tradición oriental)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1zpvhna">Deprecaciones a la Sagrada Familia</a></span><span class="c8"><a class="c3" href="#h.1zpvhna cmae">105</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4jpj0b3">Oración al Niño Jesús de Praga (Venerable Cirilo de la Madre de Dios)</a></span><span class="c8"><a class="c3" href="#h.4jpj0b3 cmae">105</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2yutaiw">Oración al Niño Jesús de Praga (Benedicto XVI)</a></span><span class="c8"><a class="c3" href="#h.2yutaiw cmae">105</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1e03kqp">Tu scendi dalle stelle (villancico de S. Alfonso M&ordf; de Ligorio)</a></span><span class="c8"><a class="c3" href="#h.1e03kqp cmae">105</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3xzr3ei">Te Ioseph (Himno de Vísperas)</a></span><span class="c8"><a class="c3" href="#h.3xzr3ei cmae">105</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2d51dmb">Oración al glorioso patriarca S. José, Patrono de la Iglesia (León XIII)</a></span><span class="c8"><a class="c3" href="#h.2d51dmb cmae">106</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.sabnu4">Oraciones para pedir la intercesión de S. José</a></span><span class="c8"><a class="c3" href="#h.sabnu4 cmae">106</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3c9z6hx">Letanías de S. José</a></span><span class="c8"><a class="c3" href="#h.3c9z6hx cmae">107</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1rf9gpq">Dolores y gozos de S. José</a></span><span class="c8"><a class="c3" href="#h.1rf9gpq cmae">107</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1zpvhna">Deprecaciones a la Sagrada Familia</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4jpj0b3">Oración al Niño Jesús de Praga (Venerable Cirilo de la Madre de Dios)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2yutaiw">Oración al Niño Jesús de Praga (Benedicto XVI)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1e03kqp">Tu scendi dalle stelle (villancico de S. Alfonso M&ordf; de Ligorio)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3xzr3ei">Te Ioseph (Himno de Vísperas)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2d51dmb">Oración al glorioso patriarca S. José, Patrono de la Iglesia (León XIII)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.sabnu4">Oraciones para pedir la intercesión de S. José</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3c9z6hx">Letanías de S. José</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1rf9gpq">Dolores y gozos de S. José</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4bewzdj">Himno a todos los santos (Gustavo Adolfo Bécquer)</a></span><span class="c8"><a class="c3" href="#h.4bewzdj cmae">109</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2qk79lc">Letanías de los santos</a></span><span class="c8"><a class="c3" href="#h.2qk79lc cmae">109</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.15phjt5">Litani&aelig; Sanctorum</a></span><span class="c8"><a class="c3" href="#h.15phjt5 cmae">111</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4bewzdj">Himno a todos los santos (Gustavo Adolfo Bécquer)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2qk79lc">Letanías de los santos</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.15phjt5">Litani&aelig; Sanctorum</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3pp52gy">Oraciones al ángel de la guarda</a></span><span class="c8"><a class="c3" href="#h.3pp52gy cmae">113</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.24ufcor">Oración a S. Miguel Arcángel (I) (León XIII)</a></span><span class="c8"><a class="c3" href="#h.24ufcor cmae">113</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.jzpmwk">Oración a S. Miguel Arcángel (II) (León XIII)</a></span><span class="c8"><a class="c3" href="#h.jzpmwk cmae">113</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.33zd5kd">Te splendor et virtus Patris (Maitines en la fiesta de la Aparición de S. Miguel)</a></span><span class="c8"><a class="c3" href="#h.33zd5kd cmae">114</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1j4nfs6">Novena a S. Miguel Arcángel</a></span><span class="c8"><a class="c3" href="#h.1j4nfs6 cmae">115</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.434ayfz">Gozos del Arcángel S. Miguel</a></span><span class="c8"><a class="c3" href="#h.434ayfz cmae">116</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2i9l8ns">Letanías de S. Miguel</a></span><span class="c8"><a class="c3" href="#h.2i9l8ns cmae">117</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.xevivl">Invocaciones de la Medalla de S. Benito</a></span><span class="c8"><a class="c3" href="#h.xevivl cmae">118</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3pp52gy">Oraciones al ángel de la guarda</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.24ufcor">Oración a S. Miguel Arcángel (I) (León XIII)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.jzpmwk">Oración a S. Miguel Arcángel (II) (León XIII)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.33zd5kd">Te splendor et virtus Patris (Maitines en la fiesta de la Aparición de S. Miguel)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1j4nfs6">Novena a S. Miguel Arcángel</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.434ayfz">Gozos del Arcángel S. Miguel</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2i9l8ns">Letanías de S. Miguel</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.xevivl">Invocaciones de la Medalla de S. Benito</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c25 c14 c9"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3hej1je">Novena de la Gracia de S. Francisco Javier (4-12 marzo)</a></span><span class="c8"><a class="c3" href="#h.3hej1je cmae">119</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1wjtbr7">Oración por la paz (S. Francisco de Asís)</a></span><span class="c8"><a class="c3" href="#h.1wjtbr7 cmae">119</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4gjguf0">Oración por la paz (León XIII)</a></span><span class="c8"><a class="c3" href="#h.4gjguf0 cmae">120</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2vor4mt">Oración por la paz (S. Pablo VI)</a></span><span class="c8"><a class="c3" href="#h.2vor4mt cmae">120</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1au1eum">Oración del buen humor (Sto. Tomás Moro)</a></span><span class="c8"><a class="c3" href="#h.1au1eum cmae">120</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3utoxif">Letanías de la humildad (Card. Rafael Merry del Val)</a></span><span class="c8"><a class="c3" href="#h.3utoxif cmae">120</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.29yz7q8">Decálogo de la serenidad (Angelo Giuseppe Roncalli)</a></span><span class="c8"><a class="c3" href="#h.29yz7q8 cmae">121</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.p49hy1">Oración para aprender a amar (Sta. Teresa de Calcuta)</a></span><span class="c8"><a class="c3" href="#h.p49hy1 cmae">121</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.393x0lu">Oración para sonreír (Sta. Teresa de Calcuta)</a></span><span class="c8"><a class="c3" href="#h.393x0lu cmae">122</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1o97atn">Oración por la familia (Sta. Teresa de Calcuta)</a></span><span class="c8"><a class="c3" href="#h.1o97atn cmae">122</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.488uthg">Oración por la curación interior (P. Gabriel Amorth)</a></span><span class="c8"><a class="c3" href="#h.488uthg cmae">122</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2ne53p9">Oración por el Papa (I)</a></span><span class="c8"><a class="c3" href="#h.2ne53p9 cmae">123</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.12jfdx2">Oración por el Papa (II)</a></span><span class="c8"><a class="c3" href="#h.12jfdx2 cmae">123</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3mj2wkv">Oración por la unidad de los cristianos</a></span><span class="c8"><a class="c3" href="#h.3mj2wkv cmae">123</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.21od6so">Que tu gracia, Señor</a></span><span class="c8"><a class="c3" href="#h.21od6so cmae">123</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.gtnh0h">Oración para comenzar a estudiar (Sto. Tomás de Aquino)</a></span><span class="c8"><a class="c3" href="#h.gtnh0h cmae">124</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.30tazoa">Bendición de S. Francisco de Asís</a></span><span class="c8"><a class="c3" href="#h.30tazoa cmae">124</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1fyl9w3">Bendición del libro de los Números (6,24-26)</a></span><span class="c8"><a class="c3" href="#h.1fyl9w3 cmae">124</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3zy8sjw">Bendición [oración] del peregrino</a></span><span class="c8"><a class="c3" href="#h.3zy8sjw cmae">124</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2f3j2rp">Bendición de los esposos (Liturgia del Matrimonio)</a></span><span class="c8"><a class="c3" href="#h.2f3j2rp cmae">124</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.u8tczi">Oración de los esposos en la noche de bodas (Tobías 8,5-7)</a></span><span class="c8"><a class="c3" href="#h.u8tczi cmae">125</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3e8gvnb">Oraciones de bendición de la mesa</a></span><span class="c8"><a class="c3" href="#h.3e8gvnb cmae">125</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1tdr5v4">Oración de bendición de las campanas (Liturgia hispano-mozárabe)</a></span><span class="c8"><a class="c3" href="#h.1tdr5v4 cmae">126</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4ddeoix">Saludo al altar (Liturgia siro-maronita)</a></span><span class="c8"><a class="c3" href="#h.4ddeoix cmae">126</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2sioyqq">Inscripción en la capilla de S. Nicolás del Monte Athos</a></span><span class="c8"><a class="c3" href="#h.2sioyqq cmae">127</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.17nz8yj">Hoy que sé que mi vida es un desierto</a></span><span class="c8"><a class="c3" href="#h.17nz8yj cmae">127</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3hej1je">Novena de la Gracia de S. Francisco Javier (4-12 marzo)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1wjtbr7">Oración por la paz (S. Francisco de Asís)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4gjguf0">Oración por la paz (León XIII)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2vor4mt">Oración por la paz (S. Pablo VI)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1au1eum">Oración del buen humor (Sto. Tomás Moro)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3utoxif">Letanías de la humildad (Card. Rafael Merry del Val)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.29yz7q8">Decálogo de la serenidad (Angelo Giuseppe Roncalli)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.p49hy1">Oración para aprender a amar (Sta. Teresa de Calcuta)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.393x0lu">Oración para sonreír (Sta. Teresa de Calcuta)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1o97atn">Oración por la familia (Sta. Teresa de Calcuta)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.488uthg">Oración por la curación interior (P. Gabriel Amorth)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2ne53p9">Oración por el Papa (I)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.12jfdx2">Oración por el Papa (II)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3mj2wkv">Oración por la unidad de los cristianos</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.21od6so">Que tu gracia, Señor</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.gtnh0h">Oración para comenzar a estudiar (Sto. Tomás de Aquino)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.30tazoa">Bendición de S. Francisco de Asís</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1fyl9w3">Bendición del libro de los Números (6,24-26)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3zy8sjw">Bendición [oración] del peregrino</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2f3j2rp">Bendición de los esposos (Liturgia del Matrimonio)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.u8tczi">Oración de los esposos en la noche de bodas (Tobías 8,5-7)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3e8gvnb">Oraciones de bendición de la mesa</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1tdr5v4">Oración de bendición de las campanas (Liturgia hispano-mozárabe)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4ddeoix">Saludo al altar (Liturgia siro-maronita)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2sioyqq">Inscripción en la capilla de S. Nicolás del Monte Athos</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.17nz8yj">Hoy que sé que mi vida es un desierto</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c0"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3rnmrmc">Recuerde el alma dormida (Jorge Manrique)</a></span><span class="c8"><a class="c3" href="#h.3rnmrmc cmae">129</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.26sx1u5">Yo &iquest;para qué nací? (Fray Pedro de los Reyes)</a></span><span class="c8"><a class="c3" href="#h.26sx1u5 cmae">129</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.ly7c1y">Recomendación del alma (I)</a></span><span class="c8"><a class="c3" href="#h.ly7c1y cmae">129</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.35xuupr">Recomendación del alma (II)</a></span><span class="c8"><a class="c3" href="#h.35xuupr cmae">129</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1l354xk">Venid en su ayuda (responso)</a></span><span class="c8"><a class="c3" href="#h.1l354xk cmae">130</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.452snld">Requiem &aelig;ternam (responso)</a></span><span class="c8"><a class="c3" href="#h.452snld cmae">130</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2k82xt6">Requiem &aelig;ternam (Introito Misa de difuntos)</a></span><span class="c8"><a class="c3" href="#h.2k82xt6 cmae">130</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.zdd80z">Absolve, Domine (Tracto Misa de difuntos)</a></span><span class="c8"><a class="c3" href="#h.zdd80z cmae">130</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3jd0qos">Dies ir&aelig; (Secuencia Misa de difuntos)</a></span><span class="c8"><a class="c3" href="#h.3jd0qos cmae">131</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1yib0wl">Libera animas (Ofertorio Misa de difuntos)</a></span><span class="c8"><a class="c3" href="#h.1yib0wl cmae">132</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.4ihyjke">Lux &aelig;terna (Comunión Misa de difuntos)</a></span><span class="c8"><a class="c3" href="#h.4ihyjke cmae">132</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2xn8ts7">In paradisum (antífona final Misa de difuntos)</a></span><span class="c8"><a class="c3" href="#h.2xn8ts7 cmae">132</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.1csj400">Ne recorderis (responso)</a></span><span class="c8"><a class="c3" href="#h.1csj400 cmae">132</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3rnmrmc">Recuerde el alma dormida (Jorge Manrique)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.26sx1u5">Yo &iquest;para qué nací? (Fray Pedro de los Reyes)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.ly7c1y">Recomendación del alma (I)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.35xuupr">Recomendación del alma (II)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1l354xk">Venid en su ayuda (responso)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.452snld">Requiem &aelig;ternam (responso)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2k82xt6">Requiem &aelig;ternam (Introito Misa de difuntos)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.zdd80z">Absolve, Domine (Tracto Misa de difuntos)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3jd0qos">Dies ir&aelig; (Secuencia Misa de difuntos)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1yib0wl">Libera animas (Ofertorio Misa de difuntos)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.4ihyjke">Lux &aelig;terna (Comunión Misa de difuntos)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2xn8ts7">In paradisum (antífona final Misa de difuntos)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.1csj400">Ne recorderis (responso)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c0"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3ws6mnt">Otras jaculatorias e invocaciones piadosas</a></span><span class="c8"><a class="c3" href="#h.3ws6mnt cmae">135</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3ws6mnt">Otras jaculatorias e invocaciones piadosas</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p>
     <p class="c6 c7"><span class="c0"></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.2bxgwvm">Catecismo de la Iglesia Católica</a></span><span class="c12 c11 c9"><a class="c3" href="#h.2bxgwvm">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.2bxgwvm">Las fuentes de la oración</a></span><span class="c8"><a class="c3" href="#h.2bxgwvm cmae">137</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.r2r73f">Congregación para el Culto</a></span><span class="c12 c11 c9"><a class="c3" href="#h.r2r73f">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.r2r73f">Directorio sobre la piedad popular y la liturgia</a></span><span class="c12 c11 c9"><a class="c3" href="#h.r2r73f">&nbsp;(2002)</a></span><span class="c8"><a class="c3" href="#h.r2r73f cmae">138</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3b2epr8">Congregación para la Doctrina de la Fe</a></span><span class="c12 c11 c9"><a class="c3" href="#h.3b2epr8">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.3b2epr8">Orationis formas</a></span><span class="c12 c11 c9"><a class="c3" href="#h.3b2epr8">&nbsp;(1989)</a></span><span class="c8"><a class="c3" href="#h.3b2epr8 cmae">143</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.14hx32g">Concilio Vaticano II</a></span><span class="c12 c11 c9"><a class="c3" href="#h.14hx32g">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.14hx32g">Sacrosanctum Concilium </a></span><span class="c12 c11 c9"><a class="c3" href="#h.14hx32g">(1963)</a></span><span class="c8"><a class="c3" href="#h.14hx32g cmae">147</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.3ohklq9">Pío XII</a></span><span class="c12 c11 c9"><a class="c3" href="#h.3ohklq9">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.3ohklq9">Mediator Dei</a></span><span class="c12 c11 c9"><a class="c3" href="#h.3ohklq9">&nbsp;(1947)</a></span><span class="c8"><a class="c3" href="#h.3ohklq9 cmae">148</a></span></p>
-    <p class="c6"><span class="c12 c11 c9"><a class="c3" href="#h.is565v">Pío XII</a></span><span class="c12 c11 c9"><a class="c3" href="#h.is565v">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.is565v">Mystici Corporis</a></span><span class="c12 c11 c9"><a class="c3" href="#h.is565v">&nbsp;(1943)</a></span><span class="c8"><a class="c3" href="#h.is565v cmae">152</a></span></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.2bxgwvm">Catecismo de la Iglesia Católica</a></span><span class="c11 c9"><a class="c3" href="#h.2bxgwvm">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.2bxgwvm">Las fuentes de la oración</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.r2r73f">Congregación para el Culto</a></span><span class="c11 c9"><a class="c3" href="#h.r2r73f">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.r2r73f">Directorio sobre la piedad popular y la liturgia</a></span><span class="c11 c9"><a class="c3" href="#h.r2r73f">&nbsp;(2002)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3b2epr8">Congregación para la Doctrina de la Fe</a></span><span class="c11 c9"><a class="c3" href="#h.3b2epr8">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.3b2epr8">Orationis formas</a></span><span class="c11 c9"><a class="c3" href="#h.3b2epr8">&nbsp;(1989)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.14hx32g">Concilio Vaticano II</a></span><span class="c11 c9"><a class="c3" href="#h.14hx32g">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.14hx32g">Sacrosanctum Concilium </a></span><span class="c11 c9"><a class="c3" href="#h.14hx32g">(1963)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.3ohklq9">Pío XII</a></span><span class="c11 c9"><a class="c3" href="#h.3ohklq9">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.3ohklq9">Mediator Dei</a></span><span class="c11 c9"><a class="c3" href="#h.3ohklq9">&nbsp;(1947)</a></p>
+    <p class="c6 c11 c9"><a class="c3" href="#h.is565v">Pío XII</a></span><span class="c11 c9"><a class="c3" href="#h.is565v">, </a></span><span class="c21 c4 c11"><a class="c3" href="#h.is565v">Mystici Corporis</a></span><span class="c11 c9"><a class="c3" href="#h.is565v">&nbsp;(1943)</a></p>
     <p class="c6"><span class="c0">________________________________________________________________________________</span></p></div>
   </body>
 </html>
