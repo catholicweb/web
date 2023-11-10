@@ -19,10 +19,6 @@ for (var i = 1; i <= 2; i++) {
 
 var videos = [
   /*{
-    caption: 'SM Dani al descubierto | El sacerdote que tiende puentes en Youtube',
-    yid: '24JdG4uMW20',
-  },*/
-  /*{
     caption: 'Pescadores de hombres',
     yid: 'gN3ROP4akbs',
     thumb: 'http://i3.ytimg.com/vi/gN3ROP4akbs/hqdefault.jpg',
@@ -95,7 +91,8 @@ var books = [
   },
   {
     caption: "El cura de Ars (Francis Trochu)",
-    thumb: "https://d3s1b1zelykba8.cloudfront.net/Articulo/Grande/541.jpg",
+    //thumb: "https://d3s1b1zelykba8.cloudfront.net/Articulo/Grande/541.jpg",
+    thumb: "https://m.media-amazon.com/images/I/81xh3GXWlNL._SY425_.jpg",
     src: "https://www.palabra.es/el-cura-de-ars-digital-0541.html",
   },
   {
