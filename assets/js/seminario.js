@@ -398,6 +398,11 @@ var app = new Vue({
       timeout = setTimeout(this.slider, 25000);  
     }
   },
+  computed: {
+    openingVideo(){
+      return 'https://www.youtube.com/embed/9EBorhB2W5w?controls=1&autoplay=0&mute=0&loop=1'
+    }
+  },
   mounted() {
     this.resetTimer()
   }
