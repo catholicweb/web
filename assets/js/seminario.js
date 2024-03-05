@@ -18,16 +18,41 @@ for (var i = 1; i <= 2; i++) {
 }*/
 
 var videos = [
-  /*{
-    caption: 'Pescadores de hombres',
-    yid: 'gN3ROP4akbs',
-    thumb: 'http://i3.ytimg.com/vi/gN3ROP4akbs/hqdefault.jpg',
-  },*/
+  {
+    caption: "Testimonio Jose Angel Zubiaur",
+    yid: "CSqnkjlqZx0",
+  },
+  {
+    caption: "Testimonio Jesús Echeverz",
+    yid: "2ZL5_aqkas4",
+  },
+  {
+    caption: "Testimonio Donato Ochoa (Navarra Televisión)",
+    yid: "t6cNqfVn8rU",
+  },
+  {
+    caption: "Testimonio de Fray Ignacio, monje benedictino y millennial",
+    yid: "LvqPshrX8cg",
+  },
+  {
+    caption: "¿Por qué eres sacerdote? La vocación después de 1, 2 ¡o 30 años!",
+    yid: "Qrf8LVmzWPk",
+    thumb: "https://i3.ytimg.com/vi/Qrf8LVmzWPk/hqdefault.jpg",
+  },
+  {
+    caption: "Te prometo una vida apasionante",
+    yid: "k1pY_IugQfY",
+  },
   {
     caption: "Signos de la vocación",
     class: "hidden",
     yid: "zURt1o1cQrA",
   },
+  {
+    caption: "¿Entregar tu vida a Dios? I Jornada Vocacional",
+    thumb: "https://img.youtube.com/vi/kTjh0OODwEg/hqdefault.jpg",
+    yid: "kTjh0OODwEg",
+  },  
   {
     caption: "La vocación Mons Munilla",
     yid: "w5FTJrEx5ro",
@@ -37,6 +62,7 @@ var videos = [
     yid: "RhZFjkmX894",
   },
   {
+    caption: "¿Y por qué no sacerdote?",
     yid: "m0To2flk_Lg",
   },
   {
@@ -45,37 +71,28 @@ var videos = [
     yid: "og6i0VZFzgc",
   },
   {
+    caption: "Testimonio Miguel & Andoni (Navarra Televisión)",
+    class: "hidden",
+    yid: "z1OMck6OAYc",
+  },
+  {
     caption: "¿Hay monjes benedictinos jóvenes? El testimonio de Fray Eduardo",
     yid: "x33Fi_iEEFM",
-  },
-  {
-    caption: "Testimonio de Fray Ignacio, monje benedictino y millennial",
-    yid: "LvqPshrX8cg",
-  },
-];
-
-var sacerdocio = [
-  {
-    caption: "Testimonio Jose Angel Zubiaur",
-    yid: "CSqnkjlqZx0",
-  },
-  {
-    caption: "¿Por qué eres sacerdote? La vocación después de 1, 2 ¡o 30 años!",
-    yid: "Qrf8LVmzWPk",
-    thumb: "https://i3.ytimg.com/vi/Qrf8LVmzWPk/hqdefault.jpg",
   },
   {
     caption: "Testimonio Pedro Luis",
     yid: "k-i5Zox0K9I",
   },
   {
-    caption: "¿Y por qué no sacerdote?",
-    yid: "m0To2flk_Lg",
-  },
-  /*{
     caption: 'Pescadores de hombres',
     yid: 'gN3ROP4akbs',
-  },*/
+    thumb: "https://img.youtube.com/vi/gN3ROP4akbs/hqdefault.jpg",
+  },
+  {
+    caption: 'El seminario es nuestra casa ¡y la de todos!',
+    yid: '3ec20-3Dv_s',
+   // thumb: "https://img.youtube.com/vi/3ec20-3Dv_s/hqdefault.jpg",
+  }
 ];
 
 var books = [
@@ -162,7 +179,7 @@ let santos = [
   {
     title: "San Fancisco Javier",
     image: "assets/img/sfj.jpeg",
-    text: `De familia noble, fue a estudiar a París (con intención promocionar canonigo...), donde conoce a Iñigo de Loyola y hace sus ejercicios espirituales, encontrandose con Cristo. Junto con cinco compañeros funda la Compañia de Jesús. Es ordenado en 1537 y enviado a evangelizar las Indias en sustitución de un compañero enfermo. Incansable evangelizador, aprendió la lengua local, realizo gran cantidad de viajes misioneros, bautizando a decenas de miles de personas y estableciendo misiones en distintos paises. Murió desgastado con 46 años a las puertas de china.`,
+    text: `De familia noble, fue a estudiar a París para ser canónigo, allí conoce a Iñigo de Loyola y se encuentra con Cristo tras hacer sus ejercicios espirituales. Junto con cinco compañeros funda la Compañia de Jesús, es ordenado en 1537 y enviado a evangelizar las Indias en sustitución de un compañero enfermo. Incansable evangelizador, realizó innumerables viajes misioneros, bautizando a decenas de miles de personas y estableciendo misiones en distintos paises. Murió desgastado con 46 años a las puertas de China.`,
     cita: `¿De qué le sirve al hombre ganar el mundo entero, si pierde su alma?`,
     cita2: `Si no encuentro una barca, iré nadando. Si en esas islas hubiera minas de oro, los cristianos se precipitarían allá. Pero no hay sino almas para salvar`,
     notas: "Francisco de Jasso y Azpilicueta (7 de abril de 1506-3 de diciembre de 1552). Ordenado 24 de junio de 1537 (31 años)",
@@ -194,7 +211,7 @@ let santos = [
     text: `
     El 20 julio de 1936 milicianos anarquistas entran en el seminario y se llevan presos a los seminaristas.
     Maltratados de palabra y de obra, son tentados con prostitutas y la liberdad si cuelgan la sotana y se unen a los revolucionarios...
-    Negandose a renunciar a Cristo, se preparan para el martirio, rezan, se confiesan y reciben la comunión que el cocinero les esconde en la comida.
+    Negandose a renunciar a Cristo, se preparan para el martirio, rezan, se confiesan y reciben la comunión a escondidas.
     Son finalmente fusilados entre el 12 y el 15 de agosto (fiesta de la Inmaculada)`,
     cita: `Cuando llega el momento de designar las víctimas hay en todos serenidad santa y ansia de oír el nombre para adelantar y ponernos en la fila de los elegidos; esperamos el momento con generosa impaciencia, y cuando ha llegado, hemos visto a unos besar los cordeles con que los ataban, y a otros dirigir palabras de perdón a la turba armada`,
     notas: `https://www.xn--elespaoldigital-3qb.com/martires-seminaristas-de-barbastro/?reload=913122 claretianos  "Morimos todos contentos sin que nadie sienta desmayos ni pesares; morimos todos rogando a Dios que la sangre que caiga de nuestras heridas no sea sangre vengadora, sino sangre que entrando roja y viva por tus venas, estimule tu desarrollo y expansión por todo el mundo" a Salvador Pigem un amigo le ofrece escapar, pero se niega a abandonar a sus compañeros.`
@@ -374,7 +391,7 @@ var app = new Vue({
       this.sliderIndex = (santos.length + this.sliderIndex + diff) % santos.length;
       this.santo = santos[this.sliderIndex]
       this.resetTimer()
-      console.log(this.sliderIndex, diff);
+      //console.log(this.sliderIndex, diff);
     },
     resetTimer(){
       clearTimeout(timeout);
@@ -393,16 +410,31 @@ function contacto() {
   var email = document.getElementById("email");
   var request = new XMLHttpRequest();
   var url = "https://arrietaeguren.es/webSeminario/email";
-  url += "?message=" + mensaje.value + "&name=" + nombre.value;
+  url += "?message=" + mensaje.value;// + "&name=" + nombre.value;
   request.open("GET", url + "&email=" + email.value);
   request.send();
   request.onreadystatechange = (e) => {
     mensaje.value = "¡Gracias!";
-    if (nombre.value) mensaje.value = "¡Gracias " + nombre.value + "!";
+    //if (nombre.value) mensaje.value = "¡Gracias por tu mensaje " + nombre.value + "!";
     nombre.value = "";
     email.value = "";
   };
 }
+
+/*
+const incrementCount = async () => {
+
+  https://arrietaeguren.es/counter.php
+  const response = await fetch(`https://arrietaeguren.es/counter.php`);
+};
+
+if (localStorage.getItem("hasVisited") == null) {
+  incrementCount()
+    .then(() => {
+      localStorage.setItem("hasVisited", "true");
+    })
+    .catch((err) => console.log(err));
+}*/
 
 
 console.log("Seminario Loaded...");
