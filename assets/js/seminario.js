@@ -31,6 +31,23 @@ var videos = [
     yid: "t6cNqfVn8rU",
   },
   {
+    caption: "Testimonio Alfredo y Juan (Navarra Televisión)",
+    thumb: "https://img.youtube.com/vi/Ny_b_PtCqC4/hqdefault.jpg",
+    yid: "Ny_b_PtCqC4",
+  },
+  /*{
+    caption: "Testimonio Andoni & Miguel (Navarra Televisión)",
+    yid: "z1OMck6OAYc",
+  },*/
+  {
+    caption: "Testimonio Xavi & Miguel (Navarra Televisión)",
+    yid: "UKx2qOazEOQ",
+  },
+  {
+    caption: "Testimonio Pedro Luis",
+    yid: "k-i5Zox0K9I",
+  },
+  {
     caption: "Testimonio de Fray Ignacio, monje benedictino y millennial",
     yid: "LvqPshrX8cg",
   },
@@ -71,17 +88,8 @@ var videos = [
     yid: "og6i0VZFzgc",
   },
   {
-    caption: "Testimonio Miguel & Andoni (Navarra Televisión)",
-    class: "hidden",
-    yid: "z1OMck6OAYc",
-  },
-  {
     caption: "¿Hay monjes benedictinos jóvenes? El testimonio de Fray Eduardo",
     yid: "x33Fi_iEEFM",
-  },
-  {
-    caption: "Testimonio Pedro Luis",
-    yid: "k-i5Zox0K9I",
   },
   {
     caption: 'Pescadores de hombres',
