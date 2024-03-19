@@ -48,6 +48,10 @@ var videos = [
     yid: "k-i5Zox0K9I",
   },
   {
+    caption: "Tu puedes ser las manos de Dios - Seminario Conciliar de Barcelona",
+    yid: "8Eh84Nsfc-8",
+  },
+  {
     caption: "Testimonio de Fray Ignacio, monje benedictino y millennial",
     yid: "LvqPshrX8cg",
   },
