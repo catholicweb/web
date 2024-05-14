@@ -19,6 +19,10 @@ for (var i = 1; i <= 2; i++) {
 
 var videos = [
   {
+    caption: "Cambio de Agujas: Diego de La-Chica",
+    yid: "wmWhGc-1iq8"
+  },
+  {
     caption: "Testimonio Jose Angel Zubiaur",
     yid: "CSqnkjlqZx0",
   },
