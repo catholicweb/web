@@ -1,0 +1,55 @@
+
+
+
+# Configuración del sitio
+title: Seminario de Pamplona
+description: Dios te sueña a lo grande. ¿Y tú? ¿Cómo te sueñas?
+author: Seminario de Pamplona
+image: https://seminario.iglesianavarra.org/assets/img/pic02.jpg
+icon: img/favicon.ico
+
+
+openingHours: "Mo-Sa 09:30-13:30 Mo-Sa 16:30-20:00"
+
+
+phone: 948 29 10 00
+email: seminario@iglesianavarra.org
+address: Avda. Baja Navarra 64, 31006 Pamplona, Navarra
+bizum: BIZUM 04698
+googleMaps: https://goo.gl/maps/qrZgaNzF3Gxrie4e8
+
+locale: es_ES
+street: Avda. Baja Navarra 64
+city: Pamplona
+region: Navarra
+zip: 31006
+country: España
+latitude: 42.813729261682596
+longitude: -1.6292928779512663
+
+
+ldType: Organization
+
+analytics:
+  google: G-X17L4PQ9JJ # GOOGLE_ANALYTICS_ID 
+  mode: privacy # privacy | consent | off
+
+#google-site-verification: 1234
+
+keywords: seminario pamplona catolico formación iglesia # ignored by Google
+
+
+
+# Build settings (NO TOCAR)
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://seminario.iglesianavarra.org/" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+#theme: minima
+sass:
+  style: compressed
+  sass_dir: _sass
+
+modules:
+  - facade
