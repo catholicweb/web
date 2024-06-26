@@ -2,6 +2,10 @@
 title: Seminario de Pamplona
 timezone: UTC
 collections:
+  events:
+    title: Eventos
+    output: true
+    type: event
   posts:
     title: Posts
     output: true
