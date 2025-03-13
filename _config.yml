@@ -8,7 +8,6 @@ author: Seminario de Pamplona
 image: https://seminario.iglesianavarra.org/assets/img/pic02.jpg
 icon: img/favicon.ico
 
-
 openingHours: "Mo-Sa 09:30-13:30 Mo-Sa 16:30-20:00"
 
 
@@ -30,10 +29,6 @@ longitude: -1.6292928779512663
 
 ldType: Organization
 
-analytics:
-  google: G-X17L4PQ9JJ # GOOGLE_ANALYTICS_ID 
-  mode: privacy # privacy | consent | off
-
 #google-site-verification: 1234
 
 keywords: seminario pamplona catolico formación iglesia # ignored by Google
@@ -45,11 +40,13 @@ keywords: seminario pamplona catolico formación iglesia # ignored by Google
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://seminario.iglesianavarra.org/" # the base hostname & protocol for your site, e.g. http://example.com
 
+goatcounter: 'seminariopamplona'
 
-#theme: minima
 sass:
   style: compressed
   sass_dir: _sass
 
 modules:
   - facade
+  - seo
+  - analytics
