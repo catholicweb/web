@@ -136,9 +136,9 @@
                         <h1 class="major">Recursos</h1>
                         <h4>Vídeos</h4>
                         <div class="video-gallery gallery light-gallery">
-                            <a v-for="video in videos" :href="'https://www.youtube.com/watch?v='+video.yid" :data-sub-html="video.caption" :class="video.class" target=”_blank”>
-                                <img :src="video.thumb || 'https://i.ytimg.com/vi_webp/'+video.yid+'/maxresdefault.webp'" />
-                            </a>
+                            {% for video in site.data.videos %}
+                            {% include module name='facade' ratio='16/9' yt=video.yid title=video.title %}
+                            {% endfor %}
                         </div>
                         <br /><br />
                         <h4>Lecturas</h4>
