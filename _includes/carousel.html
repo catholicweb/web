@@ -26,6 +26,7 @@
         border-radius: 10px;
         object-fit: cover;
         user-select: none;
+        pointer-events: auto;
     }
 
     .controls {
@@ -61,8 +62,6 @@
         }
     }
 
-
-
     .controls button {
         background: rgba(0, 0, 0, 0.5);
         color: white;
@@ -82,6 +81,7 @@ const nextBtn = document.getElementById("next");
 let isDragging = false,
     startX, scrollLeft;
 let autoPlayInterval;
+let isClick = false;
 
 function startAutoPlay() {
     autoPlayInterval = setInterval(() => {
@@ -103,21 +103,30 @@ carousel.addEventListener("mousedown", (e) => {
     scrollLeft = carousel.scrollLeft;
     carousel.style.cursor = "grabbing";
     stopAutoPlay();
+    isClick = false;
 });
 
 carousel.addEventListener("mouseleave", () => isDragging = false);
 carousel.addEventListener("mouseup", () => {
     isDragging = false;
     carousel.style.cursor = "grab";
-    startAutoPlay();
+    //startAutoPlay();
 });
 
 carousel.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
     e.preventDefault();
+    isClick = true;
     const x = e.pageX - carousel.offsetLeft;
     const walk = (x - startX) * 2;
     carousel.scrollLeft = scrollLeft - walk;
+});
+
+carousel.addEventListener("click", (e) => {
+    if (isClick) {
+        stopAutoPlay();
+        e.preventDefault();
+    }
 });
 
 nextBtn.addEventListener("click", () => {
