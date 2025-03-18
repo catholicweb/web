@@ -1,0 +1,134 @@
+<head>
+    <style type="text/css">
+    .carousel-container {
+        width: 90%;
+        margin: auto;
+        position: relative;
+    }
+
+    .carousel {
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+        cursor: grab;
+        transition: transform 0.3s ease;
+        scroll-behavior: smooth;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel>div {
+        padding: 30px;
+        border-radius: 10px;
+        object-fit: cover;
+        user-select: none;
+    }
+
+    .controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .controls #prev {
+        transform: translateX(-50px);
+    }
+
+    .controls #next {
+        transform: translateX(50px);
+    }
+
+    .carousel>div {
+        min-width: 60%;
+    }
+
+    @media (min-width: 768px) {
+        .carousel>div {
+            min-width: 35%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .carousel>div {
+            min-width: 25%;
+        }
+    }
+
+
+
+    .controls button {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        line-height: normal;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<script>
+const carousel = document.querySelector(".carousel");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+let isDragging = false,
+    startX, scrollLeft;
+let autoPlayInterval;
+
+function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
+        carousel.scrollLeft += 310;
+        if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+            carousel.scrollLeft = 0;
+        }
+    }, 3000);
+}
+
+function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+}
+startAutoPlay();
+
+carousel.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+    carousel.style.cursor = "grabbing";
+    stopAutoPlay();
+});
+
+carousel.addEventListener("mouseleave", () => isDragging = false);
+carousel.addEventListener("mouseup", () => {
+    isDragging = false;
+    carousel.style.cursor = "grab";
+    startAutoPlay();
+});
+
+carousel.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2;
+    carousel.scrollLeft = scrollLeft - walk;
+});
+
+nextBtn.addEventListener("click", () => {
+    carousel.scrollLeft += 310;
+    stopAutoPlay();
+    startAutoPlay();
+});
+
+prevBtn.addEventListener("click", () => {
+    carousel.scrollLeft -= 310;
+    stopAutoPlay();
+    startAutoPlay();
+});
+</script>
