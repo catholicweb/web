@@ -1,7 +1,7 @@
 <head>
     <style type="text/css">
     .carousel-container {
-        width: 90%;
+        width: 95%;
         margin: auto;
         position: relative;
     }
@@ -39,15 +39,15 @@
     }
 
     .controls #prev {
-        transform: translateX(-50px);
+        transform: translateX(-110%);
     }
 
     .controls #next {
-        transform: translateX(50px);
+        transform: translateX(110%);
     }
 
     .carousel>div {
-        min-width: 60%;
+        min-width: 65%;
     }
 
     @media (min-width: 768px) {
@@ -81,15 +81,16 @@ const nextBtn = document.getElementById("next");
 let isDragging = false,
     startX, scrollLeft;
 let autoPlayInterval;
-let isClick = false;
 
 function startAutoPlay() {
-    autoPlayInterval = setInterval(() => {
-        carousel.scrollLeft += 310;
-        if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
-            carousel.scrollLeft = 0;
-        }
-    }, 3000);
+    autoPlayInterval = setInterval(scrollCarousel, 3000);
+}
+
+function scrollCarousel(multiplier = 1) {
+    carousel.scrollLeft += carousel.firstChild.offsetWidth * multiplier;
+    if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+        carousel.scrollLeft = 0;
+    }
 }
 
 function stopAutoPlay() {
@@ -103,7 +104,6 @@ carousel.addEventListener("mousedown", (e) => {
     scrollLeft = carousel.scrollLeft;
     carousel.style.cursor = "grabbing";
     stopAutoPlay();
-    isClick = false;
 });
 
 carousel.addEventListener("mouseleave", () => isDragging = false);
@@ -116,27 +116,19 @@ carousel.addEventListener("mouseup", () => {
 carousel.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
     e.preventDefault();
-    isClick = true;
     const x = e.pageX - carousel.offsetLeft;
     const walk = (x - startX) * 2;
     carousel.scrollLeft = scrollLeft - walk;
 });
 
-carousel.addEventListener("click", (e) => {
-    if (isClick) {
-        stopAutoPlay();
-        e.preventDefault();
-    }
-});
-
 nextBtn.addEventListener("click", () => {
-    carousel.scrollLeft += 310;
+    scrollCarousel()
     stopAutoPlay();
     startAutoPlay();
 });
 
 prevBtn.addEventListener("click", () => {
-    carousel.scrollLeft -= 310;
+    scrollCarousel(-1)
     stopAutoPlay();
     startAutoPlay();
 });

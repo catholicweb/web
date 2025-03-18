@@ -31,18 +31,18 @@
                 <p style="text-align: center"><b><i style="text-transform: none; font-size: 1.2em;">Dios te sueña a lo grande. ¿Y tú? ¿Cómo te sueñas?</b></i></p>
                 <!--<p><b><i style="text-transform: none;">¡No tengáis miedo de Cristo! Él no quita nada, y lo da todo (Benedicto XVI)</b></i></p>-->
                 <div class="carousel-container">
+                    <div class="controls">
+                        <button id="prev">&#10094;</button>
+                        <button id="next">&#10095;</button>
+                    </div>
                     <div class="carousel">
                         {% for video in page.videos %}
                         {% include module name='facade' ratio='9/16' yt=video.link title=video.title %}
                         {% endfor %}
                     </div>
-                    <div class="controls">
-                        <button id="prev">&#10094;</button>
-                        <button id="next">&#10095;</button>
-                    </div>
                 </div>
                 <br>
-                <p style="text-align: center"><a onclick="document.getElementById('materiales').style.display = 'block'">Materiales día del seminario</a></p>
+                <!--<p style="text-align: center"><a onclick="document.getElementById('materiales').style.display = 'block'">Materiales día del seminario</a></p>
                 <div id="materiales" style="display: none;">
                     <ul>
                         <li>
@@ -61,7 +61,7 @@
                             Estampa: <a href="https://www.conferenciaepiscopal.es/wp-content/uploads/2024/03/Estampa-Dia-del-Seminario-2024_espanol_web.pdf">castellano</a> y en <a href="https://www.conferenciaepiscopal.es/wp-content/uploads/2024/02/Estampa-Dia-del-Seminario-2024_euskera_marzo_web-1.pdf">euskera</a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
             </div>
         </section>
         <!-- Wrapper -->
