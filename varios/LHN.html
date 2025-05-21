@@ -10,7 +10,7 @@
                 .filter(e => e.textContent.trim().toLowerCase().startsWith(targetText));
 
             if (matches.length !== 1) {
-                return console.error(`Expected 1 match for: "${targetText}", found ${matches.length}`);
+                return //console.error(`Expected 1 match for: "${targetText}", found ${matches.length}`);
             }
             el.classList.add('link');
             el.addEventListener('click', () => {
@@ -28,6 +28,39 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
+    <style>
+    #font-controls {
+        position: fixed;
+        bottom: 1em;
+        right: 1em;
+        display: flex;
+        gap: 0.5em;
+        z-index: 9999;
+        font-size: 8rem;
+    }
+
+    #font-controls button {
+        padding: 0.5em;
+        font-size: 1em;
+        border: none;
+        border-radius: 0.3em;
+        background: #333;
+        color: white;
+        cursor: pointer;
+    }
+    </style>
+    <script>
+        let currentSize = parseFloat(localStorage.getItem('fontSize')) || 1.5;
+    
+
+  function changeFontSize(delta) {
+    currentSize = Math.max(0.25, Math.min(4, currentSize + delta));
+    localStorage.setItem('fontSize', currentSize.toFixed(2));
+    document.documentElement.style.fontSize = `${currentSize}px`;
+  }
+
+  changeFontSize(0)
+</script>
     <style type="text/css">
     .link {
         cursor: pointer;
@@ -51,7 +84,7 @@
     }
 
     html {
-        font-size: 1.6px;
+        font-size: 1.5px;
         /* 1rem = 16px (valor por defecto) */
         padding: 10px !important;
         max-width: 750px !important;
@@ -893,6 +926,11 @@
 </head>
 
 <body class="doc-content" onload="load()">
+    <!-- Floating buttons -->
+    <div id="font-controls">
+        <button onclick="changeFontSize(0.1)">A+</button>
+        <button onclick="changeFontSize(-0.1)">A-</button>
+    </div>
     <p class="c17 c38"><span class="c10 c26 c22"></span></p>
     <p class="c17 c38"><span class="c10 c26 c22"></span></p>
     <p class="c17 c38"><span class="c10 c26 c22"></span></p>
