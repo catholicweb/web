@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecturas Diarias</title>
+    <style>
+        body {
+    font-family: Georgia, serif;
+    margin: 2em;
+    background: #f9f9f9;
+    color: #222;
+  }
+  h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.2em;
+    margin-top: 2em;
+  }
+  .reading {
+    margin-bottom: 1.5em;
+  }
+  .reading h3 {
+    margin: 0.5em 0 0.2em;
+    color: #8b0000;
+  }
+  .date-range {
+    margin-bottom: 1em;
+  }
+  input {
+    margin-right: 0.5em;
+  }
+  .loading {
+    font-style: italic;
+    color: #888;
+  }
+  @media print {
+    .date-range, button {
+      display: none !important;
+    }
+    h2 {
+      page-break-before: always;
+    }
+    body {
+      background: white;
+      color: black;
+      margin: 1cm;
+    }
+    .reading {
+      break-inside: avoid;
+    }
+  }
+</style>
+</head>
+
+<body>
+    <h1>Lecturas de la Misa</h1>
+    <div class="date-range">
+        <label>Desde: <input type="date" id="startDate" /></label>
+        <label>Hasta: <input type="date" id="endDate" /></label>
+        <button onclick="fetchReadings()">Cargar</button>
+    </div>
+    <div id="output"></div>
+    <script>
+    async function fetchReading(date) {
+        const url = `https://gxvchjojub.execute-api.eu-west-1.amazonaws.com/production/getmissafreecontent?lang=es&day=${date}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Error ${response.status} al obtener datos para ${date}`);
+        return await response.json();
+    }
+
+    function formatReading(reading) {
+        return `
+        <div class="reading">
+          <h3>${reading.title} (${reading.cita})</h3>
+          ${reading.text}
+        </div>
+      `;
+    }
+
+    async function fetchReadings() {
+        const start = document.getElementById("startDate").value;
+        const end = document.getElementById("endDate").value;
+        if (!start || !end || start > end) {
+            alert("Introduce un rango válido (¡espabila, por favor!).");
+            return;
+        }
+
+        const output = document.getElementById("output");
+        output.innerHTML = `<p class="loading">Cargando lecturas... (pixka bat itxaron)</p>`;
+
+        const dates = [];
+        let current = new Date(start);
+        const endDate = new Date(end);
+        while (current <= endDate) {
+            dates.push(current.toISOString().split("T")[0]);
+            current.setDate(current.getDate() + 1);
+        }
+
+        const results = await Promise.allSettled(dates.map(fetchReading));
+
+        output.innerHTML = "";
+        results.forEach((result, i) => {
+            const date = dates[i];
+            if (result.status === "fulfilled") {
+                const data = result.value;
+                output.innerHTML += `
+            <h2>${data.day_title} (${date})</h2>
+            ${data["lectura#0"] ? formatReading(data["lectura#0"]) : ""}
+            ${data.salm ? formatReading(data.salm) : ""}
+            ${data.evangeli ? formatReading(data.evangeli) : ""}
+          `;
+            } else {
+                output.innerHTML += `<p>Error al cargar ${date}: ${result.reason.message}</p>`;
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>
