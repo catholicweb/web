@@ -1,35 +1,18 @@
 media: media
 content:
-  - name: config
-    label: Configuración sitio
-    path: _config.yml
-    type: file
-    fields:
-      - name: title
-        label: Website title
-        type: string
-      - name: description
-        label: Website description
-        type: string
-        description: Will be used for any page with no description.
-      - name: image
-        label: Preview image
-        type: image
-        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
   - name: index
     label: Portada
     path: index.md
     type: file
     fields:
       - name: title
-        label: Website title
+        label: Título de la web
         type: string
       - name: description
-        label: Website description
+        label: Subtitulo
         type: string
-        description: Will be used for any page with no description.
       - name: videos
         label: Videos
         type: string
         list: true
-        description: Videos de la portada
+        description: Videos (poner codigo de youtube)
